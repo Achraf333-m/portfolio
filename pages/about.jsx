@@ -2,10 +2,14 @@ import React from "react";
 import Header from "@/components/Header";
 import Link from "next/link";
 import "@/styles/globals.css";
+import Head from "next/head";
 
 function About() {
   return (
     <>
+      <Head>
+        <title>About me</title>
+      </Head>
       <div className="h-screen">
         <Header />
         <section className="max-w-5xl mx-auto space-y-20 mt-10">
@@ -36,10 +40,11 @@ function About() {
             </p>
           </div>
 
-            <div className="text-center">
-
-          <Link href="/projects" className="font-bold">See my projects</Link>
-            </div>
+          <div className="text-center">
+            <Link href="/projects" className="font-bold">
+              See my projects
+            </Link>
+          </div>
         </section>
       </div>
     </>

@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+ 
+  .block {
+    @apply w-[100%] md:w-[20%] h-[400px] bg-black
+  }
+
+}
