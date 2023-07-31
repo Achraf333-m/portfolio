@@ -23,11 +23,12 @@ export default function Home() {
     <>
       <Head>
         <title>Achraf Daimallah</title>
+        <link rel="icon" href="/public/favicon.ico" sizes="any" />
       </Head>
     <div className="h-screen">
       <Header />
       <main className="flex flex-col pt-20 px-10 max-w-5xl mx-auto">
-        <h1 className="text-blue-500 text-[30px] sm:text-[50px] pb-2">{title ? 'HEY THERE!'  :  "I'M ACHRAF DAIMALLAH"}</h1>
+        <h1 className="text-yellow-600 text-[30px] sm:text-[50px] pb-2">{title ? 'HEY THERE!'  :  "I'M ACHRAF DAIMALLAH"}</h1>
         <h4 className="text-sm pb-8">FRONTEND DEVELOPER</h4>
         <p className="pb-6 text-xl">
           I love building simple, eye-pleasing yet highly

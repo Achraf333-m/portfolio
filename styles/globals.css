@@ -1,18 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-end-rgb: 0, 0, 0;
+    --background-end-rgb: 255, 255, 204;
+    --background-start-rgb: 255, 255, 255;
   }
 }
 
@@ -24,12 +20,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer components {
- 
-  .block {
-    @apply w-[100%] md:w-[20%] h-[400px] bg-black
+  .project-style {
+    @apply flex items-center justify-center w-full flex-col space-y-6 md:flex-col md:space-x-6 px-8 lg:flex-row
   }
-
+  .hover-transition {
+    @apply hover:scale-125 border-2 hover:border-white rounded-lg transition duration-300 h-auto md:w-[calc(100%)] lg:w-[calc(100%/3)]  w-full
+  }
 }
+
