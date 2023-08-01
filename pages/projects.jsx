@@ -8,7 +8,7 @@ import NetflixAccount from "@/public/Netflix-account.png";
 import SpotifyLogin from "@/public/spotify-login.png";
 import SpotifyDashboard from "@/public/spotify-dashboard.png";
 import libraryApp from "@/public/Library-Landing.png";
-import libraryCart from "@/public/Library-cart.png";
+import libraryCart from "@/public/library-cart.png";
 import loading from "@/public/Skeleton-loading.png";
 import marketplace from "@/public/internship-landing.png";
 import marketplaceExplore from "@/public/intern-explore.png";
