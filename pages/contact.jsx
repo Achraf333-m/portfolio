@@ -41,11 +41,11 @@ function Contact() {
         <form ref={form} onSubmit={contact} className="flex flex-col justify-center space-y-8 max-w-4xl mx-auto">
           <div className="flex flex-col space-y-4">
             <label>Name</label>
-            <input type="text" name="user-name" placeholder="your name" className="outline-none" />
+            <input type="text" name="user-name" placeholder="your name" className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1" />
           </div>
           <div className="flex flex-col space-y-4">
             <label>Email</label>
-            <input type="text" name="user-email" placeholder="your email" className="outline-none" />
+            <input type="text" name="user-email" placeholder="your email" className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1" />
           </div>
           <div className="flex flex-col space-y-4">
             <label>Message</label>
@@ -53,10 +53,13 @@ function Contact() {
               type="text"
               name="message"
               rows={5}
-              placeholder="I think i'd enjoy working with you, let me know when you're available for an interview!" className="outline-none resize-none"
+              placeholder="I think i'd enjoy working with you, let me know when you're available for an interview!" className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none"
             />
           </div>
-          <button type="submit" className="py-2 px-10 bg-green-100 rounded-lg">Send it my way!</button>
+          <div className="flex items-center justify-center md:justify-start">
+
+          <button type="submit" className="py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg">Send it my way!</button>
+          </div>
         </form>
       </section>
     </>
