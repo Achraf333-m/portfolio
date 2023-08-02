@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 
 function Contact() {
   useEffect(() => {
-    AOS.init({duration:2000});
+    AOS.init({duration:2000, once:true });
   }, []);
   const form = useRef();
 

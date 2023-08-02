@@ -27,7 +27,7 @@ function Header() {
           {path === "/contact" || <Link href="/contact" className="animate-pulse">Contact</Link>}
 
           <button onClick={() => setTheme(currentMode)}>
-            {theme === "dark" ? <BsSun /> : <BsFillMoonFill />}
+            {theme === "dark" ? <BsSun className="text-[20px]" /> : <BsFillMoonFill className="text-[20px]" />}
           </button>
         </div>
         <Dropdown />

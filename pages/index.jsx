@@ -18,7 +18,7 @@ export default function Home() {
     setTimeout(() => {
       setTitle(false);
     }, 1000);
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 1500, once: true });
   }, []);
 
   return (
@@ -29,7 +29,6 @@ export default function Home() {
       </Head>
       <Header />
       <div className="darkMode lightMode">
-        {/* {theme === 'dark' ? <Image src={backgroundImage} alt="" className="fixed h-screen w-screen object-cover mix-blend-overlay"/> : <Image src={lightBackground} alt="" className="fixed h-screen w-screen object-cover mix-blend-overlay"/>} */}
         <main className="relative h-screen flex flex-col pt-20 px-10 max-w-5xl mx-auto dark:text-white">
           <h1
             data-aos="fade-up"
@@ -42,10 +41,6 @@ export default function Home() {
           </h4>
           <p className="pb-6 text-xl" data-aos="fade-up" data-aos-delay="600">
             I love building simple, eye-pleasing yet highly performant websites
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi vitae
-            perferendis asperiores omnis accusantium ab quod minus quidem
-            voluptate saepe deleniti, eum et nesciunt accusamus, quas totam
-            ducimus unde eveniet?
           </p>
           <Link
             data-aos="fade-up"
