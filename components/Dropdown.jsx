@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null)
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme('dark')
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === 'dark' ? 'light' : 'dark'

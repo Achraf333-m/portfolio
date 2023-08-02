@@ -218,12 +218,11 @@ function Projects() {
           </div>
           <div className="space-y-4 md:space-y-0 flex flex-col md:flex-row md:space-x-4 items-center justify-center py-10 mb-20">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              animi.
+              You have a project for me or want me to work with you? You can easily contact me here!
             </p>
             <Link href="/contact">
               <button className="py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg">
-                contact me
+                Contact me
               </button>
             </Link>
           </div>

@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 
 function Contact() {
   useEffect(() => {
-    AOS.init({duration:2000, once:true });
+    AOS.init({ duration: 2000, once: true });
   }, []);
   const form = useRef();
 
@@ -45,6 +45,17 @@ function Contact() {
         data-aos="fade-in"
         className="darkMode lightMode h-screen pt-20 md:pt-40 px-10 md:px-14"
       >
+        <div className="flex flex-col justify-center items-center mb-10" data-aos="fade-left"
+            data-aos-delay="1000" >
+          <p className="opacity-50 text-sm md:text-md text-center">
+            You can use the form under or email me at{" "}
+            <span className="text-yellow-800">
+              achrafdaimallah2003@gmail.com
+            </span>{" "}
+            <br /> You can also call me at{" "}
+            <span className="text-yellow-800">+1 (438) 725-5776</span>
+          </p>
+        </div>
         <form
           ref={form}
           onSubmit={contact}
