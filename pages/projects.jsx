@@ -17,17 +17,23 @@ import TicTacToe from "@/public/TicTacToe.png";
 import portfolio from "@/public/portfolio.png"
 import portfolioMessage from "@/public/portfolio-message.png"
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Links from "@/components/UI/Links";
+import { useEffect } from "react";
 
 function Projects() {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Head>
         <title>My projects</title>
       </Head>
       <Header />
-      <section className="flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
+      <section className="bg-gradient-to-r dark:from-violet-950 to dark:bg-black flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
         <h1 className="mt-32 mb-20 text-3xl font-semibold">My Projects</h1>
         <div className="pb-44 flex flex-col space-y-4">
           <h3 className="font-light text-4xl">some of my clones:</h3>
@@ -38,7 +44,7 @@ function Projects() {
             aspernatur, vel tempora commodi repellat nihil nisi libero facilis
             laudantium obcaecati fugiat et nulla quaerat. Esse!
           </p>
-          <div className="space-y-10">
+          <div data-aos="fade-in" className="space-y-10">
             <div className="">
               <h1 className="text-3xl">Netflix</h1>
               <Links
@@ -46,20 +52,21 @@ function Projects() {
                 Glink="https://github.com/Achraf333-m/Netflix-cloned"
               />
               <div className="project-style">
-                <Image className="hover-transition" src={NetflixSubscription} />
-                <Image className="hover-transition" src={NetflixStripe} />
-                <Image className="hover-transition" src={NetflixAccount} />
+                <Image className="hover-transition" data-aos="fade-right" src={NetflixSubscription} />
+                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={NetflixStripe} />
+                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={NetflixAccount} />
               </div>
             </div>
-            <div>
+            <div data-aos="fade-in">
               <h1 className="text-3xl">Spotify</h1>
               <Links
+                
                 Wlink="https://spotify-clone-achraf333-m.vercel.app/"
                 Glink="https://github.com/Achraf333-m/spotify-clone"
               />
               <div className="project-style">
-                <Image className="hover-transition" src={SpotifyLogin} />
-                <Image className="hover-transition" src={SpotifyDashboard} />
+                <Image className="hover-transition" data-aos="fade-left" src={SpotifyLogin} />
+                <Image className="hover-transition" data-aos="fade-left" data-aos-delay="200" src={SpotifyDashboard} />
               </div>
             </div>
           </div>
@@ -73,16 +80,16 @@ function Projects() {
             consequatur doloremque exercitationem iure.
           </p>
           <div className="space-y-10">
-            <div>
+            <div data-aos="fade-in">
               <h1 className="text-3xl">Library app</h1>
               <Links
                 Wlink="https://library-app-r.herokuapp.com/"
                 Glink="https://github.com/Achraf333-m/react-app"
               />
               <div className="project-style">
-                <Image className="hover-transition" src={libraryApp} />
-                <Image className="hover-transition" src={libraryCart} />
-                <Image className="hover-transition" src={loading} />
+                <Image className="hover-transition" data-aos="fade-right" src={libraryApp} />
+                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={libraryCart} />
+                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={loading} />
               </div>
             </div>
             <div>
@@ -100,35 +107,35 @@ function Projects() {
           <h3>More smaller projects</h3>
           <div>
             <div className="space-y-10">
-              <div>
+              <div data-aos="fade-in">
                 <h1 className="text-3xl">Movie Palace</h1>
                 <Links
                   Wlink="https://achraf333-m.github.io/MovieDA/"
                   Glink="https://github.com/Achraf333-m/MovieDA"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" src={moviePalace} />
+                  <Image className="hover-transition" data-aos="fade-left"src={moviePalace} />
                 </div>
               </div>
-              <div>
-                <h1 className="text-3xl">TicTacToe</h1>
+              <div  data-aos="fade-in">
+                <h1  className="text-3xl">TicTacToe</h1>
                 <Links
                   Wlink="https://achraf333-m.github.io/tictatoe/"
                   Glink="https://github.com/Achraf333-m/tictatoe"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" src={TicTacToe} />
+                  <Image className="hover-transition" data-aos="fade-right" src={TicTacToe} />
                 </div>
               </div>
-              <div>
+              <div  data-aos="fade-in">
                 <h1 className="text-3xl">Portfolio Template</h1>
                 <Links
                   Wlink="https://achraf333-m.github.io/WWW/"
                   Glink="https://github.com/Achraf333-m/WWW"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" src={portfolio} />
-                  <Image className="hover-transition" src={portfolioMessage} />
+                  <Image className="hover-transition" data-aos="fade-right" src={portfolio} />
+                  <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={portfolioMessage} />
                 </div>
               </div>
             </div>
@@ -140,7 +147,7 @@ function Projects() {
             animi.
           </p>
           <Link href="/contact">
-            <button className="border-2 w-40 px-2 py-2 rounded-lg bg-green-400 text-center">
+            <button className="py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg">
               contact me
             </button>
           </Link>

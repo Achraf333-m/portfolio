@@ -5,10 +5,13 @@ import { useTheme } from 'next-themes';
 import { useState } from 'react'
 import { RiMenu4Fill } from "react-icons/ri";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null)
   const { theme, setTheme } = useTheme()
+  const router = useRouter();
+  const path = router.pathname;
   const currentMode = theme === 'dark' ? 'light' : 'dark'
   const open = Boolean(anchorEl)
 
@@ -42,19 +45,19 @@ export default function Dropdown() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Link href="/">
+        {path === '/' || <Link href="/">
         <MenuItem>Homepage</MenuItem>
-        </Link>
-        <Link href="/about">
-        <MenuItem>About me</MenuItem>
-        </Link>
-        <Link href="/projects">
-        <MenuItem>My projects</MenuItem>
-        </Link>
-        <Link href="/contact">
-        <MenuItem>Contact me</MenuItem>
-        </Link>
-        <MenuItem onClick={() => setTheme(currentMode)}>Dark Mode</MenuItem>
+        </Link>}
+        {path === '/about' || <Link href="/about">
+        <MenuItem>About</MenuItem>
+        </Link>}
+        {path === '/projects' || <Link href="/projects">
+        <MenuItem>Projects</MenuItem>
+        </Link>}
+        {path === '/contact' || <Link href="/contact">
+        <MenuItem>Contact</MenuItem>
+        </Link>}
+        <MenuItem onClick={() => setTheme(currentMode)}>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</MenuItem>
       </Menu>
     </div>
   )
