@@ -20,9 +20,9 @@ function About() {
       <Head>
         <title>About me</title>
       </Head>
-      <div className="bg-gradient-to-r dark:from-violet-950 to dark:bg-black overflow-x-hidden">
-        <div className="w-screen px-4 md:px-10 ">
           <Header />
+      
+        <div className="w-screen px-4 md:px-10 darkMode lightMode overflow-x-hidden">
           <section className="max-w-5xl mx-auto py-20 px-4 space-y-20">
             <AboutPara
               title="INFO ABOUT ME"
@@ -48,6 +48,7 @@ function About() {
                 <Image
                   data-aos="fade-left"
                   src={frontend}
+                  alt="section-image"
                   className="rounded-lg h-60 w-full md:w-[50%] "
                 />
               </div>
@@ -70,7 +71,7 @@ function About() {
             </div>
           </section>
         </div>
-      </div>
+      
     </>
   );
 }

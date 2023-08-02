@@ -33,7 +33,9 @@ function Projects() {
         <title>My projects</title>
       </Head>
       <Header />
-      <section className="bg-gradient-to-r dark:from-violet-950 to dark:bg-black flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
+      <div className="darkMode lightMode">
+
+      <section className="  flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
         <h1 className="mt-32 mb-20 text-3xl font-semibold">My Projects</h1>
         <div className="pb-44 flex flex-col space-y-4">
           <h3 className="font-light text-4xl">some of my clones:</h3>
@@ -52,9 +54,9 @@ function Projects() {
                 Glink="https://github.com/Achraf333-m/Netflix-cloned"
               />
               <div className="project-style">
-                <Image className="hover-transition" data-aos="fade-right" src={NetflixSubscription} />
-                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={NetflixStripe} />
-                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={NetflixAccount} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" src={NetflixSubscription} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={NetflixStripe} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={NetflixAccount} />
               </div>
             </div>
             <div data-aos="fade-in">
@@ -65,8 +67,8 @@ function Projects() {
                 Glink="https://github.com/Achraf333-m/spotify-clone"
               />
               <div className="project-style">
-                <Image className="hover-transition" data-aos="fade-left" src={SpotifyLogin} />
-                <Image className="hover-transition" data-aos="fade-left" data-aos-delay="200" src={SpotifyDashboard} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-left" src={SpotifyLogin} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-left" data-aos-delay="200" src={SpotifyDashboard} />
               </div>
             </div>
           </div>
@@ -87,9 +89,9 @@ function Projects() {
                 Glink="https://github.com/Achraf333-m/react-app"
               />
               <div className="project-style">
-                <Image className="hover-transition" data-aos="fade-right" src={libraryApp} />
-                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={libraryCart} />
-                <Image className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={loading} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" src={libraryApp} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={libraryCart} />
+                <Image alt="section-image" className="hover-transition" data-aos="fade-right" data-aos-delay="400" src={loading} />
               </div>
             </div>
             <div>
@@ -99,8 +101,8 @@ function Projects() {
                 Glink="https://github.com/Achraf333-m/Achraf-internship"
               />
               <div className="project-style">
-                <Image className="hover-transition" src={marketplace} />
-                <Image className="hover-transition" src={marketplaceExplore} />
+                <Image alt="section-image" data-aos="fade-left" className="hover-transition" src={marketplace} />
+                <Image alt="section-image" data-aos="fade-left" data-aos-delay="200" className="hover-transition" src={marketplaceExplore} />
               </div>
             </div>
           </div>
@@ -114,7 +116,7 @@ function Projects() {
                   Glink="https://github.com/Achraf333-m/MovieDA"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" data-aos="fade-left"src={moviePalace} />
+                  <Image alt="section-image" className="hover-transition" data-aos="fade-right"src={moviePalace} />
                 </div>
               </div>
               <div  data-aos="fade-in">
@@ -124,7 +126,7 @@ function Projects() {
                   Glink="https://github.com/Achraf333-m/tictatoe"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" data-aos="fade-right" src={TicTacToe} />
+                  <Image alt="section-image" className="hover-transition" data-aos="fade-left" src={TicTacToe} />
                 </div>
               </div>
               <div  data-aos="fade-in">
@@ -134,8 +136,8 @@ function Projects() {
                   Glink="https://github.com/Achraf333-m/WWW"
                 />
                 <div className="project-style">
-                  <Image className="hover-transition" data-aos="fade-right" src={portfolio} />
-                  <Image className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={portfolioMessage} />
+                  <Image alt="section-image" className="hover-transition" data-aos="fade-right" src={portfolio} />
+                  <Image alt="section-image" className="hover-transition" data-aos="fade-right" data-aos-delay="200" src={portfolioMessage} />
                 </div>
               </div>
             </div>
@@ -153,6 +155,7 @@ function Projects() {
           </Link>
         </div>
       </section>
+      </div>
     </>
   );
 }

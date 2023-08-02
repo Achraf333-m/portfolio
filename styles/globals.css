@@ -18,4 +18,10 @@
   .hover-transition {
     @apply hover:scale-125 border-2 hover:border-white rounded-lg transition duration-300 h-auto md:w-[calc(100%)] lg:w-[calc(100%/3)]  w-full;
   }
+  .darkMode {
+    @apply bg-gradient-to-r dark:from-yellow-800  dark:to-black
+  }
+  .lightMode {
+    @apply bg-gradient-to-r from-yellow-100  to-white
+  }
 }

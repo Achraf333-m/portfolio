@@ -23,7 +23,7 @@ function AboutPara({ title, para, Newimage }) {
         <Image
           data-aos="fade-right"
           src={Newimage}
-          alt=""
+          alt="section-image"
           priority
           className="rounded-lg h-60 w-full md:w-[50%]"
         />

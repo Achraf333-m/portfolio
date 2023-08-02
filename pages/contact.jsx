@@ -43,7 +43,7 @@ function Contact() {
       <Header />
       <section
         data-aos="fade-in"
-        className="bg-gradient-to-r dark:from-violet-950 to dark:bg-black h-screen pt-20 md:pt-40 px-10 md:px-14"
+        className="darkMode lightMode h-screen pt-20 md:pt-40 px-10 md:px-14"
       >
         <form
           ref={form}

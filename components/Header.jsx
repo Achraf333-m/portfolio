@@ -14,10 +14,10 @@ function Header() {
   const currentMode = theme === "dark" ? "light" : "dark";
 
   return (
-    <div className="">
+    <div className="darkMode lightMode">
       <div className="flex border-b-2 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">
         <Link href="/">
-          <Image src={Logo} height={100} width={100} className="rounded-2xl" />
+          <Image priority alt="website-logo" src={Logo} height={100} width={100} className="rounded-2xl" />
         </Link>
 
         <div className="space-x-4 hidden text-2xl md:flex items-center">
