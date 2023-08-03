@@ -25,7 +25,6 @@ export default function Home() {
     <>
       <Head>
         <title>Achraf Daimallah</title>
-        <link rel="icon" href="/public/favicon.ico" sizes="any" />
       </Head>
       <Header />
       <div className="darkMode lightMode">
