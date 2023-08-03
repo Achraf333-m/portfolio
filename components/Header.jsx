@@ -14,6 +14,10 @@ function Header() {
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
 
+  useEffect(() => {
+    setTheme("dark")
+  }, [])
+
   return (
     <div className="darkMode lightMode">
       <div className="flex border-b-2 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">

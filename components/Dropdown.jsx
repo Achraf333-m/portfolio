@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null)
-  const { theme, setTheme } = useTheme('dark')
+  const { theme, setTheme } = useTheme()
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === 'dark' ? 'light' : 'dark'
@@ -22,6 +22,10 @@ export default function Dropdown() {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  useEffect(() => {
+    setTheme("dark")
+  }, [])
 
   return (
     <div className="md:!hidden">
