@@ -49,11 +49,11 @@ function Contact() {
             data-aos-delay="1000" >
           <p className="opacity-50 text-sm md:text-md text-center">
             You can use the form under or email me at{" "}
-            <span className="text-yellow-800">
+            <span className="text-yellow-800 dark:text-yellow-200">
               achrafdaimallah2003@gmail.com
             </span>{" "}
             <br /> You can also call me at{" "}
-            <span className="text-yellow-800">+1 (438) 725-5776</span>
+            <span className="text-yellow-800 dark:text-yellow-200">+1 (438) 725-5776</span>
           </p>
         </div>
         <form
