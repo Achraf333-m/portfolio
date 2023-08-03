@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import Dropdown from "./Dropdown";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 
 function Header() {

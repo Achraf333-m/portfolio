@@ -43,7 +43,7 @@ function Contact() {
       <Header />
       <section
         data-aos="fade-in"
-        className="darkMode lightMode h-screen pt-20 md:pt-40 px-10 md:px-14"
+        className="darkMode w-screen overflow-x-hidden lightMode h-screen pt-20 md:pt-40 px-10 md:px-14"
       >
         <div className="flex flex-col justify-center items-center mb-10" data-aos="fade-left"
             data-aos-delay="1000" >

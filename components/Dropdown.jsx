@@ -55,7 +55,7 @@ export default function Dropdown() {
         <MenuItem>Projects</MenuItem>
         </Link>}
         {path === '/contact' || <Link href="/contact">
-        <MenuItem>Contact</MenuItem>
+        <MenuItem className='font-bold animate-pulse'>Contact</MenuItem>
         </Link>}
         <MenuItem onClick={() => setTheme(currentMode)}>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</MenuItem>
       </Menu>
