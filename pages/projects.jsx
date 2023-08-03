@@ -221,7 +221,7 @@ function Projects() {
               You have a project for me or want me to work with you? You can easily contact me here!
             </p>
             <Link href="/contact">
-              <button className="py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg">
+              <button className="btn">
                 Contact me
               </button>
             </Link>

@@ -22,13 +22,13 @@ function Header() {
         </Link>
 
         <div className="space-x-4 hidden text-2xl md:flex items-center">
-          {path === "/" || <Link href="/">Homepage</Link>}
-          {path === "/about" || <Link href="/about">About</Link>}
-          {path === "/projects" || <Link href="/projects">Projects</Link>}
-          {path === "/contact" || <Link href="/contact" className="animate-pulse">Contact</Link>}
+          {path === "/" || <Link href="/" className="hover:scale-110 transition-all">Homepage</Link>}
+          {path === "/about" || <Link href="/about" className="hover:scale-110 transition-all">About</Link>}
+          {path === "/projects" || <Link href="/projects" className="hover:scale-110 transition-all">Projects</Link>}
+          {path === "/contact" || <Link href="/contact" className="animate-pulse hover:scale-110 transition-all">Contact</Link>}
 
           <button onClick={() => setTheme(currentMode)}>
-            {theme === "dark" ? <BsSun className="text-[20px]" /> : <BsFillMoonFill className="text-[20px]" />}
+            {theme === "dark" ? <BsSun className="text-[20px] hover:scale-110 transition-all" /> : <BsFillMoonFill className="text-[20px]" />}
           </button>
         </div>
         <Dropdown />

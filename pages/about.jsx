@@ -22,8 +22,8 @@ function About() {
       </Head>
       <Header />
 
-      <div className="w-screen px-4 md:px-10 darkMode lightMode overflow-x-hidden">
-        <section className="max-w-5xl mx-auto py-20 px-4 space-y-20">
+      <div className="w-full px-4 md:px-10 darkMode lightMode ">
+        <section className="max-w-5xl mx-auto py-20 px-4 space-y-20 overflow-x-hidden">
           <AboutPara
             title="Where I'm from"
             para="Originally from Casablanca, Morocco, currently living in
@@ -62,7 +62,7 @@ function About() {
           />
 
           <div className="flex justify-center items-center py-10">
-            <button className="py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg  ">
+            <button className="btn">
               <Link href="/projects" className="font-bold">
                 See my projects
               </Link>
