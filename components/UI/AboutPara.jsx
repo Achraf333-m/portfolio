@@ -12,7 +12,7 @@ function AboutPara({ title, para, Newimage }) {
   return (
     <div className="">
       <h1 className="text-xl font-semibold">{title}</h1>
-      <div className="flex justify-between py-4 space-y-4 flex-col md:flex-row md:space-y-0 md:space-x-4">
+      <div className="flex items-center justify-center md:justify-between py-4 space-y-4 flex-col md:flex-row md:space-y-0 md:space-x-4">
         <p
           data-aos="fade-right"
           data-aos-delay="200"

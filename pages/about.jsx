@@ -34,7 +34,7 @@ function About() {
 
           <div className="">
             <h1 className="text-xl font-semibold">Frontend Development</h1>
-            <div className="flex justify-between py-4 space-y-4 flex-col md:flex-row-reverse md:space-y-0">
+            <div className="flex justify-center items-center md:justify-between py-4 space-y-4 flex-col md:flex-row-reverse md:space-y-0">
               <p
                 data-aos="fade-left"
                 data-aos-delay="500"

@@ -2,7 +2,7 @@ import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { useTheme } from 'next-themes';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RiMenu4Fill } from "react-icons/ri";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
