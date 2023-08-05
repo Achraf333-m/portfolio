@@ -20,9 +20,9 @@ function About() {
       <Head>
         <title>About me</title>
       </Head>
-      <Header />
 
       <div className="w-full px-4 md:px-10 darkMode lightMode ">
+      <Header />
         <section className="max-w-5xl mx-auto py-20 px-4 space-y-20 overflow-x-hidden">
           <AboutPara
             title="Where I'm from"

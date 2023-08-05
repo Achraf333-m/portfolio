@@ -32,8 +32,8 @@ function Projects() {
       <Head>
         <title>My projects</title>
       </Head>
-      <Header />
       <div className="darkMode lightMode">
+      <Header />
         <section className="  flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
           <h1 className="mt-32 mb-20 text-3xl font-semibold">My Projects</h1>
           <div className="pb-44 flex flex-col space-y-4">

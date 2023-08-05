@@ -9,18 +9,15 @@ import { useEffect } from "react";
 
 
 function Header() {
-  const { theme, setTheme } = useTheme('dark');
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
 
-  useEffect(() => {
-    setTheme("dark")
-  }, [])
 
   return (
     <div className="darkMode lightMode">
-      <div className="flex border-b-2 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">
+      <div className="flex border-b-2 scale-90 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">
         <Link href="/">
           <Image priority alt="website-logo" src={Logo} height={100} width={100} className="rounded-2xl" />
         </Link>
@@ -32,7 +29,7 @@ function Header() {
           {path === "/contact" || <Link href="/contact" className="animate-pulse hover:scale-110 transition-all">Contact</Link>}
 
           <button onClick={() => setTheme(currentMode)}>
-            {theme === "dark" ? <BsSun className="text-[20px] hover:scale-110 transition-all" /> : <BsFillMoonFill className="text-[20px]" />}
+            {currentMode === "dark" ? <BsFillMoonFill className="text-[20px]" /> : <BsSun className="text-[20px] hover:scale-110 transition-all" />}
           </button>
         </div>
         <Dropdown />

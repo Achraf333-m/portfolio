@@ -1,43 +1,39 @@
-import Button from '@mui/material/Button'
-import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react'
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Dropdown() {
-  const [anchorEl, setAnchorEl] = useState(null)
-  const { theme, setTheme } = useTheme()
+  const [anchorEl, setAnchorEl] = useState(null);
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const path = router.pathname;
-  const currentMode = theme === 'dark' ? 'light' : 'dark'
-  const open = Boolean(anchorEl)
+  const currentMode = theme === "dark" ? "light" : "dark";
+  const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleClose = () => {
-    setAnchorEl(null)
-  }
-
-  useEffect(() => {
-    setTheme("dark")
-  }, [])
+    setAnchorEl(null);
+  };
 
   return (
     <div className="md:!hidden">
       <Button
         id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         className="!capitalize !text-white"
       >
-        <RiMenu4Fill className="text-2xl text-black dark:text-white"/>
+        <RiMenu4Fill className="text-2xl text-black dark:text-white" />
       </Button>
       <Menu
         id="basic-menu"
@@ -46,23 +42,43 @@ export default function Dropdown() {
         onClose={handleClose}
         className="menu"
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          "aria-labelledby": "basic-button",
         }}
       >
-        {path === '/' || <Link href="/">
-        <MenuItem>Homepage</MenuItem>
-        </Link>}
-        {path === '/about' || <Link href="/about">
-        <MenuItem>About</MenuItem>
-        </Link>}
-        {path === '/projects' || <Link href="/projects">
-        <MenuItem>Projects</MenuItem>
-        </Link>}
-        {path === '/contact' || <Link href="/contact">
-        <MenuItem className='font-bold animate-pulse'>Contact</MenuItem>
-        </Link>}
-        <MenuItem onClick={() => setTheme(currentMode)}>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</MenuItem>
+        <div>
+          {path === "/" || (
+            <Link href="/">
+              <MenuItem>Homepage</MenuItem>
+            </Link>
+          )}
+        </div>
+        <div>
+          {path === "/about" || (
+            <Link href="/about">
+              <MenuItem>About</MenuItem>
+            </Link>
+          )}
+        </div>
+        <div>
+          {path === "/projects" || (
+            <Link href="/projects">
+              <MenuItem>Projects</MenuItem>
+            </Link>
+          )}
+        </div>
+        <div>
+          {path === "/contact" || (
+            <Link href="/contact">
+              <MenuItem className="font-bold animate-pulse">Contact</MenuItem>
+            </Link>
+          )}
+        </div>
+        <div>
+          <MenuItem onClick={() => setTheme(currentMode)}>
+            {currentMode === "dark" ? "Dark Mode" : "Light Mode"}
+          </MenuItem>
+        </div>
       </Menu>
     </div>
-  )
+  );
 }
