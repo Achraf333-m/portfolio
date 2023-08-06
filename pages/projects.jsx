@@ -25,7 +25,7 @@ import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
-    AOS.init({ duration:2000, once: true });
+    AOS.init({ duration:1500, once: true });
   }, []);
   return (
     <>

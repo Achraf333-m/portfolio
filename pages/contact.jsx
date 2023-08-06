@@ -50,7 +50,7 @@ function Contact() {
           <p className="opacity-50 text-sm md:text-md text-center">
             You can use the form under or email me at{" "}
             <span className="text-yellow-800 dark:text-yellow-200">
-              achrafdaimallah2003@gmail.com
+              ash@achrafdaimallah.com
             </span>{" "}
             <br /> You can also call me at{" "}
             <span className="text-yellow-800 dark:text-yellow-200">+1 (438) 725-5776</span>
