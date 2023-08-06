@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null);
-  const { theme, setTheme } = useTheme('light');
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
@@ -76,7 +76,7 @@ export default function Dropdown() {
         </div>
         <div>
           <MenuItem onClick={() => {setTheme(currentMode); setDark(!dark)}}>
-            {currentMode === "dark" ? "Dark Mode" : "Light Mode"}
+            {dark ? "Light Mode" : "Dark Mode"}
           </MenuItem>
         </div>
       </Menu>

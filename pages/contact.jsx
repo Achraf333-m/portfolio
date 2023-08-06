@@ -43,7 +43,7 @@ function Contact() {
       <Header />
       <section
         data-aos="fade-in"
-        className="darkMode w-full overflow-x-hidden lightMode h-screen pt-12 md:pt-40 px-10 md:px-14"
+        className="darkMode w-full overflow-x-hidden lightMode h-screen pt-12 md:pt-10 px-10 md:px-14"
       >
         <div className="flex flex-col justify-center items-center mb-10" data-aos="fade-left"
             data-aos-delay="1000" >
@@ -100,10 +100,10 @@ function Contact() {
               className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none"
             />
           </div>
-          <div className="flex items-center justify-center md:justify-start">
+          <div className="flex items-center justify-center md:justify-start" >
             <button
               data-aos="fade-right"
-              data-aos-delay="500"
+              data-aos-delay="800"
               type="submit"
               className="btn"
             >

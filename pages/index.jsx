@@ -6,13 +6,11 @@ import { FaArrowRight, FaGithub } from "react-icons/fa";
 import { AiOutlineFile } from "react-icons/ai";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
   const [title, setTitle] = useState();
-  const { theme, setTheme } = useTheme();
   useEffect(() => {
     setTitle(true);
     setTimeout(() => {
@@ -27,7 +25,7 @@ export default function Home() {
         <title>Achraf Daimallah</title>
       </Head>
       <Header />
-      <div className="darkMode lightMode">
+      <div className="lightMode darkMode">
         <main className="relative h-screen flex flex-col pt-20 px-10 max-w-5xl mx-auto dark:text-white">
           <h1
             data-aos="fade-up"

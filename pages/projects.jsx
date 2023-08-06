@@ -25,7 +25,7 @@ import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ duration:2000, once: true });
   }, []);
   return (
     <>
@@ -34,17 +34,17 @@ function Projects() {
       </Head>
       <div className="darkMode lightMode">
       <Header />
-        <section className="  flex flex-col max-w-6xl pt-10 mx-auto px-10 overflow-hidden">
-          <h1 className="mt-32 mb-20 text-3xl font-semibold">My Projects</h1>
+        <section className="  flex flex-col max-w-6xl mx-auto px-10 overflow-hidden">
+          <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">My Projects</h1>
           <div className="pb-44 flex flex-col space-y-4">
-            <h3 className="font-light text-4xl">some of my clones:</h3>
+            <h3 className="font-light text-4xl" data-aos="fade-in" data-aos-delay="300">some of my clones:</h3>
             <br />
-            <p className="text-xl">
+            <p className="text-xl" data-aos="fade-in" data-aos-delay="500">
               These projects were made using various APIs, CD/CI, libraries, frameworks and some backend as well.
             </p>
             <div data-aos="fade-in" className="space-y-10">
               <div className="">
-                <h1 className="text-3xl">Netflix</h1> 
+                <h1 className="text-3xl" data-aos="fade-in" data-aos-delay="300">Netflix</h1> 
                 <p>NextJS, TypeScript, TailwindCSS, MUI, Firebase</p>
                 <Links
                   Wlink="https://netflix-cloned-one.vercel.app/"

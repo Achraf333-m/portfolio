@@ -5,15 +5,19 @@ import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import Dropdown from "./Dropdown";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function Header() {
-  const { theme, setTheme } = useTheme('light');
+  const { theme, setTheme } = useTheme();
   const [dark, setDark] = useState(false)
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
+
+  useEffect(() => {
+    console.log(dark)
+  }, [])
 
 
   return (
