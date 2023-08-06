@@ -103,7 +103,7 @@ function Contact() {
           <div className="flex items-center justify-center md:justify-start">
             <button
               data-aos="fade-right"
-              data-aos-delay="1500"
+              data-aos-delay="500"
               type="submit"
               className="btn"
             >

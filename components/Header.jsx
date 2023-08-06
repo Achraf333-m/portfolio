@@ -5,11 +5,12 @@ import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import Dropdown from "./Dropdown";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useState } from "react";
 
 
 function Header() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme('light');
+  const [dark, setDark] = useState(false)
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
@@ -28,8 +29,8 @@ function Header() {
           {path === "/projects" || <Link href="/projects" className="hover:scale-110 transition-all">Projects</Link>}
           {path === "/contact" || <Link href="/contact" className="animate-pulse hover:scale-110 transition-all">Contact</Link>}
 
-          <button onClick={() => setTheme(currentMode)}>
-            {currentMode === "dark" ? <BsFillMoonFill className="text-[20px]" /> : <BsSun className="text-[20px] hover:scale-110 transition-all" />}
+          <button className="hover:scale-110 transition-all" onClick={() => {setTheme(currentMode); setDark(!dark)}}>
+            {dark ? <BsSun className="text-[20px] " /> : <BsFillMoonFill className="text-[20px]" />}
           </button>
         </div>
         <Dropdown />

@@ -2,18 +2,19 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme('light');
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
   const open = Boolean(anchorEl);
+  const [dark, setDark] = useState(false)
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -74,7 +75,7 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          <MenuItem onClick={() => setTheme(currentMode)}>
+          <MenuItem onClick={() => {setTheme(currentMode); setDark(!dark)}}>
             {currentMode === "dark" ? "Dark Mode" : "Light Mode"}
           </MenuItem>
         </div>
