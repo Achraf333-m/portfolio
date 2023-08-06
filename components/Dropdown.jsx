@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -23,6 +23,18 @@ export default function Dropdown() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    darkMode()
+  }, []);
+
+  const darkMode = () => {
+    if (currentMode !== 'dark') {
+      setDark(true)
+    } else {
+      setDark(false)
+    }
+  }
 
   return (
     <div className="md:!hidden">

@@ -7,34 +7,76 @@ import Dropdown from "./Dropdown";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-
 function Header() {
   const { theme, setTheme } = useTheme();
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
   const router = useRouter();
   const path = router.pathname;
   const currentMode = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
-    console.log(dark)
-  }, [])
+    darkMode()
+  }, []);
 
+  const darkMode = () => {
+    if (currentMode !== 'dark') {
+      setDark(true)
+    } else {
+      setDark(false)
+    }
+  }
 
   return (
     <div className="darkMode lightMode">
       <div className="flex border-b-2 scale-90 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">
         <Link href="/">
-          <Image priority alt="website-logo" src={Logo} height={100} width={100} className="rounded-2xl" />
+          <Image
+            priority
+            alt="website-logo"
+            src={Logo}
+            height={100}
+            width={100}
+            className="rounded-2xl"
+          />
         </Link>
 
         <div className="space-x-4 hidden text-2xl md:flex items-center">
-          {path === "/" || <Link href="/" className="hover:scale-110 transition-all">Homepage</Link>}
-          {path === "/about" || <Link href="/about" className="hover:scale-110 transition-all">About</Link>}
-          {path === "/projects" || <Link href="/projects" className="hover:scale-110 transition-all">Projects</Link>}
-          {path === "/contact" || <Link href="/contact" className="animate-pulse hover:scale-110 transition-all">Contact</Link>}
+          {path === "/" || (
+            <Link href="/" className="hover:scale-110 transition-all">
+              Homepage
+            </Link>
+          )}
+          {path === "/about" || (
+            <Link href="/about" className="hover:scale-110 transition-all">
+              About
+            </Link>
+          )}
+          {path === "/projects" || (
+            <Link href="/projects" className="hover:scale-110 transition-all">
+              Projects
+            </Link>
+          )}
+          {path === "/contact" || (
+            <Link
+              href="/contact"
+              className="animate-pulse hover:scale-110 transition-all"
+            >
+              Contact
+            </Link>
+          )}
 
-          <button className="hover:scale-110 transition-all" onClick={() => {setTheme(currentMode); setDark(!dark)}}>
-            {dark ? <BsSun className="text-[20px] " /> : <BsFillMoonFill className="text-[20px]" />}
+          <button
+            className="hover:scale-110 transition-all"
+            onClick={() => {
+              setTheme(currentMode);
+              setDark(!dark);
+            }}
+          >
+            {dark ? (
+              <BsSun className="text-[20px] " />
+            ) : (
+              <BsFillMoonFill className="text-[20px]" />
+            )}
           </button>
         </div>
         <Dropdown />

@@ -96,7 +96,7 @@ function Contact() {
               type="text"
               name="message"
               rows={5}
-              placeholder="I think i'd enjoy working with you, let me know when you're available for an interview!"
+              placeholder="I think I'd enjoy working with you, let me know when you're available for an interview!"
               className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none"
             />
           </div>
