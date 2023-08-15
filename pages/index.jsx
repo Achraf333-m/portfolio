@@ -55,7 +55,7 @@ export default function Home() {
             <a  data-aos="fade-up" data-aos-delay="900" href="https://github.com/Achraf333-m" target="_blank">
               <FaGithub className="hover:scale-125 transition-all" />
             </a>
-            <a  data-aos="fade-up" data-aos-delay="1000" href="https://drive.google.com/file/d/1EesymsR7l8CuZr9tBzg7a2r-u7ZHqaIC/view?usp=sharing" target="_blank">
+            <a  data-aos="fade-up" data-aos-delay="1000" href="https://drive.google.com/file/d/1IDzk5z3P6jxtfHDMHZvwP5f5Dp8tZ7xG/view?usp=sharing" target="_blank">
               <AiOutlineFile className="hover:scale-125 transition-all" />
             </a>
           </div>
