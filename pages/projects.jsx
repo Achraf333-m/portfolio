@@ -30,13 +30,17 @@ function Projects() {
     AOS.init({ duration: 1500, once: true });
   }, []);
   return (
-    <>
+    <div className="w-full h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
       <Head>
         <title>My projects</title>
       </Head>
+      <img
+        src="/background.jpg"
+        className="fixed -z-20 opacity-60 w-full h-full object-cover"
+      />
       <div className="darkMode lightMode">
         <Header />
-        <section className="  flex flex-col max-w-6xl mx-auto px-10 overflow-hidden">
+        <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">
             My Projects
           </h1>
@@ -246,7 +250,7 @@ function Projects() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }
 

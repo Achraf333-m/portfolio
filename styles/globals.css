@@ -18,14 +18,8 @@
   .hover-transition {
     @apply border-2 border-white rounded-lg h-auto md:w-[calc(100%)] lg:w-[calc(100%/3)]  w-full;
   }
-  .lightMode {
-    @apply bg-gradient-to-r from-yellow-100  to-white
-  }
-  .darkMode {
-    @apply bg-gradient-to-r dark:from-yellow-800  dark:to-black
-  }
   .btn {
-    @apply py-2 px-10 text-yellow-500 dark:text-black bg-black dark:bg-yellow-500 max-w-lg rounded-lg
+    @apply py-2 px-10 bg-gradient-to-l text-yellow-500 dark:text-pink-50 bg-black dark:from-yellow-700 dark:to-black max-w-lg rounded-lg
   }
   .menu {
     @apply mt-4 mr-4;

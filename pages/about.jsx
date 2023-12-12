@@ -10,67 +10,28 @@ import frontend from "@/public/frontend.png";
 import simplicity from "@/public/simplicity.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ChatBox from "@/components/chatbox";
 
 function About() {
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
   }, []);
   return (
-    <>
+    <div className="w-full h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
       <Head>
         <title>About me</title>
       </Head>
-
-      <div className="w-full px-4 md:px-10 darkMode lightMode ">
-      <Header />
-        <section className="max-w-5xl mx-auto py-20 px-4 space-y-20 overflow-x-hidden">
-          <AboutPara
-            title="Where I'm from"
-            para="Originally from Casablanca, Morocco, currently living in
-            Montreal, Canada and have been for 8 years. It's a beautiful
-            city, full of good people and amazing oppurtunities."
-            Newimage={montreal}
-          />
-
-          <div className="">
-            <h1 className="text-xl font-semibold">Frontend Development</h1>
-            <div className="flex justify-center items-center md:justify-between py-4 space-y-4 flex-col md:flex-row-reverse md:space-y-0">
-              <p
-                data-aos="fade-left"
-                data-aos-delay="500"
-                className="md:w-[500px] text-xl ml-4"
-              >
-                I love frontend Development because it's what everyone sees at
-                first, all of that code, the hours spent looking for a library,
-                debugging a problem only to realize hours later that it was a
-                typo lying somewhere undetected, coming together to form a
-                beautiful expression that we call websites
-              </p>
-              <Image
-                data-aos="fade-left"
-                src={frontend}
-                alt="section-image"
-                className="rounded-lg h-60 w-full md:w-[50%] "
-              />
-            </div>
-          </div>
-
-          <AboutPara
-            title="Simplicity"
-            para="The thing I love most about solving problems is how simpler you can make them once you understand how they work, solving a problem becomes just another step that leads to the real goal which is optimisation."
-            Newimage={simplicity}
-          />
-
-          <div className="flex justify-center items-center py-10">
-            <button className="btn">
-              <Link href="/projects" className="font-bold">
-                See my projects
-              </Link>
-            </button>
-          </div>
+      <img
+        src="/background.jpg"
+        className="fixed -z-20 opacity-60 w-full h-full object-cover"
+      />
+      <div className="w-full px-2 md:px-4 darkMode lightMode ">
+        <Header />
+        <section className="max-w-5xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
+          <ChatBox />
         </section>
       </div>
-    </>
+    </div>
   );
 }
 

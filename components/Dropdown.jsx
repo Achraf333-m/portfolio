@@ -68,7 +68,7 @@ export default function Dropdown() {
         <div>
           {path === "/about" || (
             <Link href="/about">
-              <MenuItem>About</MenuItem>
+              <MenuItem>AshBot</MenuItem>
             </Link>
           )}
         </div>

@@ -4,8 +4,8 @@ import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 export default function MyApp({ Component, pageProps }) {
 
   return (
-    <ThemeProvider enableSystem={false} defaultTheme = 'light' attribute="class">
-      <MouseTrail className="hidden md:inline-block" strokeColor={"#B59410"} lineWidthStart={20} lineDuration={100} lag={.9}/>
+    <ThemeProvider enableSystem={false} defaultTheme = 'dark' attribute="class">
+      <MouseTrail className="hidden md:inline-block" strokeColor={"#c89700"} lineWidthStart={10} lineDuration={100} lag={.95}/>
       <Component {...pageProps}/>
     </ThemeProvider>
   );

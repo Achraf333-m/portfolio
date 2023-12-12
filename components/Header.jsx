@@ -25,10 +25,31 @@ function Header() {
       setDark(false)
     }
   }
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      });
+    };
+  }, []);
 
   return (
-    <div className="darkMode lightMode">
-      <div className="flex border-b-2 scale-90 border-white/40 justify-between max-w-6xl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl">
+    <div className={ `${scrolled && 'bg-black/80'} transition-all duration-300 fixed top-0 left-0 right-0`}>
+      <div className={`flex text-pink-50 scale-90 ${scrolled ? 'border-b-0 border-white/0' : 'border-b-2 border-white/40'} transition-all duration-300 justify-between max-w-7xlxl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl`}>
         <Link href="/">
           <Image
             priority
@@ -48,7 +69,7 @@ function Header() {
           )}
           {path === "/about" || (
             <Link href="/about" className="hover:scale-110 transition-all">
-              About
+              AshBot
             </Link>
           )}
           {path === "/projects" || (
