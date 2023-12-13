@@ -63,7 +63,7 @@ export default function Home() {
             href="/about"
             className="flex space-x-4 max-w-xs items-center my-10"
           >
-            <h3 className="hover:scale-110 text-xl text-pink-50 font-extralight">
+            <h3 className="hover:scale-[102%] transition-all duration-300 text-xl text-pink-50 font-extralight">
               Learn a bit more about me
             </h3>
             <FaArrowRight className="animate-ping text-xs" />

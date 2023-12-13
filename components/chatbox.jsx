@@ -13,7 +13,7 @@ const ChatBox = () => {
     const msg1 = { name: "Me", message: inputText };
     setMessages([...messages, msg1]);
 
-    fetch(`http://127.0.0.1:8888/chatbot`, {
+    fetch(`https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot`, {
       method: "POST",
       body: JSON.stringify({ message: inputText }),
       headers: {
