@@ -85,6 +85,14 @@ function Header() {
               Contact
             </Link>
           )}
+          {path === "/education" || (
+            <Link
+              href="/education"
+              className="hover:scale-110 transition-all"
+            >
+              Education
+            </Link>
+          )}
 
           <button
             className="hover:scale-110 transition-all"

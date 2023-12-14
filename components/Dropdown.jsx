@@ -87,6 +87,13 @@ export default function Dropdown() {
           )}
         </div>
         <div>
+          {path === "/education" || (
+            <Link href="/education">
+              <MenuItem>Education</MenuItem>
+            </Link>
+          )}
+        </div>
+        <div>
           <MenuItem onClick={() => {setTheme(currentMode); setDark(!dark)}}>
             {dark ? "Light Mode" : "Dark Mode"}
           </MenuItem>

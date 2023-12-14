@@ -50,7 +50,7 @@ function Projects() {
               data-aos="fade-in"
               data-aos-delay="300"
             >
-              some of my clones:
+              some of my ---:
             </h3>
             <br />
             <p className="text-xl" data-aos="fade-in" data-aos-delay="500">
@@ -64,12 +64,12 @@ function Projects() {
                   data-aos="fade-in"
                   data-aos-delay="300"
                 >
-                  Netflix
+                  MovieFlix
                 </h1>
                 <p>NextJS, TypeScript, TailwindCSS, MUI, Firebase</p>
                 <Links
-                  Wlink="https://netflix-cloned-one.vercel.app/"
-                  Glink="https://github.com/Achraf333-m/Netflix-cloned"
+                  Wlink="https://mov-flix-rlt40hbt0-achraf333-m.vercel.app/"
+                  Glink="https://github.com/Achraf333-m/mov-flix"
                 />
                 <div className="project-style">
                   <Image

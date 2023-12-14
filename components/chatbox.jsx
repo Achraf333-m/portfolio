@@ -1,10 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
 const ChatBox = () => {
-  const [state, setState] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState("");
 
+  const onKeyUp = (e) => {
+    if (e.key === "Enter") {
+      onSendButton();
+      setInputText("");
+      setLoading(true);
+    }
+  };
   const onSendButton = () => {
     if (inputText === "") {
       return;
@@ -22,13 +29,15 @@ const ChatBox = () => {
     })
       .then((r) => r.json())
       .then((response) => {
-        const msg2 = { name: "AshBot", message: response.response };
         setInputText("");
+        const msg2 = { name: "AshBot", message: response.response };
+        setLoading(false);
         setMessages((prevMessages) => [...prevMessages, msg2]);
       })
       .catch((error) => {
         console.error("Error:", error);
         setInputText("");
+        setLoading(false);
       });
   };
 
@@ -44,7 +53,7 @@ const ChatBox = () => {
           {messages.length > 0 ? (
             messages.map((item, index) => (
               <div
-              key={index}
+                key={index}
                 className={`flex p-2 space-y-2 ${
                   item.name === "AshBot" ? "flex-row" : "flex-row-reverse"
                 }`}
@@ -55,15 +64,14 @@ const ChatBox = () => {
                       ? "bg-blue-400/20 rounded-tr-md rounded-b-md"
                       : "bg-yellow-700/20 rounded-tl-md rounded-b-md"
                   }`}
-                 
                 >
                   <p className="text-md break-all">{item.message}</p>
                 </div>
-                <div ref={ref}/>
+                <div ref={ref} />
               </div>
             ))
-            ) : (
-              <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
+          ) : (
+            <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
               <p className="text-center text-xl text-pink-50/60">
                 This is AshBot, you can ask him questions like "how are you",
                 "tell me about you", "where are you from?", "what can you do"
@@ -83,19 +91,30 @@ const ChatBox = () => {
             </div>
           )}
         </div>
-
         <div className="fixed left-0 right-0 bottom-20 z-20 w-[70%] m-auto">
+          {loading && (
+            <h1 className="text-pink-50/70 p-2 animate-pulse">
+              Waiting for Ashbot...
+            </h1>
+          )}
           <div className="flex justify-center items-center w-full space-x-2">
             <input
               type="text"
               value={inputText}
               className=" bg-black/20 text-pink-50 w-full outline-none rounded-md px-8 py-2"
-              placeholder="chat with me"
+              placeholder="Chat with me"
               onChange={(e) => setInputText(e.target.value)}
-              onKeyUp={(e) => e.key === "Enter" && onSendButton()}
+              onKeyUp={onKeyUp}
             />
 
-            <button className="btn" onClick={onSendButton}>
+            <button
+              className="btn"
+              onClick={() => {
+                onSendButton();
+                setInputText("");
+                setLoading(true);
+              }}
+            >
               Send
             </button>
           </div>

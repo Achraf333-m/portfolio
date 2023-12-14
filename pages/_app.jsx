@@ -1,5 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
+import '@/styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
 
