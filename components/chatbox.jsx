@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const ChatBox = () => {
   const [loading, setLoading] = useState(false);
@@ -74,7 +76,10 @@ const ChatBox = () => {
             <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
               <p className="text-center text-xl text-pink-50/60">
                 This is AshBot, you can ask him questions like "how are you",
-                "tell me about you", "where are you from?", "what can you do"
+                "tell me about you", "where are you from?", "what can you do"{" "}
+                <br />
+                *For the first message you send, Ashbot takes longer to respond
+                because he's shy*
               </p>
               <p className="text-center text-lg text-pink-50/60">
                 This model is simple and was intended as a first step into
@@ -101,6 +106,7 @@ const ChatBox = () => {
             <input
               type="text"
               value={inputText}
+              disabled={loading}
               className=" bg-black/20 text-pink-50 w-full outline-none rounded-md px-8 py-2"
               placeholder="Chat with me"
               onChange={(e) => setInputText(e.target.value)}

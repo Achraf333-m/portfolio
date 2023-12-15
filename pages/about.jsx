@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
-import Link from "next/link";
 import "@/styles/globals.css";
 import Head from "next/head";
-import montreal from "@/public/montreal2.jpg";
-import Image from "next/image";
-import AboutPara from "@/components/UI/AboutPara";
-import frontend from "@/public/frontend.png";
-import simplicity from "@/public/simplicity.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ChatBox from "@/components/chatbox";

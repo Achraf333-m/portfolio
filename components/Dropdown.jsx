@@ -87,9 +87,9 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          {path === "/education" || (
-            <Link href="/education">
-              <MenuItem>Education</MenuItem>
+          {path === "/certificates" || (
+            <Link href="/certificates">
+              <MenuItem>Certificates</MenuItem>
             </Link>
           )}
         </div>

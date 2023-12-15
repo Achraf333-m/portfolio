@@ -72,6 +72,14 @@ function Header() {
               AshBot
             </Link>
           )}
+          {path === "/certificates" || (
+            <Link
+              href="/certificates"
+              className="hover:scale-110 transition-all"
+            >
+              Certificates
+            </Link>
+          )}
           {path === "/projects" || (
             <Link href="/projects" className="hover:scale-110 transition-all">
               Projects
@@ -85,14 +93,7 @@ function Header() {
               Contact
             </Link>
           )}
-          {path === "/education" || (
-            <Link
-              href="/education"
-              className="hover:scale-110 transition-all"
-            >
-              Education
-            </Link>
-          )}
+          
 
           <button
             className="hover:scale-110 transition-all"
