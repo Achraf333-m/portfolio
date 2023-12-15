@@ -8,7 +8,7 @@ import movflixhome from "@/public/movflix-home.png";
 import bookSpace from "@/public/bookSpace.png";
 import spaceHome from "@/public/spaceHome.png";
 import spacePlanets from "@/public/spacePlanets.png";
-import Ashbot from "@/public/AshBot.png";
+import Ashbot from "@/public/Ashbot.png";
 import Ashbotq1 from "@/public/ashbotQuestion1.png";
 import Ashbotq2 from "@/public/ashbtq2.png";
 import chatapp1 from "@/public/chatapp1.png";
