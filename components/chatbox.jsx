@@ -6,6 +6,7 @@ const ChatBox = () => {
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [noIpt, setNoIpt] = useState(false);
 
   const onKeyUp = (e) => {
     if (e.key === "Enter") {
@@ -14,6 +15,18 @@ const ChatBox = () => {
       setLoading(true);
     }
   };
+
+  const checkInput = () => {
+    if (inputText.length === 0) {
+      setNoIpt(true);
+    } else {
+      setNoIpt(false)
+    }
+  };
+  useEffect(() => {
+    checkInput()
+  }, [inputText])
+
   const onSendButton = () => {
     if (inputText === "") {
       return;
@@ -114,6 +127,7 @@ const ChatBox = () => {
             />
 
             <button
+              disabled={noIpt}
               className="btn"
               onClick={() => {
                 onSendButton();
