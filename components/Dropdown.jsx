@@ -46,7 +46,7 @@ export default function Dropdown() {
         onClick={handleClick}
         className="!capitalize !text-white"
       >
-        <RiMenu4Fill className="text-2xl text-black dark:text-white" />
+        <RiMenu4Fill className="text-2xl " />
       </Button>
       <Menu
         id="basic-menu"

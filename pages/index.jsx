@@ -26,10 +26,10 @@ export default function Home() {
       </Head>
       <img
         src="/background.jpg"
-        className="fixed -z-20 opacity-60 w-full h-full object-cover"
+        className="bgImage"
       />
       <Header />
-      <div className="lightMode darkMode py-40">
+      <div className=" py-40">
         <main className="relative h-full flex flex-col pt-20 px-10 max-w-6xl mx-auto">
           <h1
             data-aos="fade-up"

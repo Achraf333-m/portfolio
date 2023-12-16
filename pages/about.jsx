@@ -17,7 +17,7 @@ function About() {
       </Head>
       <img
         src="/background.jpg"
-        className="fixed -z-20 opacity-60 w-full h-full object-cover"
+        className="bgImage"
       />
       <div className="w-full px-2 md:px-4 darkMode lightMode ">
         <Header />

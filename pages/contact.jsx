@@ -50,7 +50,7 @@ function Contact() {
       </Head>
       <img
         src="/background.jpg"
-        className="fixed -z-20 opacity-60 w-full h-full object-cover"
+        className="bgImage"
       />
       <Header />
       <section
