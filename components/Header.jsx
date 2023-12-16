@@ -49,7 +49,7 @@ function Header() {
 
   return (
     <div className={ `${scrolled && 'bg-black/80'} transition-all duration-300 fixed top-0 left-0 right-0`}>
-      <div className={`flex text-pink-50 scale-90 ${scrolled ? 'border-b-0 border-white/0' : 'border-b-2 border-white/40'} transition-all duration-300 justify-between max-w-7xlxl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl`}>
+      <div className={`flex text-pink-50 scale-90 ${scrolled ? 'border-b-0 border-white/0' : 'border-b-2 border-white/40'} transition-all duration-1000 justify-between max-w-7xlxl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl`}>
         <Link href="/">
           <Image
             priority

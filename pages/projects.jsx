@@ -55,8 +55,8 @@ function Projects() {
               Web="https://mov-flix-rho.vercel.app/"
               description="I made MovieFlix using NextJs, then linked it to my Firebase account
                             to allow users to authenticate themselves. The website also has a 'liked list'
-                            where users can ad their favorite movies, and the list will not vanish when they log out of the app. The moviesa are fetched from The Movie Database and youtube, along with their names and their trailers, and displayed using a Material UI modal.
-                            Note that the subscription goes through the Stripe portal; so, real cards are not admissible. Feel
+                            where users can add their favorite movies, and the list will not vanish when they log out of the app. The movies are fetched from The Movie Database and youtube, along with their names and their trailers, and displayed using a Material UI modal.
+                            Note that the subscription goes through the Stripe test portal; so, real cards are not admissible. Feel
                             free to try it with any test cards you have or you can use '4111 1111
                             1111 1111', any future date and any three digits."
               image1={movflixSubscription}
@@ -68,7 +68,7 @@ function Projects() {
             <Project
               Git="https://github.com/Achraf333-m/chatbot_flask"
               Web="https://www.achrafdaimallah.com/about"
-              description="Ashbot is a project I started after finishing a course on Linear algebra for machine learning, given the comlexity of ML, I couldn't create a model straight out of my mind, so I took it upon myself to look for resources on Medium and Youtube, from where I took the model and studied it then rewrote it and trained it with my data. As of yet, Ashbot is still as young as my knowledge of ML, but I plan on expanding my knowledge and improving it as I go."
+              description="Ashbot is a project I started after finishing the course on Linear algebra for machine learning, given the comlexity of ML, I couldn't create a model straight out of my mind, so I looked for resources like Medium, from where I took the model and studied it then rewrote it and trained it with my data. As of yet, Ashbot is still as young as my knowledge of ML, but I plan on expanding my knowledge and improving it as I go."
               image1={Ashbot}
               image2={Ashbotq1}
               image3={Ashbotq2}
@@ -116,8 +116,8 @@ function Projects() {
               technologies="Vanilla Javascript"
             />
             <Project
-              Git="https://github.com/Achraf333-m/tictatoe"
-              Web="https://achraf333-m.github.io/tictatoe/"
+              Git="https://github.com/Achraf333-m/react-app"
+              Web="https://react-app-rho-six.vercel.app/"
               description="A library app I developed during my frontend bootcamp, it has a collection of books and its users can add books to their cart and see the price they have to pay. There are also filters to simplify finding the right book"
               image1={libraryApp}
               image2={libraryCart}

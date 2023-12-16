@@ -8,6 +8,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BiWinkSmile } from "react-icons/bi";
 
 export default function Home() {
   const [title, setTitle] = useState();
@@ -91,6 +92,14 @@ export default function Home() {
               target="_blank"
             >
               <AiOutlineFile className="hover:scale-125 transition-all" />
+            </a>
+            <a
+              data-aos="fade-up"
+              data-aos-delay="1000"
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              target="_blank"
+            >
+              <BiWinkSmile className="hover:scale-125 transition-all" />
             </a>
             
           </div>

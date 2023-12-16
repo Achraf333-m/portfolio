@@ -86,7 +86,7 @@ function Education() {
                   I took this course as a way to start my journey into web
                   development, In it, it taught me JavaScript, HTML and CSS and
                   introduced me to React. I have improved my skills since then
-                  and used other resources to and technologies.
+                  and used other resources and technologies.
                 </p>
               </div>
               <div className="flex flex-col justify-center md:w-[50%] items-center">
