@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider enableSystem={false} defaultTheme="light" attribute="class">
+    <ThemeProvider enableSystem={false} defaultTheme="dark" attribute="class">
       <MouseTrail
         className="hidden md:inline-block"
         strokeColor={"#c89700"}

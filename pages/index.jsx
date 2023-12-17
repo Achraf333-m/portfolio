@@ -31,7 +31,7 @@ export default function Home() {
       />
       <Header />
       <div className=" py-40">
-        <main className="relative h-full flex flex-col pt-20 px-10 max-w-6xl mx-auto">
+        <main className="relative h-screen flex flex-col pt-20 px-10 max-w-6xl mx-auto">
           <h1
             data-aos="fade-up"
             className=" text-pink-50 font-light text-[30px] sm:text-[55px] pb-2"
