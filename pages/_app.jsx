@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
         strokeColor={"#c89700"}
         lineWidthStart={10}
         lineDuration={100}
-        lag={0.95}
+        lag={0.85}
       />
       <div className="bg-container">
         <Component {...pageProps} />

@@ -67,11 +67,6 @@ function Header() {
               Homepage
             </Link>
           )}
-          {path === "/about" || (
-            <Link href="/about" className="hover:scale-110 transition-all">
-              AshBot
-            </Link>
-          )}
           {path === "/certificates" || (
             <Link
               href="/certificates"
@@ -83,6 +78,11 @@ function Header() {
           {path === "/projects" || (
             <Link href="/projects" className="hover:scale-110 transition-all">
               Projects
+            </Link>
+          )}
+          {path === "/about" || (
+            <Link href="/about" className="hover:scale-110 transition-all">
+              AshBot
             </Link>
           )}
           {path === "/contact" || (

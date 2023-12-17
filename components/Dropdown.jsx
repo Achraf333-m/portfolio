@@ -66,9 +66,9 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          {path === "/about" || (
-            <Link href="/about">
-              <MenuItem>AshBot</MenuItem>
+          {path === "/certificates" || (
+            <Link href="/certificates">
+              <MenuItem>Certificates</MenuItem>
             </Link>
           )}
         </div>
@@ -80,16 +80,16 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          {path === "/contact" || (
-            <Link href="/contact">
-              <MenuItem className="font-bold animate-pulse">Contact</MenuItem>
+          {path === "/about" || (
+            <Link href="/about">
+              <MenuItem>AshBot</MenuItem>
             </Link>
           )}
         </div>
         <div>
-          {path === "/certificates" || (
-            <Link href="/certificates">
-              <MenuItem>Certificates</MenuItem>
+          {path === "/contact" || (
+            <Link href="/contact">
+              <MenuItem className="font-bold animate-pulse">Contact</MenuItem>
             </Link>
           )}
         </div>
