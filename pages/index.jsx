@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BiWinkSmile } from "react-icons/bi";
+import { SiFiverr } from "react-icons/si";
 
 export default function Home() {
   const [title, setTitle] = useState();
@@ -25,10 +26,7 @@ export default function Home() {
       <Head>
         <title>Achraf Daimallah</title>
       </Head>
-      <img
-        src="/background.jpg"
-        className="bgImage"
-      />
+      <img src="/background.jpg" className="bgImage" />
       <Header />
       <div className=" py-40">
         <main className="relative flex flex-col pt-20 px-10 max-w-6xl mx-auto">
@@ -68,7 +66,7 @@ export default function Home() {
             </h3>
             <FaArrowRight className="animate-ping text-xs" />
           </Link>
-          <div className="flex space-x-4 text-pink-50">
+          <div className="flex items-center space-x-4 text-pink-50">
             <a
               data-aos="fade-up"
               data-aos-delay="800"
@@ -96,12 +94,19 @@ export default function Home() {
             <a
               data-aos="fade-up"
               data-aos-delay="1000"
+              href="https://www.fiverr.com/adone633/design-and-code-your-website-from-scratch?gig_id=334145740&utm_campaign=base_gig_create_share&utm_content=&utm_medium=shared&utm_source=get_url&utm_term=&view=gig"
+              target="_blank"
+            >
+              <SiFiverr className="hover:scale-125 transition-all w-7 h-7" />
+            </a>
+            <a
+              data-aos="fade-up"
+              data-aos-delay="1000"
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               target="_blank"
             >
               <BiWinkSmile className="hover:scale-125 transition-all" />
             </a>
-            
           </div>
         </main>
       </div>
