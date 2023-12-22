@@ -13,6 +13,10 @@ import py1 from "@/public/py1.png";
 import py2 from "@/public/py2.png";
 import py3 from "@/public/py3.png";
 
+import htb1 from "@/public/htb1.png";
+import htb2 from "@/public/htb2.png";
+import htb3 from "@/public/htb3.png";
+
 import la1 from "@/public/la1.png";
 import la2 from "@/public/la2.png";
 import la3 from "@/public/la3.png";
@@ -107,6 +111,15 @@ function Education() {
                 </p>
               </div>
             </div>
+            <Cert
+              image1={htb1}
+              image2={htb2}
+              image3={htb3}
+              title="Hack The Box"
+              subtitle="Academy"
+              link="https://1drv.ms/b/s!AuUrkB1ZqcWGtJgFyzFN_Z3LbwA69Q?e=7Zvp9h"
+              desc="I am taking the course as a way to expand my knowledge in cybersecurity and learn what pen-testers beed to know in the real world"
+            />
             <div className="space-y-4 md:space-y-0 flex flex-col md:flex-row md:space-x-4 items-center justify-center py-10 mb-20">
             
             <Link href="/projects">
