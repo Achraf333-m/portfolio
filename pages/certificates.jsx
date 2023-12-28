@@ -99,7 +99,7 @@ function Education() {
                 <a
                   className="animate-pulse mb-2 hover:text-pink-200"
                   target="_blank"
-                  href="https://coursera.org/share/e9b3114fc90c3e220f513639196e8483"
+                  href="https://coursera.org/share/ac7f3de06ad6ec2e9bd9d0f7976995f2"
                 >
                   See progression here
                 </a>
