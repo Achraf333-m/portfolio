@@ -19,7 +19,7 @@
     @apply border-2 border-white rounded-lg h-auto md:w-[calc(100%)] lg:w-[calc(100%/3)]  w-full;
   }
   .btn {
-    @apply py-2 px-10 bg-gradient-to-l text-yellow-500 dark:text-pink-50 bg-black dark:from-yellow-700 dark:to-black max-w-lg rounded-lg
+    @apply py-2 px-10 bg-gradient-to-l text-pink-50 dark:text-pink-50  from-black to-yellow-700 dark:from-yellow-700 dark:to-black max-w-lg rounded-lg
   }
   .menu {
     @apply mt-4 mr-4;

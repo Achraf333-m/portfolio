@@ -55,28 +55,24 @@ function Contact() {
       <Header />
       <section
         data-aos="fade-in"
-        className="w-full overflow-x-hidden h-screen pt-40 px-10 md:px-14"
+        className="w-full overflow-x-hidden h-screen pt-60 px-10 md:px-14"
       >
         <div
           className="flex flex-col justify-center items-center mb-10"
           data-aos="fade-left"
           data-aos-delay="1000"
         >
-          <p className="opacity-50 text-sm md:text-md text-center">
+          <p className="opacity-50 text-md md:text-md text-center">
             You can use the form under or email me at{" "}
             <span className="text-yellow-100 dark:text-yellow-200">
               ash@achrafdaimallah.com
             </span>{" "}
-            <br /> You can also call me at{" "}
-            <span className="text-yellow-100 dark:text-yellow-200">
-              +1 (438) 725-5776
-            </span>
           </p>
         </div>
         <form
           ref={form}
           onSubmit={contact}
-          className="flex flex-col justify-center space-y-8 max-w-4xl mx-auto"
+          className="flex flex-col justify-center space-y-8 max-w-4xl py-10 mx-auto"
         >
           <div data-aos="fade-right" className="flex flex-col space-y-4">
             <label>Name</label>
@@ -114,13 +110,13 @@ function Contact() {
               name="message"
               rows={5}
               placeholder="I think I'd enjoy working with you, let me know when you're available for an interview!"
-              className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none"
+              className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
             />
           </div>
           <div className="flex items-center justify-center md:justify-start">
             <button
               disabled={loading}
-              data-aos="fade-in"
+              data-aos="fade-left"
               data-aos-delay="800"
               type="submit"
               className={`btn ${loading && 'brightness-50'}`}

@@ -31,12 +31,12 @@ function Education() {
       <Head>
         <title>Certificates</title>
       </Head>
-      <div className="w-full h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+      <div className="w-full  h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
         <img
           src="/background.jpg"
           className="bgImage"
         />
-        <div className="w-full px-2 md:px-4 darkMode lightMode ">
+        <div className="w-full  px-2 md:px-4 darkMode lightMode ">
           <Header />
           <section className="max-w-5xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
             <h1
