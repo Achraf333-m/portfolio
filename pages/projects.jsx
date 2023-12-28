@@ -43,7 +43,7 @@ function Projects() {
         src="/background.jpg"
         className="bgImage"
       />
-      <div className="darkMode lightMode">
+      <div className=" w-full  px-2 md:px-4">
         <Header />
         <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">

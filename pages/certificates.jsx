@@ -36,9 +36,9 @@ function Education() {
           src="/background.jpg"
           className="bgImage"
         />
-        <div className="w-full  px-2 md:px-4 darkMode lightMode ">
+        <div className="w-full  px-2 md:px-4 ">
           <Header />
-          <section className="max-w-5xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
+          <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
             <h1
               className="mt-16 mb-20 text-3xl font-semibold"
               data-aos="fade-in"

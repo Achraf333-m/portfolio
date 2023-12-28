@@ -10,15 +10,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Contact() {
-  const [loading, setLoading] = useState(false)
-  const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
   }, [sent]);
   const form = useRef();
 
   function contact(event) {
-    setLoading(true)
+    setLoading(true);
     event.preventDefault();
 
     emailjs
@@ -30,10 +30,10 @@ function Contact() {
       )
       .then(() => {
         event.target.reset();
-        setLoading(false)
-        setSent(true)
+        setLoading(false);
+        setSent(true);
         setTimeout(() => {
-          setSent(false)
+          setSent(false);
         }, 1000);
       })
       .catch(() => {
@@ -48,34 +48,25 @@ function Contact() {
       <Head>
         <title>Contact</title>
       </Head>
-      <img
-        src="/background.jpg"
-        className="bgImage"
-      />
+      <img src="/background.jpg" className="bgImage" />
+      <div className="w-full ">
+
       <Header />
       <section
         data-aos="fade-in"
-        className="w-full overflow-x-hidden h-screen pt-60 px-10 md:px-14"
+        className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden"
       >
-        <div
-          className="flex flex-col justify-center items-center mb-10"
-          data-aos="fade-left"
-          data-aos-delay="1000"
-        >
-          <p className="opacity-50 text-md md:text-md text-center">
-            You can use the form under or email me at{" "}
-            <span className="text-yellow-100 dark:text-yellow-200">
-              ash@achrafdaimallah.com
-            </span>{" "}
-          </p>
-        </div>
+        <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">
+          Contact me
+        </h1>
+    
         <form
           ref={form}
           onSubmit={contact}
-          className="flex flex-col justify-center space-y-8 max-w-4xl py-10 mx-auto"
+          className="space-y-8 w-full py-10 mx-auto"
         >
           <div data-aos="fade-right" className="flex flex-col space-y-4">
-            <label>Name</label>
+            <label>Your name</label>
             <input
               required
               type="text"
@@ -89,7 +80,7 @@ function Contact() {
             data-aos-delay="500"
             className="flex flex-col space-y-4"
           >
-            <label>Email</label>
+            <label>Where I can contact you</label>
             <input
               required
               type="email"
@@ -103,7 +94,7 @@ function Contact() {
             data-aos-delay="1000"
             className="flex flex-col space-y-4"
           >
-            <label>Message</label>
+            <label>Your message</label>
             <textarea
               required
               type="text"
@@ -119,14 +110,15 @@ function Contact() {
               data-aos="fade-left"
               data-aos-delay="800"
               type="submit"
-              className={`btn ${loading && 'brightness-50'}`}
+              className={`btn ${loading && "brightness-50"}`}
             >
-              {sent? 'Sent!' : `${loading ? 'Sending...' : 'Send it my way!'}`}
-
+              {sent ? "Sent!" : `${loading ? "Sending..." : "Send it my way!"}`}
             </button>
           </div>
         </form>
       </section>
+
+      </div>
     </div>
   );
 }
