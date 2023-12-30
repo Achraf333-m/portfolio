@@ -41,18 +41,17 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            FRONTEND DEVELOPER
+            FRONT-END DEVELOPER
           </h4>
           <p
             className="pb-2 text-xl font-extralight text-pink-50"
             data-aos="fade-up"
             data-aos-delay="600"
           >
-            I love building simple, user-friendly, and high-performance websites{" "}
-            <br />I know a couple frameworks but NextJS is my favorite
-            currently, along with Tailwind CSS or SCSS for seamless styling.{" "}
+            I love building simple, user-friendly, high-performance websites{" "}
+            <br />I know a couple of frameworks, but NextJS is currently my favorite, along with Tailwind CSS or SCSS for seamless styling.{" "}
             <br />
-            I'm currently learning python and SQL with the goal of broadening my
+            I'm currently learning Python and SQL with the goal of broadening my
             knowledge into the cybersecurity field.
           </p>
           <Link

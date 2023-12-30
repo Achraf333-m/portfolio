@@ -21,7 +21,7 @@ function About() {
       />
       <div className="w-full px-2 md:px-4 darkMode lightMode ">
         <Header />
-        <section className="max-w-5xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
+        <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
           <ChatBox />
         </section>
       </div>

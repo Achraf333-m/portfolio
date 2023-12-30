@@ -52,10 +52,10 @@ function Education() {
               title="Cybersecurity Certificate"
               subtitle="Google"
               link="https://coursera.org/share/bd707781011118048d4ca07ce07614fe"
-              desc=" I am currently on the final course of the certificate. This
+              desc=" I am currently in the final course of the certificate. This
               certificate taught me the basics of cybersecurity, from the protocols
               that govern the virtual world and the laws behind keeping data safe to
-              technologies like Splunk, Google Chronicle and SQL."
+              technologies like Splunk, Google Chronicle, and SQL."
             />
             <Cert
               image1={py1}
@@ -64,20 +64,20 @@ function Education() {
               title="Python for everybody"
               subtitle="Michigan University"
               link="https://www.coursera.org/account/accomplishments/verify/KFR5WMKUR2Q9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-              desc="This course taught me the basics of python, but also getting data from the web through XML and JSON parsing as shown here in some of my projects."
+              desc="This course taught me the basics of Python in addition to obtaining data from the web through XML and JSON parsing as shown here in some of my projects."
             />
             <Cert
               image1={la1}
               image2={la2}
               image3={la3}
-              title="Mathematics for Machine learning - linear algebra"
+              title="Mathematics for Machine Learning - linear algebra"
               subtitle="University of London"
               link="https://www.coursera.org/account/accomplishments/verify/JMUENDFG2S64?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-              desc="Here I was introduced to linear algebra and how it can be used in some algorithms like Page rank. Parts of the assignments were done using Python as shown below"
+              desc="Here, I was introduced to linear algebra and how it can be used in some algorithms such as PageRank. Parts of the assignments were done using Python as shown below"
             />
             <div className="flex flex-col md:flex-row text-center space-y-2 space-x-2 justify-center items-center w-full">
               <div className="flex flex-col justify-center md:w-[50%] items-center">
-                <h1 className="text-xl font-bold">Frontend Development</h1>
+                <h1 className="text-xl font-bold">Front-end Development</h1>
                 <h3 className="font-semibold  ">Frontend Simplified</h3>
                 <a
                   className="animate-pulse mb-2 hover:text-pink-200"
@@ -88,9 +88,8 @@ function Education() {
                 </a>
                 <p className="text-lg font-light text-center">
                   I took this course as a way to start my journey into web
-                  development, In it, it taught me JavaScript, HTML and CSS and
-                  introduced me to React. I have improved my skills since then
-                  and used other resources and technologies.
+                  development. Through this program, I learned JavaScript, HTML and CSS as well as React. I have improved my skills since then
+                  and used other crowd-sourced resources and technologies.
                 </p>
               </div>
               <div className="flex flex-col justify-center md:w-[50%] items-center">
@@ -104,8 +103,8 @@ function Education() {
                   See progression here
                 </a>
                 <p className="text-lg font-light text-center">
-                  I have started this course and I am currently learning more
-                  about python and its procedural, functional and
+                  Through this program, I am currently learning more
+                  about Python and its procedural, functional and
                   object-oriented programming; The course will then move towards
                   servers, databases and technologies like Linux and MySQL.{" "}
                 </p>
@@ -118,7 +117,7 @@ function Education() {
               title="Hack The Box"
               subtitle="Academy"
               link="https://1drv.ms/b/s!AuUrkB1ZqcWGtJgFyzFN_Z3LbwA69Q?e=7Zvp9h"
-              desc="I am taking the course as a way to expand my knowledge in cybersecurity and learn what pen-testers beed to know in the real world"
+              desc="I am taking the course as a way to expand my knowledge in cybersecurity and learn what penetration testers need to know in the real world"
             />
             <div className="space-y-4 md:space-y-0 flex flex-col md:flex-row md:space-x-4 items-center justify-center py-10 mb-20">
             

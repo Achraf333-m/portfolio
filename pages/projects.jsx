@@ -78,7 +78,7 @@ function Projects() {
             <Project
               Git="https://github.com/Achraf333-m/Achraf-internship"
               Web="https://achraf-internship.vercel.app/"
-              description="When I finished my Frontend bootcamp, I was tasked with making a starter-repository on github fully dynamic as a final assignment/virtual internship that taught me version control, branching and pull requests which prepared me to work with other developers in the future. On top of adding logic and animation to this website, I learned how to fork a repository, create pull requests and new branches, and make comments for other developpers to understand my code."
+              description="When I finished my front-end development course, I was tasked with making a starter-repository on github fully dynamic as a final assignment/virtual internship that taught me version control, branching and pull requests which prepared me to work with other developers in the future. On top of adding logic and animation to this website, I learned how to fork a repository, create pull requests and new branches, and make comments for other developpers to understand my code."
               image1={marketplace}
               image2={marketplaceExplore}
               image3={marketplaceFollow}
@@ -118,7 +118,7 @@ function Projects() {
             <Project
               Git="https://github.com/Achraf333-m/react-app"
               Web="https://react-app-rho-six.vercel.app/"
-              description="A library app I developed during my frontend bootcamp, it has a collection of books and its users can add books to their cart and see the price they have to pay. There are also filters to simplify finding the right book"
+              description="A library app I developed during my front-end development bootcamp, it has a collection of books and its users can add books to their cart and see the price they have to pay. There are also filters to simplify finding the right book"
               image1={libraryApp}
               image2={libraryCart}
               image3={loading}

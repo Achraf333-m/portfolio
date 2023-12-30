@@ -64,53 +64,57 @@ const ChatBox = () => {
   return (
     <div className="w-full !overflow-y-hidden">
       <div className=" space-y-10">
-        
-          <div className="bg-white/0 space-y-4 h-72 flex p-4 flex-col overflow-x-hidden overflow-y-scroll scrollbar-thumb-yellow-900 scrollbar-thumb-rounded-md scrollbar-track-black/30 scrollbar-thin">
-            {messages.length > 0 ? (
-              messages.map((item, index) => (
+        <div className="bg-white/0 space-y-4 h-72 flex p-4 flex-col overflow-x-hidden overflow-y-scroll scrollbar-thumb-yellow-900 scrollbar-thumb-rounded-md scrollbar-track-black/30 scrollbar-thin">
+          {messages.length > 0 ? (
+            messages.map((item, index) => (
+              <div
+                key={index}
+                className={`flex p-2 space-y-2 ${
+                  item.name === "AshBot" ? "flex-row" : "flex-row-reverse"
+                }`}
+              >
                 <div
-                  key={index}
-                  className={`flex p-2 space-y-2 ${
-                    item.name === "AshBot" ? "flex-row" : "flex-row-reverse"
+                  className={`py-2 px-4 max-w-sm ${
+                    item.name === "AshBot"
+                      ? "bg-blue-400/20 rounded-tr-md rounded-b-md"
+                      : "bg-yellow-700/20 rounded-tl-md rounded-b-md"
                   }`}
                 >
-                  <div
-                    className={`py-2 px-4 max-w-sm ${
-                      item.name === "AshBot"
-                        ? "bg-blue-400/20 rounded-tr-md rounded-b-md"
-                        : "bg-yellow-700/20 rounded-tl-md rounded-b-md"
-                    }`}
-                  >
-                    <p className="text-md break-all">{item.message}</p>
-                  </div>
-                  <div ref={ref} />
+                  <p className="text-md break-all">{item.message}</p>
                 </div>
-              ))
-            ) : (
-              <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
-                <p className="text-center text-xl text-pink-50/60">
-                  This is AshBot, you can ask him questions like "how are you",
-                  "tell me about you", "where are you from?", "what can you do"{" "}
-                  <br />
-                  *For the first message you send, Ashbot takes longer to
-                  respond because he's shy*
-                </p>
-                <p className="text-center text-lg text-pink-50/60">
-                  This model is simple and was intended as a first step into
-                  machine learning, I studied then replicated a preexisting
-                  model which led me to develop some basic knowledge of how it
-                  works under the hood, from the tokenization and lemmatization
-                  to the linear algebra behind it
-                </p>
-                <p className="text-center text-lg text-pink-50/60">
-                  I intend to continue feeding AshBot with more data over time
-                  and as I learn more about machine learning, I will be able to
-                  know how to improve it and create purely custom models!
-                </p>
+                <div ref={ref} />
               </div>
-            )}
-          </div>
-        
+            ))
+          ) : (
+            <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
+              <p className="text-center text-xl text-pink-50/60">
+                <h1
+                  className="mt-16 mb-20 text-3xl font-semibold"
+                  data-aos="fade-in"
+                >
+                  This is AshBot.
+                </h1>
+                Here are some ideas to break the ice: <br /><i>"How are you?"</i>  <br /><i>"Tell me about
+                yourself!"</i>  <br /><i>"Where are you from?"</i>  <br /><i>"What can you do?"</i>  <br />
+                *For the first message you send, Ashbot takes longer to respond
+                because he's shy*
+              </p>
+              <p className="text-center text-lg text-pink-50/60">
+                This model is simple and was intended as a first step into
+                machine learning, I studied then replicated a preexisting model
+                which led me to develop some basic knowledge of how it works
+                under the hood, from the tokenization and lemmatization to the
+                linear algebra behind it
+              </p>
+              <p className="text-center text-lg text-pink-50/60">
+                I intend to continue feeding AshBot with more data over time and
+                as I learn more about machine learning, I will be able to know
+                how to improve it and create purely custom models!
+              </p>
+            </div>
+          )}
+        </div>
+
         <div className="fixed left-0 right-0 bottom-20 z-20 w-[70%] m-auto">
           {loading && (
             <h1 className="text-pink-50/70 p-2 animate-pulse">
