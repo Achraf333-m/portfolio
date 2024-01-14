@@ -1,7 +1,4 @@
 import Links from "./UI/Links";
-import movflixSubscription from "@/public/movflix-Sub.png";
-import movflixStripe from "@/public/movflix-stripe.png";
-import movflixhome from "@/public/movflix-home.png";
 import Image from "next/image";
 
 function Project({

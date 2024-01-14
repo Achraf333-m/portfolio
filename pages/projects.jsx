@@ -18,6 +18,10 @@ import draw from "@/public/draw.png";
 import Xwin from "@/public/Xwin.png";
 import Owin from "@/public/Owin.png";
 
+import filters from "@/public/sqlfilter.png";
+import permissions from "@/public/linuxPerm.png";
+import report from "@/public/incReport.png";
+
 import libraryApp from "@/public/Library-Landing.png";
 import libraryCart from "@/public/library-cart.png";
 import loading from "@/public/Skeleton-loading.png";
@@ -29,6 +33,7 @@ import "aos/dist/aos.css";
 
 import { useEffect } from "react";
 import Project from "@/components/Project";
+import Image from "next/image";
 
 function Projects() {
   useEffect(() => {
@@ -39,17 +44,75 @@ function Projects() {
       <Head>
         <title>My projects</title>
       </Head>
-      <img
-        src="/background.jpg"
-        className="bgImage"
-      />
+      <img src="/background.jpg" className="bgImage" />
       <div className=" w-full  px-2 md:px-4">
         <Header />
         <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">
             My Projects
           </h1>
+          <div className="pb-20 flex flex-col space-y-4">
+            <h1 className="text-2xl font-extralight italic">
+              Cybersecurity projects:
+            </h1>
+            <div data-aos="fade-in" className="space-y-10">
+              <div className="space-y-4">
+                <h1
+                  className="text-3xl"
+                  data-aos="fade-in"
+                  data-aos-delay="300"
+                >
+                  Security Analyst Folder
+                </h1>
+                <div className="flex space-x-4 mt-5 mb-10 text-lg md:text-xl">
+                  <a
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                    href="https://drive.google.com/drive/folders/117rLt2bf_3LZWULYvhtxdzPQf7gAXs1U"
+                    className="animate-pulse hover:scale-125 transition duration-300"
+                    target="_blank"
+                  >
+                    See folder
+                  </a>
+                </div>
+
+                <div className="project-style">
+                  <Image
+                    alt="section-image"
+                    className="hover-transition"
+                    data-aos="fade-right"
+                    src={filters}
+                  />
+                  <Image
+                    alt="section-image"
+                    className="hover-transition"
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                    src={permissions}
+                  />
+                  <Image
+                    alt="section-image"
+                    className="hover-transition"
+                    data-aos="fade-right"
+                    data-aos-delay="400"
+                    src={report}
+                  />
+                </div>
+                <p className="font-light text-xl">
+                  This folder has multiple examples of the various concepts I
+                  have worked on in my cybersecurity certificate. Whenever I
+                  finished an assignment, I was asked to create a document
+                  containing screenshots and descriptions of everything I did on
+                  it to show I had assimilated the various concepts that were
+                  taught.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
           <div className="pb-44 flex flex-col space-y-4">
+            <h1 className="text-2xl font-extralight italic">
+              Front-end projects:
+            </h1>
             <Project
               Git="https://github.com/Achraf333-m/mov-flix"
               Web="https://mov-flix-rho.vercel.app/"

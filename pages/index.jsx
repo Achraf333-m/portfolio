@@ -41,7 +41,7 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            FRONT-END DEVELOPER
+            FRONT-END DEVELOPER / CYBERSECURITY ANALYST
           </h4>
           <p
             className="pb-2 text-xl font-extralight text-pink-50"
@@ -61,7 +61,7 @@ export default function Home() {
             className="flex space-x-4 max-w-xs items-center my-10"
           >
             <h3 className="hover:scale-[102%] transition-all duration-300 text-xl text-pink-50 font-extralight">
-              Learn a bit more about me
+              Learn more about me
             </h3>
             <FaArrowRight className="animate-ping text-xs" />
           </Link>
