@@ -85,7 +85,7 @@ export default function Home() {
             <a
               data-aos="fade-up"
               data-aos-delay="1000"
-              href="https://drive.google.com/file/d/1ZVdXzT-t_qgcXTSD5LE-mEdQYodret0s/view?usp=sharing"
+              href="https://drive.google.com/file/d/1CgMhevVhIr2Uue6pLrKju__pfQ91FIUP/view?usp=sharing"
               target="_blank"
             >
               <AiOutlineFile className="hover:scale-125 transition-all" />
