@@ -45,17 +45,18 @@ function Education() {
             >
               Certificates
             </h1>
+            
             <Cert
               image1={sql}
               image2={ticket}
               image3={Leastpriv}
               title="Cybersecurity Certificate"
               subtitle="Google"
-              link="https://coursera.org/share/bd707781011118048d4ca07ce07614fe"
-              desc=" I am currently in the final course of the certificate. This
+              link="https://coursera.org/share/13a59f2c5dc2bced1a58fab029a80c6b"
+              desc="This
               certificate taught me the basics of cybersecurity, from the protocols
               that govern the virtual world and the laws behind keeping data safe to
-              technologies like Splunk, Google Chronicle, and SQL."
+              technologies like Splunk, Google Chronicle, Python and SQL."
             />
             <Cert
               image1={py1}
