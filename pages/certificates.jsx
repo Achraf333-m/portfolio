@@ -32,10 +32,7 @@ function Education() {
         <title>Certificates</title>
       </Head>
       <div className="w-full  h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
-        <img
-          src="/background.jpg"
-          className="bgImage"
-        />
+        <img src="/background.jpg" className="bgImage" />
         <div className="w-full  px-2 md:px-4 ">
           <Header />
           <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
@@ -45,7 +42,23 @@ function Education() {
             >
               Certificates
             </h1>
-            
+            <div className="flex flex-col space-y-4 opacity-60">
+              <div>
+                <h3 className="text-2xl font-bold">CompTIA Security+</h3>
+                <h4 className="text-lg font-semibold">CompTIA</h4>
+                <a className="animate-pulse hover:text-pink-200" aria-disabled>
+                  In progess
+                </a>
+              </div>
+              <p className="">
+                I am currently preparing for this certificate, I have gained
+                sufficient knowledge from Google's cybersecurity certificate to
+                have a good grasp of the material I need to study to pass its
+                exam.
+              </p>
+              <h3 className="opacity-70">● ● ●</h3>
+            </div>
+
             <Cert
               image1={sql}
               image2={ticket}
@@ -89,7 +102,8 @@ function Education() {
                 </a>
                 <p className="text-lg font-light text-center">
                   I took this course as a way to start my journey into web
-                  development. Through this program, I learned JavaScript, HTML and CSS as well as React. I have improved my skills since then
+                  development. Through this program, I learned JavaScript, HTML
+                  and CSS as well as React. I have improved my skills since then
                   and used other crowd-sourced resources and technologies.
                 </p>
               </div>
@@ -104,10 +118,10 @@ function Education() {
                   See progression here
                 </a>
                 <p className="text-lg font-light text-center">
-                  Through this program, I am currently learning more
-                  about Python and its procedural, functional and
-                  object-oriented programming; The course will then move towards
-                  servers, databases and technologies like Linux and MySQL.{" "}
+                  Through this program, I am currently learning more about
+                  Python and its procedural, functional and object-oriented
+                  programming; The course will then move towards servers,
+                  databases and technologies like Linux and MySQL.{" "}
                 </p>
               </div>
             </div>
@@ -121,11 +135,10 @@ function Education() {
               desc="I am taking the course as a way to expand my knowledge in cybersecurity and learn what penetration testers need to know in the real world"
             />
             <div className="space-y-4 md:space-y-0 flex flex-col md:flex-row md:space-x-4 items-center justify-center py-10 mb-20">
-            
-            <Link href="/projects">
-              <button className="btn">See my projects</button>
-            </Link>
-          </div>
+              <Link href="/projects">
+                <button className="btn">See my projects</button>
+              </Link>
+            </div>
           </section>
         </div>
       </div>
