@@ -41,31 +41,22 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            FRONT-END DEVELOPER / CYBERSECURITY ANALYST
+            FRONT-END DEVELOPER | CYBERSECURITY ANALYST
           </h4>
           <p
-            className="pb-2 text-xl font-extralight text-pink-50"
+            className="pb-4 text-xl font-extralight text-pink-50"
             data-aos="fade-up"
             data-aos-delay="600"
           >
             I love building simple, user-friendly, high-performance websites{" "}
-            <br />I know a couple of frameworks, but NextJS is currently my favorite, along with Tailwind CSS or SCSS for seamless styling.{" "}
+            <br />I know a couple of frameworks, but NextJS is currently my
+            favorite, along with Tailwind CSS or SCSS for seamless styling.{" "}
             <br />
             I'm currently learning Python and SQL with the goal of broadening my
             knowledge into the cybersecurity field.
           </p>
-          <Link
-            data-aos="fade-up"
-            data-aos-delay="700"
-            href="/about"
-            className="flex space-x-4 max-w-xs items-center my-10"
-          >
-            <h3 className="hover:scale-[102%] transition-all duration-300 text-xl text-pink-50 font-extralight">
-              Learn more about me
-            </h3>
-            <FaArrowRight className="animate-ping text-xs" />
-          </Link>
-          <div className="flex items-center space-x-4 text-pink-50">
+
+          <div className="flex items-center text-xl space-x-4 text-pink-50">
             <a
               data-aos="fade-up"
               data-aos-delay="800"
@@ -107,6 +98,17 @@ export default function Home() {
               <BiWinkSmile className="hover:scale-125 transition-all" />
             </a>
           </div>
+          <Link
+            data-aos="fade-up"
+            data-aos-delay="700"
+            href="/projects"
+            className="flex space-x-4 max-w-xs items-center my-5"
+          >
+            <h3 className="hover:scale-[102%] transition-all duration-300 text-xl text-pink-50 font-extralight">
+              See my projects!
+            </h3>
+            <FaArrowRight className="animate-pulse-fast text-md" />
+          </Link>
         </main>
       </div>
     </div>
