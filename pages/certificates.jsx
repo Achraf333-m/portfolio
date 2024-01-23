@@ -78,7 +78,7 @@ function Education() {
               title="Python for everybody"
               subtitle="Michigan University"
               link="https://www.coursera.org/account/accomplishments/verify/KFR5WMKUR2Q9?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-              desc="This course taught me the basics of Python in addition to obtaining data from the web through XML and JSON parsing as shown here in some of my projects."
+              desc="This course taught me the basics of Python in addition to obtaining data from the web through XML and JSON parsing as shown here in some of my projects. Currenly, I am on the third course of the certificate where I am learning more about SQL and database CRUD operations."
             />
             <Cert
               image1={la1}
