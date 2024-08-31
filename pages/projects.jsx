@@ -115,7 +115,7 @@ function Projects() {
             </h1>
             <Project
               Git="https://github.com/Achraf333-m/mov-flix"
-              Web="https://mov-flix-rho.vercel.app/"
+              Web="https://mov-flix-rho.vercel.app/signUp"
               description="I made MovieFlix using NextJs, then linked it to my Firebase account
                             to allow users to authenticate themselves. The website also has a 'liked list'
                             where users can add their favorite movies, and the list will not vanish when they log out of the app. The movies are fetched from The Movie Database and youtube, along with their names and their trailers, and displayed using a Material UI modal.
