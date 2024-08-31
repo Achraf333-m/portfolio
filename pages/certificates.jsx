@@ -47,7 +47,7 @@ function Education() {
                 <h3 className="text-2xl font-bold">CompTIA Security+</h3>
                 <h4 className="text-lg font-semibold">CompTIA</h4>
                 <a className="animate-pulse hover:text-pink-200" aria-disabled>
-                  In progess
+                  In progress..
                 </a>
               </div>
               <p className="">
