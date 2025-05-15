@@ -24,24 +24,26 @@ import "aos/dist/aos.css";
 
 import { useEffect } from "react";
 import Project from "@/components/Project";
+import { Footer } from "@/components/Footer";
 
 function Projects() {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true });
   }, []);
   return (
-    <div className="w-full h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+    <div className="w-full h-full bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
       <Head>
         <title>My projects</title>
       </Head>
       <img src="/background_8.png" className="bgImage" />
-      <div className=" w-full  px-2 md:px-4">
+      <div className=" w-full relative px-2 md:px-4">
         <Header />
         <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1 className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold" data-aos="fade-in">
             My Projects
           </h1>
-          <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light" data-aos="fade-in">To see more detail - click the images!</h2>
+          <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light" data-aos="fade-in">T
+            o see more detail - click the images!</h2>
 
           <div className="pb-24 flex flex-col space-y-4">
             <h1 className="text-2xl font-extralight italic">
@@ -129,6 +131,7 @@ function Projects() {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

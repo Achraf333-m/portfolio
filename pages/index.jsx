@@ -8,6 +8,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [title, setTitle] = useState();
@@ -20,13 +21,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-full">
       <Head>
         <title>Achraf Daimallah</title>
       </Head>
       <img src="/background_8.png" className="bgImage" />
       <Header />
-      <div className="py-40">
+      <div className="py-40 relative">
         <main className="relative flex flex-col pt-20 px-10 max-w-6xl mx-auto">
           <h1
             data-aos="fade-up"
@@ -109,6 +110,7 @@ export default function Home() {
           </Link>
         </main>
       </div>
+      <Footer/>
     </div>
   );
 }

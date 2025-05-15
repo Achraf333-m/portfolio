@@ -51,7 +51,7 @@ function Header() {
 
   return (
     <div
-      className={`${scrolled && "bg-black/50"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
+      className={`${scrolled && "bg-black/60"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
     >
       <div
         className={`flex text-black/75 dark:text-pink-50 scale-90 ${

@@ -2,6 +2,7 @@ import { ThemeProvider } from "next-themes";
 import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
+import { Footer } from "@/components/Footer";
 
 
 

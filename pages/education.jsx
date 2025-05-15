@@ -14,6 +14,7 @@ import py2 from "@/public/py2.png";
 import py3 from "@/public/py3.png";
 
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 function Education() {
   useEffect(() => {
@@ -24,9 +25,9 @@ function Education() {
       <Head>
         <title>Education & Certificates</title>
       </Head>
-      <div className="w-full  h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+      <div className="w-full h-full bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
         <img src="/background_8.png" className="bgImage" />
-        <div className="w-full  px-2 md:px-4 ">
+        <div className="w-full relative px-2 md:px-4 ">
           <Header />
           <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
             <h1
@@ -57,11 +58,13 @@ function Education() {
             </div>
 
             <h1
-              className="mt-16 mb-20 text-3xl text-purple-950 dark:text-purple-200 font-semibold"
+              className="mt-16 mb-5 text-3xl text-purple-950 dark:text-purple-200 font-semibold"
               data-aos="fade-in"
             >
               Certificates
             </h1>
+            <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light">T
+            o see more detail - click the images!</h2>
 
             <Cert
               image1={sql}
@@ -92,6 +95,7 @@ function Education() {
             </div>
           </section>
         </div>
+        <Footer />
       </div>
     </>
   );

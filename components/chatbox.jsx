@@ -26,28 +26,33 @@ const ChatBox = () => {
     }
   };
 
-  useEffect(() => {
-    function preLoadBot() {
-    fetch(`https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot`, {
-      method: "POST",
-      body: JSON.stringify({ message: "Preload request to warm up" }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((r) => r.json())
-      .then((response) => {
-        console.log("Ashbot preloaded successfully");
-      })
-      .catch((error) => {
-        console.error("Error preloading Ashbot");
+ useEffect(() => {
+  const preLoadBot = async () => {
+    try {
+      const response = await fetch("https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: "Preload request to warm up" }),
       });
-  }
 
-    if (typeof window !== "undefined") {
-      preLoadBot();
+      if (response.ok) {
+        console.log("Ashbot preloaded successfully");
+      } else {
+        console.error("Ashbot preload failed:", response.status);
+      }
+    } catch (error) {
+      console.error("Error preloading Ashbot:", error);
     }
-  }, [])
+  };
+
+  // Only run in the browser
+  if (typeof window !== "undefined") {
+    preLoadBot();
+  }
+}, []);
+
   
   useEffect(() => {
     checkInput();

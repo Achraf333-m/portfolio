@@ -10,7 +10,7 @@
     @apply flex items-center justify-start overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-track-transparent scrollbar-thumb-purple-200 space-x-6 px-4 pb-4 w-full;
   }
   .placeholder {
-    @apply bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 text-[#14091f]/70 dark:text-[#afafff];
+    @apply bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 text-[#14091f]/90 dark:text-[#afafff];
   }
   .hover-transition {
     @apply border-2 border-white rounded-lg md:cursor-pointer max-h-60 max-w-max block object-cover; 

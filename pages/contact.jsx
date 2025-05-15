@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaSpinner } from "react-icons/fa";
+import { Footer } from "@/components/Footer";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -42,12 +43,12 @@ function Contact() {
   }
 
   return (
-    <div className="w-full h-screen bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+    <div className="w-full h-full bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
       <Head>
         <title>Contact</title>
       </Head>
       <img src="/background_8.png" className="bgImage" />
-      <div className="w-full ">
+      <div className="w-full relative">
 
       <Header />
       <section
@@ -116,6 +117,7 @@ function Contact() {
       </section>
 
       </div>
+      <Footer />
     </div>
   );
 }
