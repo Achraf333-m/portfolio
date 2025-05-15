@@ -1,13 +1,11 @@
 import "@/styles/globals.css";
 import Head from "next/head";
-import Link from "next/link";
-import Logo from "@/public/Gold Luxury Business Logo.png";
-import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import Header from "@/components/Header";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaSpinner } from "react-icons/fa";
 
 function Contact() {
   const [loading, setLoading] = useState(false);
@@ -38,7 +36,7 @@ function Contact() {
       })
       .catch(() => {
         alert(
-          "oops! our emailing system might be down, please message us at achrafdaimallah2003@gmail.com"
+          "oops! My emailing service might be down, please message me at ash@achrafdaimallah.com"
         );
       });
   }
@@ -48,7 +46,7 @@ function Contact() {
       <Head>
         <title>Contact</title>
       </Head>
-      <img src="/background.jpg" className="bgImage" />
+      <img src="/background_8.png" className="bgImage" />
       <div className="w-full ">
 
       <Header />
@@ -65,32 +63,32 @@ function Contact() {
           onSubmit={contact}
           className="space-y-8 w-full py-10 mx-auto"
         >
-          <div data-aos="fade-right" className="flex flex-col space-y-4">
+          <div data-aos="fade-in" className="flex flex-col space-y-4">
             <label>Your name</label>
             <input
               required
               type="text"
               name="user-name"
               placeholder="your name"
-              className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1"
+              className="placeholder"
             />
           </div>
           <div
-            data-aos="fade-right"
+            data-aos="fade-in"
             data-aos-delay="500"
             className="flex flex-col space-y-4"
           >
-            <label>Where I can contact you</label>
+            <label>Your e-mail</label>
             <input
               required
               type="email"
               name="user-email"
-              placeholder="your email"
-              className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1"
+              placeholder="Type in your email"
+              className="placeholder"
             />
           </div>
           <div
-            data-aos="fade-right"
+            data-aos="fade-in"
             data-aos-delay="1000"
             className="flex flex-col space-y-4"
           >
@@ -100,19 +98,18 @@ function Contact() {
               type="text"
               name="message"
               rows={5}
-              placeholder="I think I'd enjoy working with you, let me know when you're available for an interview!"
-              className="bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
+              placeholder="Hey, I saw your portfolio. Let me know when you're available for a call!"
+              className="placeholder resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
             />
           </div>
           <div className="flex items-center justify-center md:justify-start">
             <button
               disabled={loading}
-              data-aos="fade-left"
-              data-aos-delay="800"
               type="submit"
               className={`btn ${loading && "brightness-50"}`}
             >
-              {sent ? "Sent!" : `${loading ? "Sending..." : "Send it my way!"}`}
+            
+              {sent ? "Sent!" : `${loading ? <FaSpinner className="w-full h-full animate-spin" /> : "Send it my way!"}`}
             </button>
           </div>
         </form>

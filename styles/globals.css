@@ -2,31 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply transition-all duration-500 ease-in-out text-blue-50 dark:text-pink-50;
-  }
-}
-
 @layer components {
   .bgImage {
-    @apply fixed -z-20 dark:opacity-60 brightness-75 w-full h-full object-cover
+    @apply fixed -z-20 brightness-[.95] dark:brightness-[.55] dark:opacity-90  w-full h-full object-cover;
   }
-    .project-style {
-    @apply flex items-center justify-center w-full flex-col space-y-6 md:flex-col md:space-x-6 px-8 lg:flex-row;
+  .project-style {
+    @apply flex items-center justify-start overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-track-transparent scrollbar-thumb-purple-200 space-x-6 px-4 pb-4 w-full;
+  }
+  .placeholder {
+    @apply bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 text-[#14091f]/70 dark:text-[#afafff];
   }
   .hover-transition {
-    @apply border-2 border-white rounded-lg h-auto md:w-[calc(100%)] lg:w-[calc(100%/3)]  w-full;
+    @apply border-2 border-white rounded-lg md:cursor-pointer max-h-60 max-w-max block object-cover; 
   }
   .btn {
-    @apply py-2 px-10 bg-gradient-to-l text-pink-50 dark:text-pink-50  from-black to-yellow-700 dark:from-yellow-700 dark:to-black max-w-lg rounded-lg
+    @apply py-2 px-10  bg-gradient-to-r hover:scale-[1.02] transition-all text-pink-50 dark:text-pink-50  dark:from-purple-900 dark:to-yellow-600 from-yellow-700 to-purple-900 max-w-lg rounded-lg;
   }
   .menu {
     @apply mt-4 mr-4;
   }
 
   .menu .MuiPaper-root {
-    @apply !absolute !right-0 !rounded-md bg-black/90 ;
+    @apply !absolute !right-0 !rounded-md bg-black/40;
   }
 
   .menu .MuiList-root {

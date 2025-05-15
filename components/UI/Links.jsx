@@ -22,7 +22,7 @@ function Links({ Glink, Wlink }) {
       <a
         data-aos="fade-right"
         
-        className="hover:scale-125 transition duration-300"
+        className={(Wlink == "") ? "hidden" : "hover:scale-125 transition duration-300"}
         href={Wlink}
         target="_blank"
       >

@@ -16,6 +16,8 @@ const ChatBox = () => {
     }
   };
 
+  
+
   const checkInput = () => {
     if (inputText.length === 0) {
       setNoIpt(true);
@@ -23,9 +25,35 @@ const ChatBox = () => {
       setNoIpt(false);
     }
   };
+
+  useEffect(() => {
+    function preLoadBot() {
+    fetch(`https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot`, {
+      method: "POST",
+      body: JSON.stringify({ message: "Preload request to warm up" }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((r) => r.json())
+      .then((response) => {
+        console.log("Ashbot preloaded successfully");
+      })
+      .catch((error) => {
+        console.error("Error preloading Ashbot");
+      });
+  }
+
+    if (typeof window !== "undefined") {
+      preLoadBot();
+    }
+  }, [])
+  
   useEffect(() => {
     checkInput();
   }, [inputText]);
+  
+
 
   const onSendButton = () => {
     if (inputText === "") {
@@ -34,7 +62,6 @@ const ChatBox = () => {
 
     const msg1 = { name: "Me", message: inputText };
     setMessages([...messages, msg1]);
-
     fetch(`https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot`, {
       method: "POST",
       body: JSON.stringify({ message: inputText }),
@@ -80,14 +107,14 @@ const ChatBox = () => {
                       : "bg-yellow-700/20 rounded-tl-md rounded-b-md"
                   }`}
                 >
-                  <p className="text-md break-all">{item.message}</p>
+                  <p className="text-md break-words">{item.message}</p>
                 </div>
                 <div ref={ref} />
               </div>
             ))
           ) : (
             <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
-              <p className="text-center text-xl text-pink-50/60">
+              <div className="text-center text-xl text-gray-600/60  dark:text-pink-50/60">
                 <h1
                   className="mt-16 mb-20 text-3xl font-semibold"
                   data-aos="fade-in"
@@ -96,20 +123,9 @@ const ChatBox = () => {
                 </h1>
                 Here are some ideas to break the ice: <br /><i>"How are you?"</i>  <br /><i>"Tell me about
                 yourself!"</i>  <br /><i>"Where are you from?"</i>  <br /><i>"What can you do?"</i>  <br />
-                *For the first message you send, Ashbot takes longer to respond
-                because he's shy*
-              </p>
+              </div>
               <p className="text-center text-lg text-pink-50/60">
-                This model is simple and was intended as a first step into
-                machine learning, I studied then replicated a preexisting model
-                which led me to develop some basic knowledge of how it works
-                under the hood, from the tokenization and lemmatization to the
-                linear algebra behind it
-              </p>
-              <p className="text-center text-lg text-pink-50/60">
-                I intend to continue feeding AshBot with more data over time and
-                as I learn more about machine learning, I will be able to know
-                how to improve it and create purely custom models!
+                See projects section for more details.
               </p>
             </div>
           )}
@@ -117,7 +133,7 @@ const ChatBox = () => {
 
         <div className="fixed left-0 right-0 bottom-20 z-20 w-[70%] m-auto">
           {loading && (
-            <h1 className="text-pink-50/70 p-2 animate-pulse">
+            <h1 className="text-pink-50/70 p-2 animate-pulse-fast">
               Waiting for Ashbot...
             </h1>
           )}

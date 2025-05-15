@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/Gold Luxury Business Logo.png";
+import Logo from "@/public/logo.png";
 import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import Dropdown from "./Dropdown";
@@ -12,22 +12,23 @@ function Header() {
   const [dark, setDark] = useState(false);
   const router = useRouter();
   const path = router.pathname;
-  const currentMode = theme === "dark" ? "light" : "dark";
+  const nextMode = theme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    darkMode()
+    darkMode();
   }, []);
 
   const darkMode = () => {
-    if (currentMode !== 'dark') {
-      setDark(true)
+    if (nextMode !== "dark") {
+      setDark(true);
     } else {
-      setDark(false)
+      setDark(false);
     }
-  }
+  };
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         setScrolled(true);
@@ -44,12 +45,19 @@ function Header() {
           setScrolled(false);
         }
       });
+
     };
   }, []);
 
   return (
-    <div className={ `${scrolled && 'bg-black/80'} transition-all z-20 duration-300 fixed top-0 left-0 right-0`}>
-      <div className={`flex text-pink-50 scale-90 ${scrolled ? 'border-b-0 border-white/0' : 'border-b-2 border-white/40'} transition-all duration-1000 justify-between max-w-7xlxl mx-auto px-6 items-center font-light text-sm sm:text-lg md:text-xl`}>
+    <div
+      className={`${scrolled && "bg-black/50"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
+    >
+      <div
+        className={`flex text-black/75 dark:text-pink-50 scale-90 ${
+          scrolled || "border-b-2 border-white/50"
+        } justify-between max-w-7xlxl mx-auto px-6 items-center text-sm sm:text-lg md:text-xl`}
+      >
         <Link href="/">
           <Image
             priority
@@ -63,42 +71,50 @@ function Header() {
 
         <div className="space-x-4 hidden text-2xl md:flex items-center">
           {path === "/" || (
-            <Link href="/" className="hover:scale-110 transition-all">
+            <Link
+              href="/"
+              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+            >
               Homepage
             </Link>
           )}
-          {path === "/certificates" || (
+          {path === "/education" || (
             <Link
-              href="/certificates"
-              className="hover:scale-110 transition-all"
+              href="/education"
+              className="hover:scale-[.98] hover:brightness-[2] transition-all"
             >
-              Certificates
+              Education
             </Link>
           )}
           {path === "/projects" || (
-            <Link href="/projects" className="hover:scale-110 transition-all">
+            <Link
+              href="/projects"
+              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+            >
               Projects
             </Link>
           )}
-          {path === "/about" || (
-            <Link href="/about" className="hover:scale-110 transition-all">
+          {path === "/ashbot" || (
+            <Link
+              href="/ashbot"
+              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+            >
               AshBot
             </Link>
           )}
           {path === "/contact" || (
             <Link
               href="/contact"
-              className="animate-pulse hover:scale-110 transition-all"
+              className="animate-pulse hover:scale-[.98] hover:brightness-[2] transition-all"
             >
               Contact
             </Link>
           )}
-          
 
           <button
-            className="hover:scale-110 transition-all"
+            className="hover:scale-[.98] hover:brightness-[2] transition-all"
             onClick={() => {
-              setTheme(currentMode);
+              setTheme(nextMode);
               setDark(!dark);
             }}
           >
@@ -109,6 +125,7 @@ function Header() {
             )}
           </button>
         </div>
+
         <Dropdown />
       </div>
     </div>

@@ -2,14 +2,12 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import { GrLinkedinOption } from "react-icons/gr";
-import { FaArrowRight, FaGithub } from "react-icons/fa";
+import { FaArrowRight, FaGithub, FaRegCircle } from "react-icons/fa";
 import { AiOutlineFile } from "react-icons/ai";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { BiWinkSmile } from "react-icons/bi";
-import { SiFiverr } from "react-icons/si";
 
 export default function Home() {
   const [title, setTitle] = useState();
@@ -17,97 +15,97 @@ export default function Home() {
     setTitle(true);
     setTimeout(() => {
       setTitle(false);
-    }, 1000);
+    }, 1200);
     AOS.init({ duration: 1500, once: true });
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-screen">
       <Head>
         <title>Achraf Daimallah</title>
       </Head>
-      <img src="/background.jpg" className="bgImage" />
+      <img src="/background_8.png" className="bgImage" />
       <Header />
-      <div className=" py-40">
+      <div className="py-40">
         <main className="relative flex flex-col pt-20 px-10 max-w-6xl mx-auto">
           <h1
             data-aos="fade-up"
-            className=" text-pink-50 font-light text-[30px] sm:text-[55px] pb-2"
+            className=" text-[30px] text-[#14091f] dark:text-[#c3c3fb] sm:text-[55px] pb-2"
           >
-            {title ? "Hey there!" : "I'm Achraf Daimallah"}
+            {title ? (
+              <span className="">Hey there!</span>
+            ) : (
+              <span>I'm Achraf Daimallah</span>
+            )}
           </h1>
           <h4
-            className="text-sm text-pink-50 pb-8 font-extralight"
+            className="text-md pb-8 text-[#14091f]/70 dark:text-[#afafff] font-light"
             data-aos="fade-up"
-            data-aos-delay="500"
+            data-aos-delay="700"
           >
-            FRONT-END DEVELOPER | CYBERSECURITY ANALYST
+            Electrical Engineering Student | Exploring Low-Level Software &
+            Hardware Systems
           </h4>
-          <p
-            className="pb-4 text-xl font-extralight text-pink-50"
+          <div
+            className="pb-4 space-y-2 text-[#1e102c] dark:text-[#efefff] transition-colors duration-300 ease-in-out text-xl"
             data-aos="fade-up"
-            data-aos-delay="600"
+            data-aos-delay="800"
           >
-            I love building simple, user-friendly, high-performance websites{" "}
-            <br />I know a couple of frameworks, but NextJS is currently my
-            favorite, along with Tailwind CSS or SCSS for seamless styling.{" "}
-            <br />
-            I'm currently learning Python and SQL with the goal of broadening my
-            knowledge into the cybersecurity field.
-          </p>
+            <p>
+              I love learning about systems that are efficient, logical, and
+              close to the hardware.
+            </p>
+            <p>
+              I built this site from scratch to showcase my skills as I continue
+              to grow through my Electrical Engineering degree.
+            </p>
+            <p>
+              I’m especially interested in digital logic, low-level programming,
+              and anything hardware-related.
+            </p>
+            <p>
+              While I’ve explored web development independently, my current
+              focus is on understanding how hardware components interact to
+              create the complex systems that power the world.
+            </p>
+          </div>
 
-          <div className="flex items-center text-xl space-x-4 text-pink-50">
+          <div className="flex items-center text-[#14091f] dark:text-[#afafff] transition-colors duration-300 ease-in-out text-xl space-x-4">
             <a
-              data-aos="fade-up"
-              data-aos-delay="800"
+              data-aos="fade-in"
+              data-aos-delay="900"
               href="https://www.linkedin.com/in/achraf-daimallah/"
               target="_blank"
             >
-              <GrLinkedinOption className="hover:scale-125 transition-all" />
+              <GrLinkedinOption className="hover:scale-[0.95] transition-transform" />
             </a>
             <a
-              data-aos="fade-up"
-              data-aos-delay="900"
+              data-aos="fade-in"
+              data-aos-delay="1000"
               href="https://github.com/Achraf333-m"
               target="_blank"
             >
-              <FaGithub className="hover:scale-125 transition-all" />
+              <FaGithub className="hover:scale-[0.95]  transition-transform" />
             </a>
             <a
-              data-aos="fade-up"
-              data-aos-delay="1000"
+              data-aos="fade-in"
+              data-aos-delay="1100"
               href="https://drive.google.com/file/d/1CgMhevVhIr2Uue6pLrKju__pfQ91FIUP/view?usp=sharing"
               target="_blank"
             >
-              <AiOutlineFile className="hover:scale-125 transition-all" />
-            </a>
-            <a
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              href="https://www.fiverr.com/adone633/design-and-code-your-website-from-scratch?gig_id=334145740&utm_campaign=base_gig_create_share&utm_content=&utm_medium=shared&utm_source=get_url&utm_term=&view=gig"
-              target="_blank"
-            >
-              <SiFiverr className="hover:scale-125 transition-all w-7 h-7" />
-            </a>
-            <a
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              target="_blank"
-            >
-              <BiWinkSmile className="hover:scale-125 transition-all" />
+              <AiOutlineFile className="hover:scale-[0.95]  transition-transform" />
             </a>
           </div>
           <Link
-            data-aos="fade-up"
-            data-aos-delay="700"
+            data-aos="fade-in"
+            data-aos-delay="1200"
             href="/projects"
-            className="flex space-x-4 max-w-xs items-center my-5"
+            className="flex space-x-4 max-w-[180px] items-center my-5"
           >
-            <h3 className="hover:scale-[102%] transition-all duration-300 text-xl text-pink-50 font-extralight">
+            <h3 className="hover:scale-[102%] transition-all text-[#14091f] dark:text-[#afafff] duration-300 text-xl">
               See my projects!
             </h3>
-            <FaArrowRight className="animate-pulse-fast text-md" />
+            <FaRegCircle className="animate-pulse-fast text-[#000000] dark:text-[#ffffff] text-sm" />
           </Link>
         </main>
       </div>

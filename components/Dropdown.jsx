@@ -12,9 +12,9 @@ export default function Dropdown() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
   const path = router.pathname;
-  const currentMode = theme === "dark" ? "light" : "dark";
+  const nextMode = theme === "light" ? "dark" : "light";
   const open = Boolean(anchorEl);
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -25,16 +25,16 @@ export default function Dropdown() {
   };
 
   useEffect(() => {
-    darkMode()
+    darkMode();
   }, []);
 
   const darkMode = () => {
-    if (currentMode !== 'dark') {
-      setDark(true)
+    if (nextMode === "light") {
+      setDark(true);
     } else {
-      setDark(false)
+      setDark(false);
     }
-  }
+  };
 
   return (
     <div className="md:!hidden">
@@ -61,14 +61,14 @@ export default function Dropdown() {
         <div>
           {path === "/" || (
             <Link href="/">
-              <MenuItem>Homepage</MenuItem>
+              <MenuItem className="">Homepage</MenuItem>
             </Link>
           )}
         </div>
         <div>
-          {path === "/certificates" || (
-            <Link href="/certificates">
-              <MenuItem>Certificates</MenuItem>
+          {path === "/education" || (
+            <Link href="/education">
+              <MenuItem>Education</MenuItem>
             </Link>
           )}
         </div>
@@ -80,8 +80,8 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          {path === "/about" || (
-            <Link href="/about">
+          {path === "/ashbot" || (
+            <Link href="/ashbot">
               <MenuItem>AshBot</MenuItem>
             </Link>
           )}
@@ -94,7 +94,12 @@ export default function Dropdown() {
           )}
         </div>
         <div>
-          <MenuItem onClick={() => {setTheme(currentMode); setDark(!dark)}}>
+          <MenuItem
+            onClick={() => {
+              setTheme(nextMode);
+              setDark(!dark);
+            }}
+          >
             {dark ? "Light Mode" : "Dark Mode"}
           </MenuItem>
         </div>

@@ -2,38 +2,28 @@ import Header from "@/components/Header";
 import "@/styles/globals.css";
 import Head from "next/head";
 import Link from "next/link";
+
 import movflixSubscription from "@/public/movflix-Sub.png";
 import movflixStripe from "@/public/movflix-stripe.png";
 import movflixhome from "@/public/movflix-home.png";
-import bookSpace from "@/public/bookSpace.png";
-import spaceHome from "@/public/spaceHome.png";
-import spacePlanets from "@/public/spacePlanets.png";
+
+import Thev1 from "@/public/thevequiv1.png";
+import Thev2 from "@/public/thevequiv2.png";
+import Thev3 from "@/public/thevequiv3.png";
+
+import phasor1 from "@/public/phasorTool1.png";
+import phasor2 from "@/public/phasorTool2.png";
+import phasor3 from "@/public/phasorTool3.png";
+
 import Ashbot from "@/public/Ashbot.png";
 import Ashbotq1 from "@/public/ashbotQuestion1.png";
 import Ashbotq2 from "@/public/ashbtq2.png";
-import chatapp1 from "@/public/chatapp1.png";
-import chatapp2 from "@/public/chatapp2.png";
-import chatapp3 from "@/public/chatapp3.png";
-import draw from "@/public/draw.png";
-import Xwin from "@/public/Xwin.png";
-import Owin from "@/public/Owin.png";
 
-import filters from "@/public/sqlfilter.png";
-import permissions from "@/public/linuxPerm.png";
-import report from "@/public/incReport.png";
-
-import libraryApp from "@/public/Library-Landing.png";
-import libraryCart from "@/public/library-cart.png";
-import loading from "@/public/Skeleton-loading.png";
-import marketplace from "@/public/internship-landing.png";
-import marketplaceExplore from "@/public/intern-explore.png";
-import marketplaceFollow from "@/public/marketplaceFollow.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { useEffect } from "react";
 import Project from "@/components/Project";
-import Image from "next/image";
 
 function Projects() {
   useEffect(() => {
@@ -44,71 +34,55 @@ function Projects() {
       <Head>
         <title>My projects</title>
       </Head>
-      <img src="/background.jpg" className="bgImage" />
+      <img src="/background_8.png" className="bgImage" />
       <div className=" w-full  px-2 md:px-4">
         <Header />
         <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
-          <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">
+          <h1 className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold" data-aos="fade-in">
             My Projects
           </h1>
-          <div className="pb-20 flex flex-col space-y-4">
-            <h1 className="text-2xl font-extralight italic">
-              Cybersecurity projects:
-            </h1>
-            <div data-aos="fade-in" className="space-y-10">
-              <div className="space-y-4">
-                <h1
-                  className="text-3xl"
-                  data-aos="fade-in"
-                  data-aos-delay="300"
-                >
-                  Security Analyst Folder
-                </h1>
-                <div className="flex space-x-4 mt-5 mb-10 text-lg md:text-xl">
-                  <a
-                    data-aos="fade-right"
-                    data-aos-delay="200"
-                    href="https://drive.google.com/drive/folders/117rLt2bf_3LZWULYvhtxdzPQf7gAXs1U"
-                    className="animate-pulse hover:scale-125 transition duration-300"
-                    target="_blank"
-                  >
-                    See folder
-                  </a>
-                </div>
+          <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light" data-aos="fade-in">To see more detail - click the images!</h2>
 
-                <div className="project-style">
-                  <Image
-                    alt="section-image"
-                    className="hover-transition"
-                    data-aos="fade-right"
-                    src={filters}
-                  />
-                  <Image
-                    alt="section-image"
-                    className="hover-transition"
-                    data-aos="fade-right"
-                    data-aos-delay="200"
-                    src={permissions}
-                  />
-                  <Image
-                    alt="section-image"
-                    className="hover-transition"
-                    data-aos="fade-right"
-                    data-aos-delay="400"
-                    src={report}
-                  />
-                </div>
-                <p className="font-light text-xl">
-                  This folder has multiple examples of the various concepts I
-                  have worked on in my cybersecurity certificate. Whenever I
-                  finished an assignment, I was asked to create a document
-                  containing screenshots and descriptions of everything I did on
-                  it to show I had assimilated the various concepts that were
-                  taught.{" "}
-                </p>
-              </div>
-            </div>
+          <div className="pb-24 flex flex-col space-y-4">
+            <h1 className="text-2xl font-extralight italic">
+              Electrical Engineering projects
+            </h1>
+            <Project
+              Git="https://github.com/Achraf333-m/TheveninEquivalentTool/releases/tag/v.1.0.0"
+              Web={""}
+              description="The Thevenin Equivalence Theorem stood out to me
+               during my circuits course, so I built this CLI tool as a capstone 
+               to reinforce my understanding and support other students. The tool guides 
+               users step-by-step through simplifying a circuit into its Thevenin equivalent, 
+               explaining each part of the process. It calculates and displays the equivalent voltage and
+                resistance, evaluates whether the load absorbs maximum power, and logs the entire session to a file for review."
+              image1={Thev1}
+              image2={Thev2}
+              image3={Thev3}
+              name="TheveninEquivalent"
+              technologies="C++, Object-Oriented Programming, Circuit Analysis, Operator Overloading, Exception Handling, File Handling"
+            />
+            <Project
+              Git="https://github.com/Achraf333-m/PhasorHelper/releases/tag/v.1.0.0"
+              Web={""}
+              description="While studying Basic Circuit Analysis, I realized how time-consuming and error-prone AC circuit calculations 
+              can be; especially when working with complex number conversions and solving systems using Cramer's Rule. To streamline the process and reduce mistakes, 
+              I used the skills I gained in Programming Methodology I & II to build this CLI tool. It helps convert between rectangular, polar, and sinusoidal forms 
+              and performs complex arithmetic. 
+              Although I could have used smart pointers, 
+              I chose to manage memory manually as an exercise in understanding lower-level C++ memory handling."
+              image1={phasor1}
+              image2={phasor2}
+              image3={phasor3}
+              name="PhasorHelper"
+              technologies="C++, Object-Oriented Programming (OOP), Circuit Analysis, 
+              Operator Overloading, Exception Handling, Modular Design, Raw Pointers, Abstract Classes, Polymorphism, Dynamic Binding, Manual Memory Management"
+            />
           </div>
+          <div>
+            <h3 className="italic font-extralight text-lg pb-24">Other fun projects...</h3>
+          </div>
+
           <div className="pb-44 flex flex-col space-y-4">
             <h1 className="text-2xl font-extralight italic">
               Front-end projects:
@@ -116,84 +90,38 @@ function Projects() {
             <Project
               Git="https://github.com/Achraf333-m/mov-flix"
               Web="https://mov-flix-rho.vercel.app/signUp"
-              description="I made MovieFlix using NextJs, then linked it to my Firebase account
-                            to allow users to authenticate themselves. The website also has a 'liked list'
-                            where users can add their favorite movies, and the list will not vanish when they log out of the app. The movies are fetched from The Movie Database and youtube, along with their names and their trailers, and displayed using a Material UI modal.
-                            Note that the subscription goes through the Stripe test portal; so, real cards are not admissible. Feel
-                            free to try it with any test cards you have or you can use '4111 1111
-                            1111 1111', any future date and any three digits."
+              description="MovieFlix is built with Next.js and uses Firebase for user authentication. 
+              Users can log in, browse movies fetched from The Movie Database and YouTube, and watch trailers through a Material UI modal.
+               Authenticated users can also add favorites to their 'Liked List',  which persists across sessions. 
+               The app includes a mock subscription system integrated with Stripe’s test portal - real cards won’t work. 
+               
+               To try it out:
+               - Sign up with any email format and a six digit password => Choose a subsription => Use the TEST CARD ** 4111 1111 1111 1111 **, any future expiration date, and any 3-digit CVC => browse through movies and shows"
               image1={movflixSubscription}
               image2={movflixStripe}
               image3={movflixhome}
               name="MovieFlix"
-              technologies="NextJS, TypeScript, TailwindCSS, MUI, Firebase DB/Auth, Stripe payments,TMDB, RecoilJs"
+              technologies="NextJS, TypeScript, TailwindCSS, MUI, Firebase DB/Auth, Stripe payments, TMDB, RecoilJs"
             />
             <Project
               Git="https://github.com/Achraf333-m/chatbot_flask"
               Web="https://www.achrafdaimallah.com/about"
-              description="Ashbot is a project I started after finishing the course on Linear algebra for machine learning, given the comlexity of ML, I couldn't create a model straight out of my mind, so I looked for resources like Medium, from where I took the model and studied it then rewrote it and trained it with my data. As of yet, Ashbot is still as young as my knowledge of ML, but I plan on expanding my knowledge and improving it as I go."
+              description="This project was originally from a Medium article. 
+              After completing a Linear Algebra course that sparked my interest in Machine Learning, I decided to follow along and implement it.
+               While I didn't develop the model myself, 
+              I gained a basic understanding of key concepts like tokenization, lemmatization, and how matrices are used in Natural Language Processing (NLP)."
               image1={Ashbot}
               image2={Ashbotq1}
               image3={Ashbotq2}
               name="AshBot"
-              technologies="Python, NLTK, TensorFlow, Numpy Flask"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/Achraf-internship"
-              Web="https://achraf-internship.vercel.app/"
-              description="When I finished my front-end development course, I was tasked with making a starter-repository on github fully dynamic as a final assignment/virtual internship that taught me version control, branching and pull requests which prepared me to work with other developers in the future. On top of adding logic and animation to this website, I learned how to fork a repository, create pull requests and new branches, and make comments for other developpers to understand my code."
-              image1={marketplace}
-              image2={marketplaceExplore}
-              image3={marketplaceFollow}
-              name="E-currency Marketplace"
-              technologies="GIT, React, JavaScript, BootstrapCSS"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/space-project"
-              Web="https://space-project-pi.vercel.app/"
-              description="A space exploration website, it shows users different planets and moons along with interesting facts about them, then the users get to meet the crew and the technologies used to get to the destination planet. The ticket page is not listed in the navigation bar, but when  users get to it, they'll get to book a ticket then get a confirmation email a few moments after"
-              image1={bookSpace}
-              image2={spaceHome}
-              image3={spacePlanets}
-              name="Space Travel Ticket"
-              technologies="NextJs, Material UI, NodeMailer"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/Chat-app"
-              Web="https://chat-app-ten-rouge.vercel.app/"
-              description="This chat app uses firebase database in a different way, instead of storing lists or prices, it stores the messages sent back and forth between users and then accesses this database and displays its contents."
-              image1={chatapp1}
-              image2={chatapp2}
-              image3={chatapp3}
-              name="Awesome Chat"
-              technologies="NextJs, Firebase, SCSS"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/tictatoe"
-              Web="https://achraf333-m.github.io/tictatoe/"
-              description="A simple game I like playing, I also added a counter to keep track of wins and losses"
-              image1={draw}
-              image2={Owin}
-              image3={Xwin}
-              name="Tic Tac Toe"
-              technologies="Vanilla Javascript"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/react-app"
-              Web="https://react-app-rho-six.vercel.app/"
-              description="A library app I developed during my front-end development bootcamp, it has a collection of books and its users can add books to their cart and see the price they have to pay. There are also filters to simplify finding the right book"
-              image1={libraryApp}
-              image2={libraryCart}
-              image3={loading}
-              name="Canada Library"
-              technologies="React, JavaScript, CSS"
+              technologies="The model was built using Python, NLTK, TensorFlow, NumPy, and flask - 
+              I implemented the backend integration, styled the UI with Tailwind CSS, handled async requests, and deployed it on Heroku."
             />
           </div>
 
           <div className="space-y-4 md:space-y-0 flex flex-col md:space-x-4 items-center justify-center py-10 mb-20">
-            <p className="mb-4 text-pink-50">
-              You have a project for me or want me to work with you? You can
-              easily contact me here!
+            <p className="mb-4 text-gray-900 dark:text-purple-200/90">
+              Curious to learn more about me? I'd love to hear from you - get in touch here!
             </p>
             <Link href="/contact">
               <button className="btn">Contact me</button>
