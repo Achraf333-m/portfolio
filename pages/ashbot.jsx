@@ -28,7 +28,6 @@ function About() {
           <ChatBox />
         </section>
       </div>
-      <Footer />
     </div>
   );
 }

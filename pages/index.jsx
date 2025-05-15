@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Footer } from "@/components/Footer";
+import ChatBox from "@/components/chatbox";
 
 export default function Home() {
   const [title, setTitle] = useState();
@@ -109,6 +110,10 @@ export default function Home() {
             <FaRegCircle className="animate-pulse-fast text-[#000000] dark:text-[#ffffff] text-sm" />
           </Link>
         </main>
+      </div>
+      {/* this is to load the bot -- so there is no delay */}
+      <div className="absolute hidden">
+        <ChatBox />
       </div>
       <Footer/>
     </div>

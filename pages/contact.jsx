@@ -65,13 +65,13 @@ function Contact() {
           className="space-y-8 w-full py-10 mx-auto"
         >
           <div data-aos="fade-in" className="flex flex-col space-y-4">
-            <label>Your name</label>
+            <label classname="" >Your name</label>
             <input
               required
               type="text"
               name="user-name"
               placeholder="your name"
-              className="placeholder"
+              className="placeholder placeholder-white/50 dark:placeholder-white/70 "
             />
           </div>
           <div
@@ -79,13 +79,13 @@ function Contact() {
             data-aos-delay="500"
             className="flex flex-col space-y-4"
           >
-            <label>Your e-mail</label>
+            <label classname="" >Your e-mail</label>
             <input
               required
               type="email"
               name="user-email"
               placeholder="Type in your email"
-              className="placeholder"
+              className="placeholder placeholder-white/50 dark:placeholder-white/70 "
             />
           </div>
           <div
@@ -93,14 +93,14 @@ function Contact() {
             data-aos-delay="1000"
             className="flex flex-col space-y-4"
           >
-            <label>Your message</label>
+            <label classname="" >Your message</label>
             <textarea
               required
               type="text"
               name="message"
               rows={5}
               placeholder="Hey, I saw your portfolio. Let me know when you're available for a call!"
-              className="placeholder resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
+              className="placeholder placeholder-white/50 dark:placeholder-white/70 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
             />
           </div>
           <div className="flex items-center justify-center md:justify-start">
