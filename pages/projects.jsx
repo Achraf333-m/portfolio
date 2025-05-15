@@ -31,19 +31,30 @@ function Projects() {
     AOS.init({ duration: 1500, once: true });
   }, []);
   return (
-    <div className="w-full h-full bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+    <div className="wrapper">
       <Head>
         <title>My projects</title>
       </Head>
-      <img src="/background_8.png" className="bgImage" />
+      <div
+        className="bg-image"
+        style={{ backgroundImage: "url('/background_8.png')" }}
+      />
+
       <div className=" w-full relative px-2 md:px-4">
         <Header />
         <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
-          <h1 className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold" data-aos="fade-in">
+          <h1
+            className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold"
+            data-aos="fade-in"
+          >
             My Projects
           </h1>
-          <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light" data-aos="fade-in">T
-            o see more detail - click the images!</h2>
+          <h2
+            className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light"
+            data-aos="fade-in"
+          >
+            T o see more detail - click the images!
+          </h2>
 
           <div className="pb-24 flex flex-col space-y-4">
             <h1 className="text-2xl font-extralight italic">
@@ -82,7 +93,9 @@ function Projects() {
             />
           </div>
           <div>
-            <h3 className="italic font-extralight text-lg pb-24">Other fun projects...</h3>
+            <h3 className="italic font-extralight text-lg pb-24">
+              Other fun projects...
+            </h3>
           </div>
 
           <div className="pb-44 flex flex-col space-y-4">
@@ -123,7 +136,8 @@ function Projects() {
 
           <div className="space-y-4 md:space-y-0 flex flex-col md:space-x-4 items-center justify-center py-10 mb-20">
             <p className="mb-4 text-gray-900 dark:text-purple-200/90">
-              Curious to learn more about me? I'd love to hear from you - get in touch here!
+              Curious to learn more about me? I'd love to hear from you - get in
+              touch here!
             </p>
             <Link href="/contact">
               <button className="btn">Contact me</button>

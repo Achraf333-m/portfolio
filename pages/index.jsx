@@ -22,11 +22,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="wrapper">
       <Head>
         <title>Achraf Daimallah</title>
       </Head>
-      <img src="/background_8.png" className="bgImage" />
+      <div className="bg-image" style={{ backgroundImage: "url('/background_8.png')"}} />
       <Header />
       <div className="py-40 relative">
         <main className="relative flex flex-col pt-20 px-10 max-w-6xl mx-auto">
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="flex items-center text-[#14091f] dark:text-[#afafff] transition-colors duration-300 ease-in-out text-xl space-x-4">
             <a
               data-aos="fade-in"
-              data-aos-delay="900"
+              data-aos-delay="1200"
               href="https://www.linkedin.com/in/achraf-daimallah/"
               target="_blank"
             >
@@ -83,7 +83,7 @@ export default function Home() {
             </a>
             <a
               data-aos="fade-in"
-              data-aos-delay="1000"
+              data-aos-delay="1200"
               href="https://github.com/Achraf333-m"
               target="_blank"
             >
@@ -91,7 +91,7 @@ export default function Home() {
             </a>
             <a
               data-aos="fade-in"
-              data-aos-delay="1100"
+              data-aos-delay="1200"
               href="https://drive.google.com/file/d/1CgMhevVhIr2Uue6pLrKju__pfQ91FIUP/view?usp=sharing"
               target="_blank"
             >
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <Link
             data-aos="fade-in"
-            data-aos-delay="1200"
+            data-aos-delay="1100"
             href="/projects"
             className="flex space-x-4 max-w-[180px] items-center my-5"
           >

@@ -8,20 +8,21 @@ import ChatBox from "@/components/chatbox";
 import { Footer } from "@/components/Footer";
 
 function About() {
-  
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
-    
-    return () => {};
-}, []);
 
-  
+    return () => {};
+  }, []);
+
   return (
-    <div className="w-full h-full bg-gradient-to-l from-yellow-700/0 to to-blue-400/0">
+    <div className="wrapper">
       <Head>
         <title>Ashbot</title>
       </Head>
-      <img src="/background_8.png" className="bgImage" />
+      <div
+        className="bg-image"
+        style={{ backgroundImage: "url('/background_8.png')" }}
+      />
       <div className="w-full relative px-2 md:px-4 darkMode lightMode ">
         <Header />
         <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">

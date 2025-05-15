@@ -37,7 +37,7 @@ export default function MyApp({ Component, pageProps }) {
         lag={0.6}
       />
       {/* for mobile/tablet, calculate real viewport length when resized, so that background doesn't "jump" */}
-      <div className="bg-container h-[calc(var(--vh, 1vh)*100)]">
+      <div className="">
         <Component {...pageProps} />
       </div>
     </ThemeProvider>
