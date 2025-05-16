@@ -88,14 +88,6 @@ export default function Home() {
             >
               <FaGithub className="hover:scale-[0.95]  transition-transform" />
             </a>
-            <a
-              data-aos="fade-in"
-              data-aos-delay="1200"
-              href="https://drive.google.com/file/d/1CgMhevVhIr2Uue6pLrKju__pfQ91FIUP/view?usp=sharing"
-              target="_blank"
-            >
-              <AiOutlineFile className="hover:scale-[0.95]  transition-transform" />
-            </a>
           </div>
           <Link
             data-aos="fade-in"
