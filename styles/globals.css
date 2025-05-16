@@ -5,7 +5,7 @@
 
 @layer components {
   .bg-image {
-    @apply fixed top-0 left-0 -z-20 brightness-[.95] dark:brightness-[.55] dark:opacity-90  w-full h-[calc(var(--vh,1vh)*100)] bg-cover bg-center;
+    @apply fixed top-0 left-0 bottom-0 right-0 -z-20 brightness-[.95] dark:brightness-[.55] dark:opacity-90 bg-cover w-full bg-center;
   }
   .wrapper {
     @apply relative min-h-[calc(var(--vh,1vh)*100)] overflow-hidden
