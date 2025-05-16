@@ -22,14 +22,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>Achraf Daimallah</title>
       </Head>
-      <div className="bg-image" style={{ backgroundImage: "url('/background_8.png')"}} />
       <Header />
-      <div className="py-40 relative">
-        <main className="relative flex flex-col pt-20 px-10 max-w-6xl mx-auto">
+      <div className="py-40">
+        <main className="flex flex-col pt-20 px-10 max-w-6xl mx-auto">
           <h1
             data-aos="fade-up"
             className=" text-[30px] text-[#14091f] dark:text-[#c3c3fb] sm:text-[55px] pb-2"
@@ -116,6 +115,6 @@ export default function Home() {
         <ChatBox />
       </div>
       <Footer/>
-    </div>
+    </>
   );
 }

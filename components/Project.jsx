@@ -56,7 +56,7 @@ function Project({
             onClick={() => openModal(image3)}
           />
         </div>
-        <p className="font-light p-2 text-xl break-words">{description}</p>
+        <p className="font-normal p-2 text-xl break-words">{description}</p>
       </div>
       {modal && (
         <div

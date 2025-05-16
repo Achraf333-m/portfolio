@@ -27,7 +27,7 @@
   }
 
   .menu .MuiPaper-root {
-    @apply !absolute !right-0 !rounded-md bg-black/40;
+    @apply !absolute !right-0 !rounded-md bg-black/70;
   }
 
   .menu .MuiList-root {

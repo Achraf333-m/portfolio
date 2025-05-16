@@ -15,6 +15,10 @@ import phasor1 from "@/public/phasorTool1.png";
 import phasor2 from "@/public/phasorTool2.png";
 import phasor3 from "@/public/phasorTool3.png";
 
+import portfolio1 from "@/public/portfolio1.png";
+import portfolio2 from "@/public/portfolio2.png";
+import portfolio3 from "@/public/portfolio3.png";
+
 import Ashbot from "@/public/Ashbot.png";
 import Ashbotq1 from "@/public/ashbotQuestion1.png";
 import Ashbotq2 from "@/public/ashbtq2.png";
@@ -31,18 +35,14 @@ function Projects() {
     AOS.init({ duration: 1500, once: true });
   }, []);
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>My projects</title>
       </Head>
-      <div
-        className="bg-image"
-        style={{ backgroundImage: "url('/background_8.png')" }}
-      />
 
-      <div className=" w-full relative px-2 md:px-4">
+      <div className=" w-full px-2 md:px-4">
         <Header />
-        <section className="  flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
+        <section className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1
             className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold"
             data-aos="fade-in"
@@ -53,7 +53,8 @@ function Projects() {
             className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light"
             data-aos="fade-in"
           >
-            T o see more detail - click the images!
+            By the way, you can <span className="md:hidden">swipe and </span>
+            click on the images to see better!
           </h2>
 
           <div className="pb-24 flex flex-col space-y-4">
@@ -94,13 +95,13 @@ function Projects() {
           </div>
           <div>
             <h3 className="italic font-extralight text-lg pb-24">
-              Other fun projects...
+              Other fun projects
             </h3>
           </div>
 
           <div className="pb-44 flex flex-col space-y-4">
             <h1 className="text-2xl font-extralight italic">
-              Front-end projects:
+              Front-end projects
             </h1>
             <Project
               Git="https://github.com/Achraf333-m/mov-flix"
@@ -118,6 +119,22 @@ function Projects() {
               name="MovieFlix"
               technologies="NextJS, TypeScript, TailwindCSS, MUI, Firebase DB/Auth, Stripe payments, TMDB, RecoilJs"
             />
+
+            <Project
+              Git="https://github.com/Achraf333-m/portfolio"
+              Web="https://achrafdaimallah.com"
+              description="Another fun project I worked on is this portfolio that contains all of my projects, I build it from scratch using nextjs, tailwindcss, modular design and vercel hosting as well as a private domain. I also integrated Ashbot into it using a flask backend and heroku hosting (see below)"
+              image1={portfolio1}
+              image2={portfolio2}
+              image3={portfolio3}
+              name="E-portfolio"
+              technologies="NextJS, TailwindCSS, MUI"
+            />
+
+            <h1 className="text-xl pt-10 font-extralight italic">
+              Projects I didn't develop from scratch but I added to
+            </h1>
+
             <Project
               Git="https://github.com/Achraf333-m/chatbot_flask"
               Web="https://www.achrafdaimallah.com/about"
@@ -135,7 +152,7 @@ function Projects() {
           </div>
 
           <div className="space-y-4 md:space-y-0 flex flex-col md:space-x-4 items-center justify-center py-10 mb-20">
-            <p className="mb-4 text-gray-900 dark:text-purple-200/90">
+            <p className="mb-4 md:text-lg text-center text-gray-900 dark:text-purple-200/90">
               Curious to learn more about me? I'd love to hear from you - get in
               touch here!
             </p>
@@ -146,7 +163,7 @@ function Projects() {
         </section>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

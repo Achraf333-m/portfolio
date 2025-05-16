@@ -21,15 +21,11 @@ function Education() {
     AOS.init({ duration: 1500, once: true });
   }, []);
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>Education & Certificates</title>
       </Head>
-      <div
-        className="bg-image"
-        style={{ backgroundImage: "url('/background_8.png')" }}
-      />
-      <div className="w-full relative px-2 md:px-4 ">
+      <div className="w-full px-2 md:px-4 ">
         <Header />
         <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
           <h1
@@ -67,8 +63,12 @@ function Education() {
           >
             Certificates
           </h1>
-          <h2 className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light">
-            T o see more detail - click the images!
+          <h2
+            className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light"
+            data-aos="fade-in"
+          >
+            By the way, you can <span className="md:hidden">swipe and </span>
+            click on the images to see better!
           </h2>
 
           <Cert
@@ -101,7 +101,7 @@ function Education() {
         </section>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

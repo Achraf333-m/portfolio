@@ -15,21 +15,17 @@ function About() {
   }, []);
 
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>Ashbot</title>
       </Head>
-      <div
-        className="bg-image"
-        style={{ backgroundImage: "url('/background_8.png')" }}
-      />
-      <div className="w-full relative px-2 md:px-4 darkMode lightMode ">
+      <div className="w-full px-2 md:px-4 darkMode lightMode ">
         <Header />
         <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
           <ChatBox />
         </section>
       </div>
-    </div>
+    </>
   );
 }
 

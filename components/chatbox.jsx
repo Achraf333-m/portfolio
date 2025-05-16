@@ -119,17 +119,19 @@ const ChatBox = () => {
             ))
           ) : (
             <div className="w-full h-86 flex flex-col p-8 space-y-2 justify-center items-center">
-              <div className="text-center text-xl text-gray-600/60  dark:text-pink-50/60">
+              <div className="text-center text-xl text-gray-900/90  dark:text-pink-50/60">
                 <h1
                   className="mt-16 mb-20 text-3xl font-semibold"
                   data-aos="fade-in"
                 >
                   This is AshBot.
                 </h1>
+                <p className="text-gray-900/80 dark:text-pink-50/50">
                 Here are some ideas to break the ice: <br /><i>"How are you?"</i>  <br /><i>"Tell me about
                 yourself!"</i>  <br /><i>"Where are you from?"</i>  <br /><i>"What can you do?"</i>  <br />
+                </p>
               </div>
-              <p className="text-center text-lg text-pink-50/60">
+              <p className="text-center text-lg">
                 See projects section for more details.
               </p>
             </div>

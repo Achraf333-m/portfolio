@@ -51,10 +51,10 @@ function Header() {
 
   return (
     <div
-      className={`${scrolled && "bg-black/60"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
+      className={`${scrolled && "bg-black/[.85]"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
     >
       <div
-        className={`flex text-black/75 dark:text-pink-50 scale-90 ${
+        className={` ${scrolled && "text-pink-100"} flex text-black/75 dark:text-pink-50 scale-90 ${
           scrolled || "border-b-2 border-white/50"
         } justify-between max-w-7xlxl mx-auto px-6 items-center text-sm sm:text-lg md:text-xl`}
       >

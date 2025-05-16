@@ -43,15 +43,11 @@ function Contact() {
   }
 
   return (
-    <div className="wrapper">
+    <>
       <Head>
         <title>Contact</title>
       </Head>
-      <div
-        className="bg-image"
-        style={{ backgroundImage: "url('/background_8.png')" }}
-      />
-      <div className="w-full relative">
+      <div className="w-full">
         <Header />
         <section
           data-aos="fade-in"
@@ -126,7 +122,7 @@ function Contact() {
         </section>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
