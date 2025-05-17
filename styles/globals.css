@@ -2,39 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base {
+  h1 {
+    @apply
+  }
+  h2 {
+    @apply
+  }
+  p {
+    @apply
+  }
+} */
+
+@layer body {
+  html,
+  body {
+    @apply h-[100%];
+  }
+}
 
 @layer components {
   .bg-image {
     @apply absolute top-0 left-0 -z-20 brightness-[.95] dark:brightness-[.55] dark:opacity-90  w-full min-h-full bg-cover bg-center;
   }
   .wrapper {
-    @apply relative min-h-[calc(var(--vh,1vh)*100)] overflow-hidden
+    @apply relative min-h-[calc(var(--vh,1vh)*100)] overflow-hidden;
   }
   .project-style {
     @apply flex items-center justify-start overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-track-transparent scrollbar-thumb-purple-200 space-x-6 px-4 pb-4 w-full;
   }
-  .placeholder {
-    @apply bg-transparent outline-none px-2 md:px-4 rounded-lg py-1 text-[#14091f] dark:text-[#ffffff];
+  .textarea_style {
+    @apply w-full p-4 rounded-2xl border-b border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-orange-400 dark:focus:ring-orange-500 transition duration-200 resize-none shadow-sm;
   }
   .hover-transition {
-    @apply border-2 border-white rounded-lg md:cursor-pointer max-h-60 max-w-max block object-cover; 
+    @apply border-2 border-white rounded-lg md:cursor-pointer max-h-60 max-w-max block object-cover;
   }
   .btn {
-    @apply py-2 px-10  bg-gradient-to-r hover:scale-[1.02] transition-all text-pink-50 dark:text-pink-50  dark:from-purple-900 dark:to-yellow-600 from-yellow-700 to-purple-900 max-w-lg rounded-lg;
+    @apply inline-flex items-center justify-center px-7 py-3 rounded-lg
+      bg-gradient-to-r from-purple-700 via-purple-900 to-indigo-800
+      text-white font-semibold text-lg
+      shadow-lg
+      transition-transform duration-300 ease-in-out
+      hover:scale-105 hover:shadow-xl
+      focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50
+      active:scale-95 active:shadow-md;
   }
   .menu {
-    @apply mt-4 mr-4;
+    @apply mt-10 w-full;
   }
 
-  .menu .MuiPaper-root {
-    @apply !absolute !right-0 !rounded-md bg-black/70;
+  /* Fullscreen container */
+  .menu-fullscreen {
+    @apply fixed -inset-0 z-50 bg-black/90 rounded-none flex flex-col items-center justify-center;
   }
 
+  /* Fullscreen list layout */
   .menu .MuiList-root {
-    @apply !p-0;
+    @apply h-full w-full flex flex-col items-center justify-center gap-6;
   }
 
+  /* Unified MenuItem styling */
   .menu .MuiMenuItem-root {
-    @apply !block !w-40 !py-3.5 !text-center !text-sm !font-light !text-white !transition !duration-200 first:cursor-default first:!font-normal first:!text-white hover:!bg-black/20;
+    @apply block w-60 py-6 text-center text-sm font-light text-black transition duration-200 
+         first:cursor-default first:font-normal first:text-white hover:bg-black/40;
   }
 }

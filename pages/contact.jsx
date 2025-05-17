@@ -45,7 +45,7 @@ function Contact() {
   return (
     <>
       <Head>
-        <title>Contact</title>
+        <title>Contact | Achraf Daimallah</title>
       </Head>
       <div className="w-full">
         <Header />
@@ -53,7 +53,7 @@ function Contact() {
           data-aos="fade-in"
           className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden"
         >
-          <h1 className="mt-16 mb-20 text-3xl font-semibold" data-aos="fade-in">
+          <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold" data-aos="fade-in">
             Contact me
           </h1>
 
@@ -68,8 +68,8 @@ function Contact() {
                 required
                 type="text"
                 name="user-name"
-                placeholder="your name"
-                className="placeholder placeholder-white/50 dark:placeholder-white/70 "
+                placeholder="Type your name..."
+                className="textarea_style placeholder-white/50 dark:placeholder-white/70 "
               />
             </div>
             <div
@@ -82,8 +82,8 @@ function Contact() {
                 required
                 type="email"
                 name="user-email"
-                placeholder="Type in your email"
-                className="placeholder placeholder-white/50 dark:placeholder-white/70 "
+                placeholder="Type your email..."
+                className="textarea_style placeholder-white/50 dark:placeholder-white/70 "
               />
             </div>
             <div
@@ -98,7 +98,7 @@ function Contact() {
                 name="message"
                 rows={5}
                 placeholder="Hey, I saw your portfolio. Let me know when you're available for a call!"
-                className="placeholder placeholder-white/50 dark:placeholder-white/70 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
+                className="textarea_style placeholder-white/50 dark:placeholder-white/70 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
               />
             </div>
             <div className="flex items-center justify-center md:justify-start">

@@ -17,11 +17,14 @@ function About() {
   return (
     <>
       <Head>
-        <title>Ashbot</title>
+        <title>Ashbot | Achraf Daimallah</title>
       </Head>
       <div className="w-full px-2 md:px-4 darkMode lightMode ">
         <Header />
         <section className="max-w-6xl mx-auto py-40 px-4 space-y-20 overflow-x-hidden">
+          <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold" data-aos="fade-in">
+            Ashbot
+          </h1>
           <ChatBox />
         </section>
       </div>

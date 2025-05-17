@@ -9,10 +9,10 @@ function Links({ Glink, Wlink }) {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div className="flex space-x-4 mt-5 mb-10 text-lg md:text-xl">
+    <div className="flex space-x-4 mt-5 mb-10">
       <a
         data-aos="fade-right"
-        data-aos-delay="200"
+        data-aos-delay="400"
         className="hover:scale-125 transition duration-300"
         href={Glink}
         target="_blank"
@@ -21,7 +21,7 @@ function Links({ Glink, Wlink }) {
       </a>
       <a
         data-aos="fade-right"
-        
+        data-aos-delay="200"
         className={(Wlink == "") ? "hidden" : "hover:scale-125 transition duration-300"}
         href={Wlink}
         target="_blank"

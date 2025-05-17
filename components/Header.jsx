@@ -14,21 +14,24 @@ function Header() {
   const path = router.pathname;
   const nextMode = theme === "light" ? "dark" : "light";
 
-  useEffect(() => {
-    darkMode();
-  }, []);
-
-  const darkMode = () => {
-    if (nextMode !== "dark") {
-      setDark(true);
-    } else {
-      setDark(false);
-    }
-  };
+  
+  
+  
+  
+  
   const [scrolled, setScrolled] = useState(false);
-
+  
   useEffect(() => {
-
+    
+    const darkMode = () => {
+      if (nextMode !== "dark") {
+        setDark(true);
+      } else {
+        setDark(false);
+      }
+    };
+    
+    darkMode();
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         setScrolled(true);
@@ -51,7 +54,7 @@ function Header() {
 
   return (
     <div
-      className={`${scrolled && "bg-black/[.85]"} w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
+      className={`${scrolled && "bg-black/[.85]"}  transition-all duration-[450ms] w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
     >
       <div
         className={` ${scrolled && "text-pink-100"} flex text-black/75 dark:text-pink-50 scale-90 ${

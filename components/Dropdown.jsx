@@ -50,12 +50,25 @@ export default function Dropdown() {
       </Button>
       <Menu
         id="basic-menu"
-        anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        className="menu"
+        anchorEl={anchorEl}
+        anchorReference="anchorEl"
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        slotProps={{
+          paper: {
+            className: "menu-fullscreen",
+          },
+        }}
         MenuListProps={{
-          "aria-labelledby": "basic-button",
+          disablePadding: true,
         }}
       >
         <div>

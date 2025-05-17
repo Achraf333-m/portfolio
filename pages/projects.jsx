@@ -37,14 +37,14 @@ function Projects() {
   return (
     <>
       <Head>
-        <title>My projects</title>
+        <title>My projects | Achraf Daimallh</title>
       </Head>
 
       <div className=" w-full px-2 md:px-4">
         <Header />
         <section className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
           <h1
-            className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl font-semibold"
+            className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl text-center font-extrabold"
             data-aos="fade-in"
           >
             My Projects
@@ -57,98 +57,142 @@ function Projects() {
             click on the images to see better!
           </h2>
 
-          <div className="pb-24 flex flex-col space-y-4">
+          <div className="pb-24 flex flex-col space-y-8">
             <h1 className="text-2xl font-extralight italic">
               Electrical Engineering projects
             </h1>
-            <Project
-              Git="https://github.com/Achraf333-m/TheveninEquivalentTool/releases/tag/v.1.0.0"
-              Web={""}
-              description="The Thevenin Equivalence Theorem stood out to me
-               during my circuits course, so I built this CLI tool as a capstone 
-               to reinforce my understanding and support other students. The tool guides 
-               users step-by-step through simplifying a circuit into its Thevenin equivalent, 
-               explaining each part of the process. It calculates and displays the equivalent voltage and
-                resistance, evaluates whether the load absorbs maximum power, and logs the entire session to a file for review."
-              image1={Thev1}
-              image2={Thev2}
-              image3={Thev3}
-              name="TheveninEquivalent"
-              technologies="C++, Object-Oriented Programming, Circuit Analysis, Operator Overloading, Exception Handling, File Handling"
-            />
-            <Project
-              Git="https://github.com/Achraf333-m/PhasorHelper/releases/tag/v.1.0.0"
-              Web={""}
-              description="While studying Basic Circuit Analysis, I realized how time-consuming and error-prone AC circuit calculations 
+
+            <div className="flex items-center flex-col space-y-16 md:flex-row md:justify-start md:gap-x-4">
+              <Project
+                Git="https://github.com/Achraf333-m/PhasorHelper/releases/tag/v.1.0.0"
+                Web={""}
+                description="While studying Basic Circuit Analysis, I realized how time-consuming and error-prone AC circuit calculations 
               can be; especially when working with complex number conversions and solving systems using Cramer's Rule. To streamline the process and reduce mistakes, 
               I used the skills I gained in Programming Methodology I & II to build this CLI tool. It helps convert between rectangular, polar, and sinusoidal forms 
               and performs complex arithmetic. 
               Although I could have used smart pointers, 
               I chose to manage memory manually as an exercise in understanding lower-level C++ memory handling."
-              image1={phasor1}
-              image2={phasor2}
-              image3={phasor3}
-              name="PhasorHelper"
-              technologies="C++, Object-Oriented Programming (OOP), Circuit Analysis, 
-              Operator Overloading, Exception Handling, Modular Design, Raw Pointers, Abstract Classes, Polymorphism, Dynamic Binding, Manual Memory Management"
-            />
-          </div>
-          <div>
-            <h3 className="italic font-extralight text-lg pb-24">
-              Other fun projects
-            </h3>
+                image1={phasor1}
+                image2={phasor2}
+                image3={phasor3}
+                delay={300}
+                name="PhasorHelper"
+                technologies={[
+                  "C++",
+                  "Object-Oriented Programming (OOP)",
+                  "Circuit Analysis",
+                  "Operator Overloading",
+                  "Exception Handling",
+                  "Modular Design",
+                  "Raw Pointers",
+                  "Abstract Classes",
+                  "Polymorphism",
+                  "Dynamic Binding",
+                  "Manual Memory Management",
+                ]}
+              />
+              <Project
+                Git="https://github.com/Achraf333-m/TheveninEquivalentTool/releases/tag/v.1.0.0"
+                Web={""}
+                description="The Thevenin Equivalence Theorem stood out to me
+               during my circuits course, so I built this CLI tool as a capstone 
+               to reinforce my understanding and support other students. The tool guides 
+               users step-by-step through simplifying a circuit into its Thevenin equivalent, 
+               explaining each part of the process. It calculates and displays the equivalent voltage and
+                resistance, evaluates whether the load absorbs maximum power, and logs the entire session to a file for review."
+                image1={Thev1}
+                image2={Thev2}
+                image3={Thev3}
+                delay={200}
+                name="TheveninEquivalent"
+                technologies={[
+                  "C++",
+                  "Object-Oriented Programming",
+                  "Circuit Analysis",
+                  "Operator Overloading",
+                  "Exception Handling",
+                  "File Handling",
+                ]}
+              />
+            </div>
           </div>
 
-          <div className="pb-44 flex flex-col space-y-4">
+          <div className="pb-24 flex flex-col space-y-8">
             <h1 className="text-2xl font-extralight italic">
               Front-end projects
             </h1>
-            <Project
-              Git="https://github.com/Achraf333-m/mov-flix"
-              Web="https://mov-flix-rho.vercel.app/signUp"
-              description="MovieFlix is built with Next.js and uses Firebase for user authentication. 
+            <div className="flex items-center flex-col gap-y-4 space-y-16 md:flex-row md:justify-start md:gap-x-4">
+              <Project
+                Git="https://github.com/Achraf333-m/mov-flix"
+                Web="https://mov-flix-rho.vercel.app/signUp"
+                description="MovieFlix is built with Next.js and uses Firebase for user authentication. 
               Users can log in, browse movies fetched from The Movie Database and YouTube, and watch trailers through a Material UI modal.
                Authenticated users can also add favorites to their 'Liked List',  which persists across sessions. 
                The app includes a mock subscription system integrated with Stripe’s test portal - real cards won’t work. 
                
                To try it out:
                - Sign up with any email format and a six digit password => Choose a subsription => Use the TEST CARD ** 4111 1111 1111 1111 **, any future expiration date, and any 3-digit CVC => browse through movies and shows"
-              image1={movflixSubscription}
-              image2={movflixStripe}
-              image3={movflixhome}
-              name="MovieFlix"
-              technologies="NextJS, TypeScript, TailwindCSS, MUI, Firebase DB/Auth, Stripe payments, TMDB, RecoilJs"
-            />
+                image1={movflixSubscription}
+                image2={movflixStripe}
+                image3={movflixhome}
+                delay={300}
+                name="MovieFlix"
+                technologies={[
+                  "NextJS",
+                  "TypeScript",
+                  "TailwindCSS",
+                  "MUI",
+                  "Firebase DB/Auth",
+                  "Stripe payments",
+                  "TMDB, RecoilJs",
+                ]}
+              />
 
-            <Project
-              Git="https://github.com/Achraf333-m/portfolio"
-              Web="https://achrafdaimallah.com"
-              description="Another fun project I worked on is this portfolio that contains all of my projects, I build it from scratch using nextjs, tailwindcss, modular design and vercel hosting as well as a private domain. I also integrated Ashbot into it using a flask backend and heroku hosting (see below)"
-              image1={portfolio1}
-              image2={portfolio2}
-              image3={portfolio3}
-              name="E-portfolio"
-              technologies="NextJS, TailwindCSS, MUI"
-            />
+              <Project
+                Git="https://github.com/Achraf333-m/portfolio"
+                Web="https://achrafdaimallah.com"
+                description="Another fun project I worked on is this portfolio that contains all of my projects, I build it from scratch using nextjs, tailwindcss, modular design and vercel hosting as well as a private domain. I also integrated Ashbot into it using a flask backend and heroku hosting (see below)"
+                image1={portfolio1}
+                image2={portfolio2}
+                image3={portfolio3}
+                delay={200}
+                name="E-portfolio"
+                technologies={["NextJS", "TailwindCSS", "MUI"]}
+              />
+            </div>
+          </div>
 
+          <div className="pb-24 flex flex-col space-y-8">
             <h1 className="text-xl pt-10 font-extralight italic">
-              Projects I didn't develop from scratch but I added to
+              Projects I integrated and customized
             </h1>
-
-            <Project
-              Git="https://github.com/Achraf333-m/chatbot_flask"
-              Web="https://www.achrafdaimallah.com/about"
-              description="This project was originally from a Medium article. 
+            <div className="flex items-center flex-col gap-y-4 space-y-16 md:flex-row md:justify-start md:gap-x-4">
+              <Project
+                Git="https://github.com/Achraf333-m/chatbot_flask"
+                Web="https://www.achrafdaimallah.com/ashbot"
+                description="This project was originally from a Medium article. 
               After completing a Linear Algebra course that sparked my interest in Machine Learning, I decided to follow along and implement it.
                While I didn't develop the model myself, 
               I gained a basic understanding of key concepts like tokenization, lemmatization, and how matrices are used in Natural Language Processing (NLP)."
-              image1={Ashbot}
-              image2={Ashbotq1}
-              image3={Ashbotq2}
-              name="AshBot"
-              technologies="The model was built using Python, NLTK, TensorFlow, NumPy, and flask - 
-              I implemented the backend integration, styled the UI with Tailwind CSS, handled async requests, and deployed it on Heroku."
-            />
+                image1={Ashbot}
+                image2={Ashbotq1}
+                image3={Ashbotq2}
+                name="AshBot"
+                technologies={[
+                  "Original model:",
+                  "Python",
+                  "NLTK",
+                  "TensorFlow",
+                  "NumPy",
+                  "flask",
+                  "I implemented:",
+                  "backend integration",
+                  "Tailwind CSS",
+                  "async requests",
+                  "Heroku",
+                ]}
+              />
+            </div>
           </div>
 
           <div className="space-y-4 md:space-y-0 flex flex-col md:space-x-4 items-center justify-center py-10 mb-20">
