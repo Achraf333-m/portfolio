@@ -34,44 +34,39 @@ function Projects() {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true });
   }, []);
+
   return (
     <>
       <Head>
-        <title>My projects | Achraf Daimallh</title>
+        <title>My Projects | Achraf Daimallah</title>
       </Head>
 
-      <div className=" w-full px-2 md:px-4">
-        <Header />
-        <section className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden">
-          <h1
-            className="mt-16 mb-5  text-[#1e0c2c] dark:text-purple-100 text-3xl text-center font-extrabold"
-            data-aos="fade-in"
-          >
-            My Projects
-          </h1>
-          <h2
-            className="mb-20  text-[#1e0c2c] dark:text-purple-100 text-xl font-light"
-            data-aos="fade-in"
-          >
-            By the way, you can <span className="md:hidden">swipe and </span>
-            click on the images to see better!
-          </h2>
+      <Header />
 
-          <div className="pb-24 flex flex-col space-y-8">
-            <h1 className="text-2xl font-extralight italic">
-              Electrical Engineering projects
+      <section className="section_style">
+        <div className="main_style">
+          <div className="text-center mb-16 px-4" data-aos="fade-in">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-purple-950 dark:text-purple-200">
+              My Projects
             </h1>
+            <p className="mt-4 text-lg font-light text-[#1e0c2c] dark:text-purple-100">
+              You can click on each project to see more details!
+            </p>
+          </div>
 
-            <div className="flex items-center flex-col space-y-16 md:flex-row md:justify-start md:gap-x-4">
+          {/* Electrical Engineering */}
+          <section className="mb-24 px-4">
+            <h2
+              className="subtitle"
+            >
+              Electrical Engineering projects
+            </h2>
+
+            <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
                 Git="https://github.com/Achraf333-m/PhasorHelper/releases/tag/v.1.0.0"
-                Web={""}
-                description="While studying Basic Circuit Analysis, I realized how time-consuming and error-prone AC circuit calculations 
-              can be; especially when working with complex number conversions and solving systems using Cramer's Rule. To streamline the process and reduce mistakes, 
-              I used the skills I gained in Programming Methodology I & II to build this CLI tool. It helps convert between rectangular, polar, and sinusoidal forms 
-              and performs complex arithmetic. 
-              Although I could have used smart pointers, 
-              I chose to manage memory manually as an exercise in understanding lower-level C++ memory handling."
+                Web=""
+                description="While studying Basic Circuit Analysis, I realized how time-consuming and error-prone AC circuit calculations can be. I used what I learned in Programming Methodology I & II to build a CLI tool that streamlines conversions between rectangular, polar, and sinusoidal forms—plus complex arithmetic using Cramer's Rule. I managed memory manually to strengthen my understanding of low-level C++."
                 image1={phasor1}
                 image2={phasor2}
                 image3={phasor3}
@@ -79,27 +74,18 @@ function Projects() {
                 name="PhasorHelper"
                 technologies={[
                   "C++",
-                  "Object-Oriented Programming (OOP)",
+                  "Object-Oriented Programming",
+                  "Manual Memory Management",
                   "Circuit Analysis",
                   "Operator Overloading",
                   "Exception Handling",
                   "Modular Design",
-                  "Raw Pointers",
-                  "Abstract Classes",
-                  "Polymorphism",
-                  "Dynamic Binding",
-                  "Manual Memory Management",
                 ]}
               />
               <Project
                 Git="https://github.com/Achraf333-m/TheveninEquivalentTool/releases/tag/v.1.0.0"
-                Web={""}
-                description="The Thevenin Equivalence Theorem stood out to me
-               during my circuits course, so I built this CLI tool as a capstone 
-               to reinforce my understanding and support other students. The tool guides 
-               users step-by-step through simplifying a circuit into its Thevenin equivalent, 
-               explaining each part of the process. It calculates and displays the equivalent voltage and
-                resistance, evaluates whether the load absorbs maximum power, and logs the entire session to a file for review."
+                Web=""
+                description="Built as a capstone for my circuits class, this CLI tool helps simplify a linear circuit into its Thevenin equivalent. It guides the user through step-by-step simplification, checks for max power transfer, and logs the session to a file. Built in C++ with a focus on clear structure and exception handling."
                 image1={Thev1}
                 image2={Thev2}
                 image3={Thev3}
@@ -107,31 +93,28 @@ function Projects() {
                 name="TheveninEquivalent"
                 technologies={[
                   "C++",
-                  "Object-Oriented Programming",
+                  "OOP",
                   "Circuit Analysis",
-                  "Operator Overloading",
                   "Exception Handling",
                   "File Handling",
                 ]}
               />
             </div>
-          </div>
+          </section>
 
-          <div className="pb-24 flex flex-col space-y-8">
-            <h1 className="text-2xl font-extralight italic">
+          {/* Front-end Projects */}
+          <section className="mb-24 px-4">
+            <h2
+              className="subtitle"
+            >
               Front-end projects
-            </h1>
-            <div className="flex items-center flex-col gap-y-4 space-y-16 md:flex-row md:justify-start md:gap-x-4">
+            </h2>
+
+            <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
                 Git="https://github.com/Achraf333-m/mov-flix"
                 Web="https://mov-flix-rho.vercel.app/signUp"
-                description="MovieFlix is built with Next.js and uses Firebase for user authentication. 
-              Users can log in, browse movies fetched from The Movie Database and YouTube, and watch trailers through a Material UI modal.
-               Authenticated users can also add favorites to their 'Liked List',  which persists across sessions. 
-               The app includes a mock subscription system integrated with Stripe’s test portal - real cards won’t work. 
-               
-               To try it out:
-               - Sign up with any email format and a six digit password => Choose a subsription => Use the TEST CARD ** 4111 1111 1111 1111 **, any future expiration date, and any 3-digit CVC => browse through movies and shows"
+                description="MovieFlix is a full-stack movie app built with Next.js. It uses Firebase for auth and Stripe test payments for subscription access. Users can sign up, browse movies from TMDB, watch trailers, and save favorites. It also features protected routing and Material UI for a polished UI."
                 image1={movflixSubscription}
                 image2={movflixStripe}
                 image3={movflixhome}
@@ -142,16 +125,16 @@ function Projects() {
                   "TypeScript",
                   "TailwindCSS",
                   "MUI",
-                  "Firebase DB/Auth",
-                  "Stripe payments",
-                  "TMDB, RecoilJs",
+                  "Firebase Auth",
+                  "Stripe",
+                  "TMDB",
+                  "RecoilJs",
                 ]}
               />
-
               <Project
                 Git="https://github.com/Achraf333-m/portfolio"
                 Web="https://achrafdaimallah.com"
-                description="Another fun project I worked on is this portfolio that contains all of my projects, I build it from scratch using nextjs, tailwindcss, modular design and vercel hosting as well as a private domain. I also integrated Ashbot into it using a flask backend and heroku hosting (see below)"
+                description="This portfolio itself is a project! I built it from scratch using Next.js, TailwindCSS, modular components, and deployed it with Vercel. It showcases all of my work in one place and even includes my chatbot integration (AshBot) via a Flask backend and Heroku hosting."
                 image1={portfolio1}
                 image2={portfolio2}
                 image3={portfolio3}
@@ -160,53 +143,56 @@ function Projects() {
                 technologies={["NextJS", "TailwindCSS", "MUI"]}
               />
             </div>
-          </div>
+          </section>
 
-          <div className="pb-24 flex flex-col space-y-8">
-            <h1 className="text-xl pt-10 font-extralight italic">
+          {/* Integrated + Customized */}
+          <section className="mb-24 px-4">
+            <h2
+              className="subtitle"
+            >
               Projects I integrated and customized
-            </h1>
-            <div className="flex items-center flex-col gap-y-4 space-y-16 md:flex-row md:justify-start md:gap-x-4">
+            </h2>
+
+            <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
                 Git="https://github.com/Achraf333-m/chatbot_flask"
                 Web="https://www.achrafdaimallah.com/ashbot"
-                description="This project was originally from a Medium article. 
-              After completing a Linear Algebra course that sparked my interest in Machine Learning, I decided to follow along and implement it.
-               While I didn't develop the model myself, 
-              I gained a basic understanding of key concepts like tokenization, lemmatization, and how matrices are used in Natural Language Processing (NLP)."
+                description="AshBot was built from a Medium article tutorial. I followed along and integrated it into my portfolio using Flask + Heroku. It helped me learn about NLP concepts like tokenization, lemmatization, and how matrices power simple chatbot models. My main focus was backend integration and UI polishing."
                 image1={Ashbot}
                 image2={Ashbotq1}
                 image3={Ashbotq2}
                 name="AshBot"
                 technologies={[
-                  "Original model:",
                   "Python",
                   "NLTK",
                   "TensorFlow",
                   "NumPy",
-                  "flask",
-                  "I implemented:",
-                  "backend integration",
-                  "Tailwind CSS",
-                  "async requests",
+                  "Flask",
+                  "TailwindCSS",
+                  "Async Requests",
                   "Heroku",
                 ]}
               />
             </div>
-          </div>
+          </section>
 
-          <div className="space-y-4 md:space-y-0 flex flex-col md:space-x-4 items-center justify-center py-10 mb-20">
-            <p className="mb-4 md:text-lg text-center text-gray-900 dark:text-purple-200/90">
-              Curious to learn more about me? I'd love to hear from you - get in
-              touch here!
+          {/* CTA */}
+          <div
+            className="flex flex-col items-center justify-center space-y-6 py-16"
+            data-aos="fade-in"
+            data-aos-delay="600"
+          >
+            <p className="text-lg text-center text-gray-900 dark:text-purple-200/90">
+              Curious to learn more about me? I’d love to hear from you.
             </p>
             <Link href="/contact">
               <button className="btn">Contact me</button>
             </Link>
           </div>
-        </section>
-      </div>
-      <Footer />
+        </div>
+      </section>
+
+      <Footer data-aos="fade-in" data-aos-delay="700" />
     </>
   );
 }

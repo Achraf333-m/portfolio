@@ -5,7 +5,7 @@ export const Footer = () => {
 
   return (
     <footer className="w-full h-[150px]  bg-black text-white px-4">
-      <div className="flex h-full border-t-[1px] border-white flex-col md:flex-row justify-between items-center p-4 max-w-6xl mx-auto">
+      <div className="flex h-full  flex-col md:flex-row justify-between items-center p-4 max-w-6xl mx-auto">
         
         <div className="flex items-center justify-center h-full space-x-6 mt-2 md:mt-0">
           <a
@@ -31,7 +31,7 @@ export const Footer = () => {
             Email
           </a>
         </div>
-        <h1 className="text-[#ffffff] dark:text-[#afafff] text-center md:text-left">
+        <h1 className="text-[#ffffff] dark:text-[#afafff] text-center text-sm md:text-lg md:text-left">
           All Rights Reserved -{" "}
           <span className="font-semibold">Achraf Daimallah</span> &copy; {year}
         </h1>

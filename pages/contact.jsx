@@ -50,10 +50,9 @@ function Contact() {
       <div className="w-full">
         <Header />
         <section
-          data-aos="fade-in"
           className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden"
         >
-          <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold" data-aos="fade-in">
+          <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold">
             Contact me
           </h1>
 
@@ -62,7 +61,7 @@ function Contact() {
             onSubmit={contact}
             className="space-y-8 w-full py-10 mx-auto"
           >
-            <div data-aos="fade-in" className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <label>Your name</label>
               <input
                 required
@@ -73,8 +72,7 @@ function Contact() {
               />
             </div>
             <div
-              data-aos="fade-in"
-              data-aos-delay="500"
+            
               className="flex flex-col space-y-4"
             >
               <label>Your e-mail</label>
@@ -87,8 +85,7 @@ function Contact() {
               />
             </div>
             <div
-              data-aos="fade-in"
-              data-aos-delay="1000"
+              
               className="flex flex-col space-y-4"
             >
               <label>Your message</label>
@@ -107,16 +104,15 @@ function Contact() {
                 type="submit"
                 className={`btn ${loading && "brightness-50"}`}
               >
-                {sent
-                  ? "Sent!"
-                  : `${
+                {
                       loading ? (
                         <FaSpinner className="w-full h-full animate-spin" />
                       ) : (
                         "Send it my way!"
                       )
-                    }`}
+                    }
               </button>
+              {sent && (loading && <span className="font-extralight textxs text-orange-800">Sent!</span>)}
             </div>
           </form>
         </section>

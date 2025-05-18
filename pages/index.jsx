@@ -25,13 +25,14 @@ export default function Home() {
       </Head>
       <Header />
 
-      <div className="py-36">
-        <main className="flex flex-col pt-20 px-6 md:px-10 max-w-4xl md:max-w-6xl mx-auto">
+      <section className="section_style">
+        <main className="main_style">
           <h1
-            data-aos="fade-up"
-            className="text-[28px] sm:text-[52px] font-bold tracking-tight text-[#14091f] dark:text-[#c3c3fb] pb-2"
+            data-aos="fade-in"
+            className="text-[28px] sm:text-[52px] font-bold tracking-tight text-[#14091f] dark:text-[#efefff] pb-2"
           >
-            {title ? (
+            <span className={title ? "sr-only" : ""}>Achraf Daimallah</span>
+            {title && (
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -48,74 +49,82 @@ export default function Home() {
                     .start();
                 }}
               />
-            ) : (
-              <span>Achraf Daimallah</span>
             )}
           </h1>
 
           <h4
-            className="text-base sm:text-lg pb-8 text-[#14091f]/70 dark:text-[#afafff] font-light"
-            data-aos="fade-up"
+            className="text-base sm:text-lg pb-8 text-[#14091f]/70 dark:text-[#efefff] font-light"
+            data-aos="fade-in"
             data-aos-delay="700"
           >
-            Electrical Engineering Student | Exploring Low-Level Software & Hardware Systems
+            Electrical Engineering Student | Exploring Low-Level Software &
+            Hardware Systems
           </h4>
 
-          <div
-            className="pb-4 space-y-4 text-[#1e102c] dark:text-[#efefff] transition-colors duration-300 text-[17px] leading-relaxed"
-            data-aos="fade-up"
-            data-aos-delay="800"
-          >
-            <p>
-              I love learning about systems that are efficient, logical, and close to the hardware.
-            </p>
-            <p>
-              I built this site from scratch to showcase my skills as I continue to grow through my Electrical Engineering degree.
-            </p>
-            <p>
-              I’m especially interested in digital logic, low-level programming, and anything hardware-related.
-            </p>
-            <p>
-              While I’ve explored web development independently, my current focus is on understanding how hardware components interact to create the complex systems that power the world.
-            </p>
-          </div>
-
-          <div className="flex items-center pt-6 text-[#14091f] dark:text-[#afafff] text-2xl md:text-3xl space-x-5">
-            <a
-              data-aos="fade-in"
-              data-aos-delay="1200"
-              href="https://www.linkedin.com/in/achraf-daimallah/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <GrLinkedinOption className="hover:scale-95 transition-transform duration-200" />
-            </a>
-            <a
-              data-aos="fade-in"
-              data-aos-delay="1200"
-              href="https://github.com/Achraf333-m"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub className="hover:scale-95 transition-transform duration-200" />
-            </a>
-          </div>
-
-          <Link
+          <section
+            className="pb-4 space-y-4 text-[#1e102c] dark:text-[#efefff] text-[17px] leading-relaxed"
             data-aos="fade-in"
-            data-aos-delay="1100"
-            href="/projects"
-            className="mt-8 w-fit"
+            data-aos-delay="800"
+            aria-label="Introductory description"
           >
-            <button className="group flex items-center gap-2 rounded-2xl bg-black px-6 py-3 text-white transition-all duration-300 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
-              <span className="text-base font-medium">See my projects!</span>
-              <FaArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </button>
-          </Link>
+            <p>
+              I love learning about systems that are efficient, logical, and
+              close to the hardware.
+            </p>
+            <p>
+              I built this site from scratch to showcase my skills as I continue
+              to grow through my Electrical Engineering degree.
+            </p>
+            <p>
+              I’m especially interested in digital logic, low-level programming,
+              and anything hardware-related.
+            </p>
+            <p>
+              While I’ve explored web development independently, my current
+              focus is on understanding how hardware components interact to
+              create the complex systems that power the world.
+            </p>
+          </section>
+
+          <div className="flex justify-between items-center pt-6 text-[#14091f] dark:text-[#efefff] text-2xl md:text-3xl space-x-5">
+            <div className=" flex space-x-5 items-center">
+              <a
+                href="https://www.linkedin.com/in/achraf-daimallah/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                // data-aos="fade-in"
+                // data-aos-delay="1000"
+              >
+                <GrLinkedinOption className="hover:scale-95 transition-transform duration-200" />
+              </a>
+              <a
+                href="https://github.com/Achraf333-m"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                // data-aos="fade-in"
+                // data-aos-delay="1000"
+              >
+                <FaGithub className="hover:scale-95 transition-transform duration-200" />
+              </a>
+            </div>
+            <Link
+              href="/projects"
+              id="button"
+              className="w-fit"
+              // data-aos="fade-in"
+              // data-aos-delay="1000"
+            >
+              {/*  rounded-2xl bg-black px-3 py-2 md:px-6 md:py-3 text-white transition-all duration-300 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black */}
+              <button className="btn group flex items-center gap-2">
+                <span className="text-base font-medium">See my projects!</span>
+                <FaArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </button>
+            </Link>
+          </div>
         </main>
-      </div>
+      </section>
 
       {/* Preload ChatBox */}
       <div className="absolute hidden">

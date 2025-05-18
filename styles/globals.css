@@ -17,53 +17,68 @@
 @layer body {
   html,
   body {
-    @apply h-[100%];
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 
+:root {
+  --vw: 1vw;
+  --vh: 1vh;
+}
+
 @layer components {
-  .bg-image {
-    @apply absolute top-0 left-0 -z-20 brightness-[.95] dark:brightness-[.55] dark:opacity-90  w-full min-h-full bg-cover bg-center;
+  .section_style {
+    @apply relative py-36;
   }
-  .wrapper {
-    @apply relative min-h-[calc(var(--vh,1vh)*100)] overflow-hidden;
+  .main_style {
+    @apply flex p-4 flex-col pt-20 px-6 mx-4 md:px-10 md:mx-auto max-w-4xl md:max-w-6xl
+       bg-gray-200/70 dark:bg-gray-950/30 rounded-2xl shadow-lg transition-all duration-300 ease-in-out;
   }
-  .project-style {
-    @apply flex items-center justify-start overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-track-transparent scrollbar-thumb-purple-200 space-x-6 px-4 pb-4 w-full;
+  .subtitle {
+    @apply text-2xl font-semibold italic text-left text-[#1e0c2c] dark:text-purple-100 mb-12;
   }
+
   .textarea_style {
     @apply w-full p-4 rounded-2xl border-b border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-orange-400 dark:focus:ring-orange-500 transition duration-200 resize-none shadow-sm;
   }
-  .hover-transition {
-    @apply border-2 border-white rounded-lg md:cursor-pointer max-h-60 max-w-max block object-cover;
-  }
+
   .btn {
-    @apply inline-flex items-center justify-center px-7 py-3 rounded-lg
-      bg-gradient-to-r from-purple-700 via-purple-900 to-indigo-800
-      text-white font-semibold text-lg
-      shadow-lg
-      transition-transform duration-300 ease-in-out
-      hover:scale-105 hover:shadow-xl
-      focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50
-      active:scale-95 active:shadow-md;
-  }
-  .menu {
-    @apply mt-10 w-full;
+    @apply inline-flex cursor-pointer text-black max-h-full items-center justify-center px-8 py-1.5 rounded-lg
+  bg-gradient-to-r from-[#F89700] via-[#d4a017] to-[#a6730e]
+  dark:text-white font-semibold text-lg
+  shadow-[0_0_10px_#F89700]
+  transition-transform duration-300 ease-in-out
+  hover:scale-105 hover:shadow-[0_0_15px_#F89700] hover:brightness-105
+  focus:outline-none focus:ring-4 focus:ring-[#cc7700] focus:ring-opacity-50
+  active:scale-95 active:shadow-md;
   }
 
-  /* Fullscreen container */
+  .menu {
+    @apply mt-10 w-full flex;
+  }
+
   .menu-fullscreen {
-    @apply fixed -inset-0 z-50 bg-black/90 rounded-none flex flex-col items-center justify-center;
+    @apply fixed rounded-2xl -inset-0 z-30 backdrop-blur-sm bg-gray-400/90 dark:bg-black/90 text-black dark:text-white  w-full text-center flex flex-col items-center justify-center;
   }
 
   /* Fullscreen list layout */
-  .menu .MuiList-root {
-    @apply h-full w-full flex flex-col items-center justify-center gap-6;
+  .MuiList-root {
+    @apply h-full w-full flex flex-col items-center !text-center justify-center gap-6 animate-fadeIn;
+  }
+  .MuiButtonBase-root {
+    @apply px-6 py-3 rounded-lg font-medium hover:bg-orange-500/20 transition duration-300;
+  }
+  .MuiMenu-list {
+    @apply !flex !justify-center !items-center !text-center;
   }
 
   /* Unified MenuItem styling */
-  .menu .MuiMenuItem-root {
-    @apply block w-60 py-6 text-center text-sm font-light text-black transition duration-200 
-         first:cursor-default first:font-normal first:text-white hover:bg-black/40;
+  .MuiMenuItem-root {
+    @apply w-60 py-6 flex items-center justify-center text-center
+    text-lg font-medium text-white dark:text-black
+    transition duration-300 hover:bg-orange-500/10 hover:text-[#F89700] rounded-md;
   }
 }

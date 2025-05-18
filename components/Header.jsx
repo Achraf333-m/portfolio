@@ -14,15 +14,9 @@ function Header() {
   const path = router.pathname;
   const nextMode = theme === "light" ? "dark" : "light";
 
-  
-  
-  
-  
-  
   const [scrolled, setScrolled] = useState(false);
-  
+
   useEffect(() => {
-    
     const darkMode = () => {
       if (nextMode !== "dark") {
         setDark(true);
@@ -30,7 +24,7 @@ function Header() {
         setDark(false);
       }
     };
-    
+
     darkMode();
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -48,18 +42,19 @@ function Header() {
           setScrolled(false);
         }
       });
-
     };
   }, []);
 
   return (
     <div
-      className={`${scrolled && "bg-black/[.85]"}  transition-all duration-[450ms] w-[calc(var(--vw, 1vw)*100)] z-20 fixed top-0 left-0 right-0`}
+      className={` transition-all duration-[450ms] z-20 w-full
+  bg-white/10 dark:bg-black/20
+  backdrop-blur-md
+  border-b border-white/10 dark:border-black/20
+  text-white"`}
     >
       <div
-        className={` ${scrolled && "text-pink-100"} flex text-black/75 dark:text-pink-50 scale-90 ${
-          scrolled || "border-b-2 border-white/50"
-        } justify-between max-w-7xlxl mx-auto px-6 items-center text-sm sm:text-lg md:text-xl`}
+        className={` transition-all duration-100  flex text-black/75 dark:text-pink-50 scale-90 justify-between max-w-7xlxl mx-auto px-6 items-center text-sm sm:text-lg md:text-xl`}
       >
         <Link href="/">
           <Image
@@ -108,7 +103,7 @@ function Header() {
           {path === "/contact" || (
             <Link
               href="/contact"
-              className="animate-pulse hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="hover:scale-[.98] hover:brightness-[2] transition-all"
             >
               Contact
             </Link>

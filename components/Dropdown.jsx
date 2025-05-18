@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FaTimes } from "react-icons/fa";
 
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -44,9 +45,17 @@ export default function Dropdown() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        className="!capitalize !text-white"
+        className={`${open ? "hidden" : "block"} !capitalize`}
       >
-        <RiMenu4Fill className="text-2xl " />
+        <RiMenu4Fill className="text-2xl dark:text-white text-black" />
+      </Button>
+
+      <Button
+        id="basic-button_2"
+        onClick={handleClose}
+        className={`${open ? "block" : "hidden"} !z-40 !capitalize `}
+      >
+        <FaTimes className="text-2xl dark:!text-white !text-black" />
       </Button>
       <Menu
         id="basic-menu"
@@ -102,7 +111,7 @@ export default function Dropdown() {
         <div>
           {path === "/contact" || (
             <Link href="/contact">
-              <MenuItem className="font-bold animate-pulse">Contact</MenuItem>
+              <MenuItem className="font-bold">Contact</MenuItem>
             </Link>
           )}
         </div>

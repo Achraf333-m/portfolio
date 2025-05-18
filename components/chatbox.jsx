@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaCheck } from "react-icons/fa";
 
 const ChatBox = () => {
   const [loading, setLoading] = useState(false);
@@ -16,8 +16,6 @@ const ChatBox = () => {
     }
   };
 
-  
-
   const checkInput = () => {
     if (inputText.length === 0) {
       setNoIpt(true);
@@ -26,39 +24,39 @@ const ChatBox = () => {
     }
   };
 
- useEffect(() => {
-  const preLoadBot = async () => {
-    try {
-      const response = await fetch("https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: "Preload request to warm up" }),
-      });
+  useEffect(() => {
+    const preLoadBot = async () => {
+      try {
+        const response = await fetch(
+          "https://flask-server-chatbot-e326926789d0.herokuapp.com/chatbot",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message: "Preload request to warm up" }),
+          }
+        );
 
-      if (response.ok) {
-        console.log("Ashbot preloaded successfully");
-      } else {
-        console.error("Ashbot preload failed:", response.status);
+        if (response.ok) {
+          console.log("Ashbot preloaded successfully");
+        } else {
+          console.error("Ashbot preload failed:", response.status);
+        }
+      } catch (error) {
+        console.error("Error preloading Ashbot:", error);
       }
-    } catch (error) {
-      console.error("Error preloading Ashbot:", error);
+    };
+
+    // Only run in the browser
+    if (typeof window !== "undefined") {
+      preLoadBot();
     }
-  };
+  }, []);
 
-  // Only run in the browser
-  if (typeof window !== "undefined") {
-    preLoadBot();
-  }
-}, []);
-
-  
   useEffect(() => {
     checkInput();
   }, [inputText]);
-  
-
 
   const onSendButton = () => {
     if (inputText === "") {
@@ -94,9 +92,9 @@ const ChatBox = () => {
   }, [messages]);
 
   return (
-    <div className="w-full !overflow-y-hidden">
+    <div className="w-[70%] gap-y-10 mx-auto !overflow-y-hidden">
       <div className=" space-y-10">
-        <div className="bg-white/0 space-y-4 h-72 flex p-4 flex-col overflow-x-hidden overflow-y-scroll scrollbar-thumb-yellow-900 scrollbar-thumb-rounded-md scrollbar-track-black/30 scrollbar-thin">
+        <div className="dark:bg-white/5 bg-black/5 rounded-md backdrop-blur-sm space-y-4 h-72 flex p-4 flex-col overflow-x-hidden overflow-y-scroll scrollbar-thumb-yellow-900 scrollbar-thumb-rounded-md scrollbar-track-black/30 scrollbar-thin">
           {messages.length > 0 ? (
             messages.map((item, index) => (
               <div
@@ -127,8 +125,11 @@ const ChatBox = () => {
                   This is AshBot.
                 </h1>
                 <p className="text-gray-900/80 dark:text-pink-50/50">
-                Here are some ideas to break the ice: <br /><i>"How are you?"</i>  <br /><i>"Tell me about
-                yourself!"</i>  <br /><i>"Where are you from?"</i>  <br /><i>"What can you do?"</i>  <br />
+                  Here are some ideas to break the ice: <br />
+                  <i>"How are you?"</i> <br />
+                  <i>"Tell me about yourself!"</i> <br />
+                  <i>"Where are you from?"</i> <br />
+                  <i>"What can you do?"</i> <br />
                 </p>
               </div>
               <p className="text-center text-lg">
@@ -138,33 +139,42 @@ const ChatBox = () => {
           )}
         </div>
 
-        <div className="fixed left-0 right-0 bottom-20 z-20 w-[70%] m-auto">
+        <div className=" w-[70%] m-auto">
           {loading && (
-            <h1 className="text-pink-50/70 p-2 animate-pulse-fast">
+            <h1 className="text-pink-50/70 p-2 absolute animate-pulse-fast">
               Waiting for Ashbot...
             </h1>
           )}
-          <div className="flex pt-10 justify-center items-center w-full space-x-2">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-10 w-full max-w-xl mx-auto">
             <input
               type="text"
               value={inputText}
               disabled={loading}
-              className=" bg-black/20 text-pink-50 w-full outline-none rounded-md px-8 py-2"
               placeholder="Chat with me"
               onChange={(e) => setInputText(e.target.value)}
               onKeyUp={onKeyUp}
+              className="flex-grow  bg-black/40 text-pink-50 outline-none placeholder-white/50 rounded-md px-6 py-2 text-base"
             />
 
             <button
               disabled={noIpt}
-              className="btn"
               onClick={() => {
                 onSendButton();
                 setInputText("");
                 setLoading(true);
               }}
+              className="flex items-center gap-2 px-6 py-2 rounded-lg
+      bg-gradient-to-r from-[#F89700] via-[#d4a017] to-[#a6730e]
+      text-black dark:text-white font-semibold text-base
+      shadow-[0_0_10px_#F89700]
+      transition-transform duration-300 ease-in-out
+      hover:scale-105 hover:shadow-[0_0_15px_#F89700] hover:brightness-105
+      focus:outline-none focus:ring-4 focus:ring-[#cc7700] focus:ring-opacity-50
+      active:scale-95 active:shadow-md
+      disabled:opacity-50"
             >
-              Send
+              <span>Send</span>
+              <FaCheck />
             </button>
           </div>
         </div>
