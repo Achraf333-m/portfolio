@@ -34,15 +34,26 @@
     @apply relative py-36;
   }
   .main_style {
-    @apply flex p-4 flex-col pt-20 px-6 mx-4 md:px-10 md:mx-auto max-w-4xl md:max-w-6xl
+    @apply flex p-4 flex-col pt-20 px-6 mx-4 md:px-10 md:mx-auto max-w-4xl md:max-w-6xl space-y-8
        bg-gray-200/70 dark:bg-gray-950/30 rounded-2xl shadow-lg transition-all duration-300 ease-in-out;
   }
   .subtitle {
-    @apply text-2xl font-semibold italic text-left text-[#1e0c2c] dark:text-purple-100 mb-12;
+    @apply text-2xl font-semibold italic text-left mb-12;
   }
 
   .textarea_style {
     @apply w-full p-4 rounded-2xl border-b border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-orange-400 dark:focus:ring-orange-500 transition duration-200 resize-none shadow-sm;
+  }
+
+  .header-element {
+    @apply px-4 py-2
+    rounded-xl
+    bg-gray-100/50 dark:bg-white/5
+    hover:bg-gray-300/40 dark:hover:bg-white/10
+    text-xl text-neutral-800 dark:text-neutral-100
+    transition duration-300 ease-in-out
+    hover:scale-105 hover:brightness-110
+    backdrop-blur-md
   }
 
   .btn {
@@ -56,29 +67,5 @@
   active:scale-95 active:shadow-md;
   }
 
-  .menu {
-    @apply mt-10 w-full flex;
-  }
-
-  .menu-fullscreen {
-    @apply fixed rounded-2xl -inset-0 z-30 backdrop-blur-sm bg-gray-400/90 dark:bg-black/90 text-black dark:text-white  w-full text-center flex flex-col items-center justify-center;
-  }
-
-  /* Fullscreen list layout */
-  .MuiList-root {
-    @apply h-full w-full flex flex-col items-center !text-center justify-center gap-6 animate-fadeIn;
-  }
-  .MuiButtonBase-root {
-    @apply px-6 py-3 rounded-lg font-medium hover:bg-orange-500/20 transition duration-300;
-  }
-  .MuiMenu-list {
-    @apply !flex !justify-center !items-center !text-center;
-  }
-
-  /* Unified MenuItem styling */
-  .MuiMenuItem-root {
-    @apply w-60 py-6 flex items-center justify-center text-center
-    text-lg font-medium text-white dark:text-black
-    transition duration-300 hover:bg-orange-500/10 hover:text-[#F89700] rounded-md;
-  }
+  
 }

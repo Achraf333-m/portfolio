@@ -79,8 +79,9 @@ export default function MyApp({ Component, pageProps }) {
       > */}
       <div
         className="relative min-h-screen w-full bg-gradient-to-br 
-        from-[#f5f5f5]/30 via-[#eaeaea]/30 to-[#dcdcdc]/30
-        dark:from-[#1a1a1a]/30 dark:via-[#202020]/30 dark:to-[#2c2c2c]/30 "
+  from-[#f8f8f8cc] via-[#eaeaea99] to-[#dcdcdccc] 
+  dark:from-[#1e1e1ecc] dark:via-[#2a2a2a99] dark:to-[#3a3a3acc]
+ "
       >
         {/* Background effects */}
         {init && (

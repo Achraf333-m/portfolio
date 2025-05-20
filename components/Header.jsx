@@ -71,7 +71,7 @@ function Header() {
           {path === "/" || (
             <Link
               href="/"
-              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="header-element"
             >
               Homepage
             </Link>
@@ -79,7 +79,7 @@ function Header() {
           {path === "/education" || (
             <Link
               href="/education"
-              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="header-element"
             >
               Education
             </Link>
@@ -87,7 +87,7 @@ function Header() {
           {path === "/projects" || (
             <Link
               href="/projects"
-              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="header-element"
             >
               Projects
             </Link>
@@ -95,7 +95,7 @@ function Header() {
           {path === "/ashbot" || (
             <Link
               href="/ashbot"
-              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="header-element"
             >
               AshBot
             </Link>
@@ -103,14 +103,14 @@ function Header() {
           {path === "/contact" || (
             <Link
               href="/contact"
-              className="hover:scale-[.98] hover:brightness-[2] transition-all"
+              className="header-element"
             >
               Contact
             </Link>
           )}
 
           <button
-            className="hover:scale-[.98] hover:brightness-[2] transition-all"
+            className="header-element"
             onClick={() => {
               setTheme(nextMode);
               setDark(!dark);

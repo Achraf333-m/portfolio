@@ -64,11 +64,7 @@ function Project({
   };
 
   return (
-    <div
-      
-     
-      className="max-w-sm w-full h-full md:cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 transition hover:shadow-xl"
-    >
+    <div className="max-w-sm w-full h-full md:cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 transition hover:shadow-xl">
       <Image
         alt="section-image"
         className="w-full animate-fadeIn rounded cursor-pointer h-48 object-cover"
@@ -99,14 +95,18 @@ function Project({
           <a
             href={Web}
             target="_blank"
-            className={`text-blue-600 ${Web == "" ? "hidden" : "block"} dark:text-blue-400 text-sm font-medium hover:underline`}
+            className={`text-blue-600 ${
+              Web == "" ? "hidden" : "block"
+            } dark:text-blue-400 text-sm font-medium hover:underline`}
           >
             Go to site
           </a>
           <a
             href={Git}
             target="_blank"
-            className={`text-sm text-neutral-500 ${Git == "" ? "hidden" : "block"} dark:text-neutral-400 hover:underline`}
+            className={`text-sm text-neutral-500 ${
+              Git == "" ? "hidden" : "block"
+            } dark:text-neutral-400 hover:underline`}
           >
             GitHub →
           </a>
@@ -121,13 +121,19 @@ function Project({
           aria-modal="true"
         >
           {/* Close button */}
-          <button className="absolute top-5 select-none outline-none active:scale-95 !active:outline-none right-5  font-semibold text-white cursor-pointer  !focus:outline-none  rounded-lg" onClick={() => {setModal(null); setImages(false); setCaroImg(image1)}}>
-          <FaTimes
-            className="z-20 brightness-90 hover:brightness-200 text-md outline-none"
-            tabIndex={0}
-            aria-label="Close modal"
-          />
-
+          <button
+            className="absolute top-5 select-none outline-none active:scale-95 !active:outline-none right-5  font-semibold dark:text-white text-black cursor-pointer  !focus:outline-none  rounded-lg"
+            onClick={() => {
+              setModal(null);
+              setImages(false);
+              setCaroImg(image1);
+            }}
+          >
+            <FaTimes
+              className="z-20 brightness-90 hover:brightness-200 text-md outline-none"
+              tabIndex={0}
+              aria-label="Close modal"
+            />
           </button>
 
           {/* Modal Content */}
@@ -145,7 +151,7 @@ function Project({
                       key={caroImg}
                       src={caroImg}
                       alt="Zoomed project image"
-                      className="absolute top-0 left-0 w-full h-full object-cover rounded-xl shadow-2xl select-none"
+                      className="absolute top-0 left-0 w-full h-full object-cover animate-fadeIn duration-1000 rounded-xl shadow-2xl select-none"
                       onClick={(e) => e.stopPropagation()}
                     />
                   </div>
@@ -169,16 +175,16 @@ function Project({
                       </button>
                     </div>
 
-                    <p className="text-white font-light">
+                    <p className="text-black/60 dark:text-white/60 font-light">
                       {count} / {totalCount}
                     </p>
 
                     <button
-                      className="hover:opacity-80 transition-all active:scale-[.98] flex items-center gap-2 text-white"
+                      className="group bg-gray-600/40 rounded-lg flex max-w-md px-4 py-1 justify-center items-center gap-2 text-black/60 dark:text-white/60 focus:outline-none"
                       onClick={() => setImages(false)}
                     >
-                      <FaArrowLeft className="text-xs font-extralight" />
-                      <span>Back to description</span>
+                      <FaArrowLeft className="dark:group-hover:text-gray-200 group-hover:text-gray-900 text-xs transition-transform duration-300 group-hover:-translate-x-1 font-extralight" />
+                      <span className="dark:group-hover:text-gray-200 group-hover:text-gray-900 transition-transform duration-300 group-hover:translate-x-[1px]">Back to description</span>
                     </button>
                   </div>
                 </>
@@ -198,12 +204,14 @@ function Project({
                   </div>
 
                   <button
-                    className="flex w-full justify-center items-center gap-2 text-white hover:underline focus:outline-none"
+                    className="group bg-gray-600/40 rounded-lg flex max-w-md px-4 py-1 justify-center items-center gap-2 text-black/60 dark:text-white/60 focus:outline-none"
                     onClick={() => setImages(true)}
                     aria-label="See images"
                   >
-                    <span>See images</span>
-                    <FaArrowRight className="text-sm font-extralight" />
+                    <span className="dark:group-hover:text-gray-200 group-hover:text-gray-900 transition-all duration-300 group-hover:-translate-x-[1px]">
+                      See images
+                    </span>
+                    <FaArrowRight className="dark:group-hover:text-gray-200 group-hover:text-gray-900 transition-all duration-300 group-hover:translate-x-1 text-sm font-extralight" />
                   </button>
                 </div>
               )}

@@ -1,3 +1,5 @@
+"use client";
+
 import "@/styles/globals.css";
 import Head from "next/head";
 import Header from "@/components/Header";
@@ -14,8 +16,9 @@ import Typewriter from "typewriter-effect";
 export default function Home() {
   const [title, setTitle] = useState(true);
 
+  
   useEffect(() => {
-    AOS.init({ duration: 1500, once: true });
+   setTitle(true);
   }, []);
 
   return (
@@ -26,9 +29,8 @@ export default function Home() {
       <Header />
 
       <section className="section_style">
-        <main className="main_style">
+        <main className="main_style !space-y-0">
           <h1
-            data-aos="fade-in"
             className="text-[28px] sm:text-[52px] font-bold tracking-tight text-[#14091f] dark:text-[#efefff] pb-2"
           >
             <span className={title ? "sr-only" : ""}>Achraf Daimallah</span>
@@ -36,7 +38,7 @@ export default function Home() {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .pauseFor(1500)
+                    .pauseFor(300)
                     .typeString("Hello There!")
                     .pauseFor(1000)
                     .deleteAll()
@@ -54,17 +56,15 @@ export default function Home() {
 
           <h4
             className="text-base sm:text-lg pb-8 text-[#14091f]/70 dark:text-[#efefff] font-light"
-            data-aos="fade-in"
-            data-aos-delay="700"
+          
           >
             Electrical Engineering Student | Exploring Low-Level Software &
             Hardware Systems
           </h4>
 
           <section
-            className="pb-4 space-y-4 text-[#1e102c] dark:text-[#efefff] text-[17px] leading-relaxed"
-            data-aos="fade-in"
-            data-aos-delay="800"
+            className="pb-4 animate-fadeIn space-y-4 text-[#1e102c] dark:text-[#efefff] text-[17px] leading-relaxed"
+           
             aria-label="Introductory description"
           >
             <p>
@@ -86,7 +86,7 @@ export default function Home() {
             </p>
           </section>
 
-          <div className="flex justify-between items-center pt-6 text-[#14091f] dark:text-[#efefff] text-2xl md:text-3xl space-x-5">
+          <div className="flex justify-between animate-fadeIn items-center pt-6 text-[#14091f] dark:text-[#efefff] text-2xl md:text-3xl space-x-5">
             <div className=" flex space-x-5 items-center">
               <a
                 href="https://www.linkedin.com/in/achraf-daimallah/"
@@ -103,8 +103,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                // data-aos="fade-in"
-                // data-aos-delay="1000"
+               
               >
                 <FaGithub className="hover:scale-95 transition-transform duration-200" />
               </a>
@@ -113,8 +112,7 @@ export default function Home() {
               href="/projects"
               id="button"
               className="w-fit"
-              // data-aos="fade-in"
-              // data-aos-delay="1000"
+             
             >
               {/*  rounded-2xl bg-black px-3 py-2 md:px-6 md:py-3 text-white transition-all duration-300 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black */}
               <button className="btn group flex items-center gap-2">

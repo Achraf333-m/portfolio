@@ -13,6 +13,7 @@ function Contact() {
   const [sent, setSent] = useState(false);
   useEffect(() => {
     AOS.init({ duration: 2000, once: true });
+    AOS.refresh();
   }, [sent]);
   const form = useRef();
 
@@ -47,11 +48,9 @@ function Contact() {
       <Head>
         <title>Contact | Achraf Daimallah</title>
       </Head>
-      <div className="w-full">
         <Header />
-        <section
-          className="flex flex-col max-w-6xl mx-auto py-40 px-10 overflow-hidden"
-        >
+      <section className="section_style">
+        <main className="main_style">
           <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold">
             Contact me
           </h1>
@@ -68,26 +67,20 @@ function Contact() {
                 type="text"
                 name="user-name"
                 placeholder="Type your name..."
-                className="textarea_style placeholder-white/50 dark:placeholder-white/70 "
+                className="textarea_style placeholder-black/50 dark:placeholder-white/70 "
               />
             </div>
-            <div
-            
-              className="flex flex-col space-y-4"
-            >
+            <div className="flex flex-col space-y-4">
               <label>Your e-mail</label>
               <input
                 required
                 type="email"
                 name="user-email"
                 placeholder="Type your email..."
-                className="textarea_style placeholder-white/50 dark:placeholder-white/70 "
+                className="textarea_style placeholder-black/50 dark:placeholder-white/70 "
               />
             </div>
-            <div
-              
-              className="flex flex-col space-y-4"
-            >
+            <div className="flex flex-col space-y-4">
               <label>Your message</label>
               <textarea
                 required
@@ -95,7 +88,7 @@ function Contact() {
                 name="message"
                 rows={5}
                 placeholder="Hey, I saw your portfolio. Let me know when you're available for a call!"
-                className="textarea_style placeholder-white/50 dark:placeholder-white/70 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
+                className="textarea_style placeholder-black/50 dark:placeholder-white/70 resize-none cursor-auto scrollbar-thin scrollbar-thumb-yellow-800 scrollbar-thumb-rounded-3xl  scrollbar-track-transparent"
               />
             </div>
             <div className="flex items-center justify-center md:justify-start">
@@ -104,19 +97,21 @@ function Contact() {
                 type="submit"
                 className={`btn ${loading && "brightness-50"}`}
               >
-                {
-                      loading ? (
-                        <FaSpinner className="w-full h-full animate-spin" />
-                      ) : (
-                        "Send it my way!"
-                      )
-                    }
+                {loading ? (
+                  <FaSpinner className="w-full h-full animate-spin" />
+                ) : (
+                  "Send it my way!"
+                )}
               </button>
-              {sent && (loading && <span className="font-extralight textxs text-orange-800">Sent!</span>)}
+              {sent && loading && (
+                <span className="font-extralight textxs text-orange-800">
+                  Sent!
+                </span>
+              )}
             </div>
           </form>
-        </section>
-      </div>
+        </main>
+      </section>
       <Footer />
     </>
   );

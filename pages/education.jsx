@@ -20,6 +20,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function Education() {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true });
+    AOS.refresh();
   }, []);
 
   return (
@@ -31,21 +32,19 @@ export default function Education() {
       <Header />
 
       {/* Main Content Wrapper */}
-      <section className="section_style">
+      <section className="section_style animate-fadeIn duration-500">
         <div className="main_style">
           {/* Education Section */}
           <article className="space-y-12 overflow-x-hidden">
             <h1
-              className="text-3xl md:text-4xl font-extrabold tracking-tight text-orange-950 dark:text-purple-200"
-              data-aos="fade-in"
+              className="text-3xl md:text-4xl font-extrabold tracking-tight "
+    
             >
               Education
             </h1>
 
             <section
-              className="space-y-6 max-w-3xl text-[#2c1f4c] dark:text-[#d4ccf9]"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              className="space-y-6 max-w-3xl"
             >
               <div className="">
                 <h2 className="text-2xl font-bold">
@@ -55,9 +54,9 @@ export default function Education() {
                 <h3 className="text-lg font-semibold mt-1">
                   Electrical Engineering
                 </h3>
-                <h4 className="text-md font-semibold mt-0.5">
+                <a href="https://www.concordia.ca/" target="_blank" className="text-md font-semibold mt-0.5">
                   Concordia University
-                </h4>
+                </a>
               </div>
               <p className=" leading-relaxed text-base md:text-lg font-light">
                 I'm currently pursuing a Bachelor of Engineering in Electrical
@@ -76,10 +75,7 @@ export default function Education() {
 
           {/* Certificates Section */}
           <article className="mt-24 overflow-x-hidden">
-            <h1
-              className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#d4a017] dark:text-[#574926]"
-  
-            >
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
               Certificates
             </h1>
 
@@ -131,21 +127,20 @@ export default function Education() {
 
           {/* Call to Action */}
           <div
-            className="flex justify-center py-12"
-            data-aos="fade-in"
-            data-aos-delay="500"
+            className="flex bg-white/40 dark:bg-black/20 rounded-lg flex-col items-center justify-center space-y-6 py-12"
+  
           >
             <Link href="/projects">
-              <button className="group flex items-center gap-2 bg-black px-6 py-3 text-white text-base rounded-2xl transition-all duration-300 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+              <button className="btn group flex items-center gap-2">
                 <span>See my projects</span>
-                <FaArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <FaArrowRight className="h-4 w-6 transition-transform group-hover:translate-x-1" />
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      <Footer data-aos="fade-in" data-aos-delay="700" />
+      <Footer  />
     </>
   );
 }

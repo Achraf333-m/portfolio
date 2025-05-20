@@ -50,77 +50,66 @@ export default function Dropdown() {
         <RiMenu4Fill className="text-2xl dark:text-white text-black" />
       </Button>
 
-      <Button
-        id="basic-button_2"
-        onClick={handleClose}
-        className={`${open ? "block" : "hidden"} !z-40 !capitalize `}
-      >
-        <FaTimes className="text-2xl dark:!text-white !text-black" />
-      </Button>
       <Menu
         id="basic-menu"
         open={open}
         onClose={handleClose}
         anchorEl={anchorEl}
-        anchorReference="anchorEl"
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+        transformOrigin={{ vertical: "bottom", horizontal: "left" }}
         slotProps={{
           paper: {
-            className: "menu-fullscreen",
+            className:
+              " w-screen p-2 h-screen  gap-4 bg-gray-300/50 dark:bg-black/50 backdrop-blur dark:text-white p-6",
           },
         }}
         MenuListProps={{
           disablePadding: true,
         }}
       >
-        <div>
-          {path === "/" || (
+        {/* Close Button at top-right */}
+        <button
+          onClick={handleClose}
+          className="absolute top-0 right-0 text-black dark:text-white z-50"
+        >
+          <FaTimes className="text-2xl" />
+        </button>
+        <div className="pt-16">
+          {/* Menu Items */}
+          {path !== "/" && (
             <Link href="/">
-              <MenuItem className="">Homepage</MenuItem>
+              <MenuItem className="font-light text-3xl">Homepage</MenuItem>
             </Link>
           )}
-        </div>
-        <div>
-          {path === "/education" || (
+          {path !== "/education" && (
             <Link href="/education">
-              <MenuItem>Education</MenuItem>
+              <MenuItem className="font-light text-3xl">Education</MenuItem>
             </Link>
           )}
-        </div>
-        <div>
-          {path === "/projects" || (
+          {path !== "/projects" && (
             <Link href="/projects">
-              <MenuItem>Projects</MenuItem>
+              <MenuItem className="font-light text-3xl">Projects</MenuItem>
             </Link>
           )}
-        </div>
-        <div>
-          {path === "/ashbot" || (
+          {path !== "/ashbot" && (
             <Link href="/ashbot">
-              <MenuItem>AshBot</MenuItem>
+              <MenuItem className="font-light text-3xl">AshBot</MenuItem>
             </Link>
           )}
-        </div>
-        <div>
-          {path === "/contact" || (
+          {path !== "/contact" && (
             <Link href="/contact">
-              <MenuItem className="font-bold">Contact</MenuItem>
+              <MenuItem className="font-light text-3xl">Contact</MenuItem>
             </Link>
           )}
-        </div>
-        <div>
           <MenuItem
             onClick={() => {
               setTheme(nextMode);
               setDark(!dark);
+              setTimeout(() => {
+                handleClose();
+              }, 50);
             }}
+            className="font-light text-3xl"
           >
             {dark ? "Light Mode" : "Dark Mode"}
           </MenuItem>

@@ -29,10 +29,12 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Project from "@/components/Project";
 import { Footer } from "@/components/Footer";
+import { FaArrowRight } from "react-icons/fa";
 
 function Projects() {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true });
+    AOS.refresh();
   }, []);
 
   return (
@@ -43,24 +45,20 @@ function Projects() {
 
       <Header />
 
-      <section className="section_style">
+      <section className="section_style animate-fadeIn duration-500">
         <div className="main_style">
           <div className="text-center mb-16 px-4" data-aos="fade-in">
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-purple-950 dark:text-purple-200">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
               My Projects
             </h1>
-            <p className="mt-4 text-lg font-light text-[#1e0c2c] dark:text-purple-100">
+            <p className="mt-4 text-lg font-light">
               You can click on each project to see more details!
             </p>
           </div>
 
           {/* Electrical Engineering */}
           <section className="mb-24 px-4">
-            <h2
-              className="subtitle"
-            >
-              Electrical Engineering projects
-            </h2>
+            <h2 className="subtitle">Electrical Engineering projects</h2>
 
             <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
@@ -104,11 +102,7 @@ function Projects() {
 
           {/* Front-end Projects */}
           <section className="mb-24 px-4">
-            <h2
-              className="subtitle"
-            >
-              Front-end projects
-            </h2>
+            <h2 className="subtitle">Front-end projects</h2>
 
             <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
@@ -147,11 +141,7 @@ function Projects() {
 
           {/* Integrated + Customized */}
           <section className="mb-24 px-4">
-            <h2
-              className="subtitle"
-            >
-              Projects I integrated and customized
-            </h2>
+            <h2 className="subtitle">Projects I integrated and customized</h2>
 
             <div className="flex flex-col space-y-16 md:flex-row md:space-y-0 md:gap-x-6">
               <Project
@@ -177,22 +167,22 @@ function Projects() {
           </section>
 
           {/* CTA */}
-          <div
-            className="flex flex-col items-center justify-center space-y-6 py-16"
-            data-aos="fade-in"
-            data-aos-delay="600"
-          >
-            <p className="text-lg text-center text-gray-900 dark:text-purple-200/90">
+          <div className="flex bg-white/40 dark:bg-black/20 rounded-lg flex-col items-center justify-center space-y-6 px-4 break-words py-12">
+            <p className="text-lg text-center">
               Curious to learn more about me? I’d love to hear from you.
             </p>
             <Link href="/contact">
-              <button className="btn">Contact me</button>
+              <button className="btn group flex items-center gap-2">
+                <span> Contact me
+                  </span>
+              <FaArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </button>
             </Link>
           </div>
         </div>
       </section>
 
-      <Footer data-aos="fade-in" data-aos-delay="700" />
+      <Footer />
     </>
   );
 }

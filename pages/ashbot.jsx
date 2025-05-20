@@ -10,9 +10,6 @@ import { Footer } from "@/components/Footer";
 import "@/styles/globals.css";
 
 function About() {
-  useEffect(() => {
-    AOS.init({ duration: 2000, once: true });
-  }, []);
 
   return (
     <>
@@ -20,19 +17,17 @@ function About() {
         <title>Ashbot | Achraf Daimallah</title>
       </Head>
 
-      <div className="w-full px-2 md:px-4 darkMode lightMode">
-        <Header />
+      <Header />
 
-        <section className="section">
-          <header>
-            <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold">Ashbot</h1>
-          </header>
+      <section className="section_style">
 
-          <main className="main">
-            <ChatBox />
-          </main>
-        </section>
-      </div>
+        <main className="main_style">
+        <h1 className="mt-16 text-center mb-20 text-3xl font-extrabold">
+            Ashbot
+          </h1>
+          <ChatBox />
+        </main>
+      </section>
 
       <Footer />
     </>
