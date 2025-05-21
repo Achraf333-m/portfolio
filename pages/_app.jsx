@@ -6,7 +6,6 @@ import { loadSlim } from "@tsparticles/slim";
 import { MouseTrail } from "@stichiboi/react-elegant-mouse-trail";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import "@/styles/globals.css";
-import { ScrollTop } from "@/components/scrollTop";
 import { useRouter } from "next/router";
 
 export default function MyApp({ Component, pageProps }) {
