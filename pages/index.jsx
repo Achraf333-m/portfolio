@@ -33,18 +33,17 @@ export default function Home() {
           <h1
             className="text-[28px] sm:text-[52px] font-bold tracking-tight text-[#14091f] dark:text-[#efefff] pb-2"
           >
-            <span className={title ? "sr-only" : ""}>Achraf Daimallah</span>
+            <span className={title ? "sr-only" : ""}>I'm Achraf Daimallah</span>
             {title && (
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .pauseFor(300)
+                    .pauseFor(200)
+                    .changeDelay(100)
                     .typeString("Hello There!")
-                    .pauseFor(1000)
+                    .pauseFor(800)
                     .deleteAll()
-                    .typeString("I'm Achraf Daimallah :D")
-                    .pauseFor(1000)
-                    .deleteAll()
+                    .typeString("I'm Achraf Daimallah")
                     .callFunction(() => {
                       setTitle(false);
                     })
