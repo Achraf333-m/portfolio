@@ -18,10 +18,7 @@ import py3 from "@/public/py3.png";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Education() {
-  useEffect(() => {
-    AOS.init({ duration: 1500, once: true });
-    AOS.refresh();
-  }, []);
+
 
   return (
     <>

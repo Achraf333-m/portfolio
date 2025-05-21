@@ -1,3 +1,6 @@
+"use client";
+
+
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaCheck } from "react-icons/fa";

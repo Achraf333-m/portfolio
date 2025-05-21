@@ -1,3 +1,6 @@
+"use client";
+
+
 import "@/styles/globals.css";
 import Head from "next/head";
 import emailjs from "@emailjs/browser";
@@ -11,10 +14,7 @@ import { Footer } from "@/components/Footer";
 function Contact() {
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
-  useEffect(() => {
-    AOS.init({ duration: 2000, once: true });
-    AOS.refresh();
-  }, [sent]);
+
   const form = useRef();
 
   function contact(event) {

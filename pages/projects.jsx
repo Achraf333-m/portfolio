@@ -32,10 +32,7 @@ import { Footer } from "@/components/Footer";
 import { FaArrowRight } from "react-icons/fa";
 
 function Projects() {
-  useEffect(() => {
-    AOS.init({ duration: 1500, once: true });
-    AOS.refresh();
-  }, []);
+
 
   return (
     <>
@@ -47,7 +44,7 @@ function Projects() {
 
       <section className="section_style animate-fadeIn duration-500">
         <div className="main_style">
-          <div className="text-center mb-16 px-4" data-aos="fade-in">
+          <div className="text-center mb-16 px-4">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
               My Projects
             </h1>

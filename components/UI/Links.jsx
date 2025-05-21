@@ -1,3 +1,6 @@
+"use client";
+
+
 import { AiFillGithub } from "react-icons/ai";
 import { BiLink } from "react-icons/bi";
 import AOS from "aos";
